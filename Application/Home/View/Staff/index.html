@@ -1,0 +1,246 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        员工资料
+        <small>员工信息列表</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">员工资料</a></li>
+        <li class="active">员工信息列表</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="panel panel-default">
+                  <div class="panel-body panel-body-footer">
+                      <form class="form-inline search-line" >
+
+
+                          <div class="form-group">
+                              <label>员工姓名&nbsp;</label>
+                              <input type="text" class="form-control" placeholder="按员工姓名搜索" size="15" name="search_name" value="{$input_name}">
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>手机号码&nbsp;</label>
+                              <input type="text" class="form-control" placeholder="按员工手机号码搜索" size="15" name="search_phone" value="{$input_phone}">
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>身份证号&nbsp;</label>
+                              <input type="text" class="form-control" placeholder="按身份证号码搜索" size="25" name="search_idcard" value="{$input_idcard}">
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>所属部门&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" title="按所属部门搜索" data-size="8" name="search_department" id="search_department" data-width="fit" multiple>
+                                  <volist name="departments" id="department">
+                                      <if condition="$department.selected eq 1">
+                                          <option value="{$department.department_id}" selected>{$department.department_name}</option>
+                                          <else />
+                                          <option value="{$department.department_id}">{$department.department_name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+                          <if condition="$userInfo.jurisdiction eq 2">
+                              &nbsp;&nbsp;
+                              <div class="form-group">
+                                  <label>所属公司&nbsp;</label>
+                                  <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                                      <volist name="companys" id="company">
+                                          <if condition="$company.selected eq 1">
+                                              <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                                              <else />
+                                              <option value="{$company.company_id}">{$company.smallname}</option>
+                                          </if>
+                                      </volist>
+                                  </select>
+                              </div>
+                          </if>
+
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>员工状态&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" title="选择状态" data-size="8" name="search_loan_status" id="search_loan_status" data-width="fit" multiple>
+                                  <volist name="statusSearchArray" id="status">
+                                      <if condition="$status.selected eq 1">
+                                          <option value="{$status.id}" selected>{$status.name}</option>
+                                          <else />
+                                          <option value="{$status.id}">{$status.name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>入职时间&nbsp;</label>
+                              <input type="text" class="form-control" placeholder="按入职时间范围搜索" size="40" name="search_datepicker" value="{$input_datepicker}" id="reservationtime">
+                          </div>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" id="get-search-staff"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" id="export-staff"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                      </form>
+
+
+                  </div>
+              </div>
+
+
+
+          </div>
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th class="text-center">员工编号</th>
+                  <th class="text-center">员工姓名</th>
+                  <th class="text-center">手机号码</th>
+                  <th class="text-center">身份证号码</th>
+                  <th class="text-center">家庭住址</th>
+                  <th class="text-center">所属部门</th>
+                  <!--<th class="text-center">基本工资</th>-->
+                  <!--<th class="text-center">银行卡号</th>-->
+                  <th class="text-center">在职状态</th>
+                    <if condition="$userInfo.jurisdiction eq 2">
+                        <th class="text-center">所属公司</th>
+                    </if>
+                  <th class="text-center">入职时间</th>
+                  <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="staffs" id="staff">
+                  <tr>
+                    <td class="text-center">{$staff.staff_id}</td>
+                    <td class="text-center">{$staff.staff_name}</td>
+                    <td class="text-center">{$staff.phone_number}</td>
+                    <td class="text-center">{$staff.idcard}</td>
+                    <td>{$staff.address}</td>
+                    <td class="text-center">{$staff.department_name}</td>
+                    <!--<td class="text-center">{$staff.base_pay}</td>
+                    <td class="text-center">{$staff.bank_card}</td>-->
+
+
+                    <td class="text-center">
+                      <if condition="$staff.staff_status eq 0">
+                        <span class="label label-success" id="change-status" attr-id="{$staff.staff_id}" attr-status="{$staff.staff_status}" attr-m="home" attr-c="staff" attr-a="changeStatus">在职</span>
+                        <elseif condition="$staff.staff_status eq -1" />
+                        <span class="label label-danger" id="change-status" attr-id="{$staff.staff_id}" attr-status="{$staff.staff_status}" attr-m="home" attr-c="staff" attr-a="changeStatus">离职</span>
+                      </if>
+                    </td>
+                      <if condition="$userInfo.jurisdiction eq 2">
+                          <td class="text-center">{$staff.company_name}</td>
+                      </if>
+
+                      <td class="text-center">{$staff.induction_time|date="Y年m月d日",###}</td>
+                    <td class="text-center"><span id="edit-info" attr-id="{$staff.staff_id}" attr-m="home" attr-c="staff" attr-a="editStaff" data-toggle="modal" data-target="#editInfoModal"><i class="fa fa-edit fa-fw"></i></span>&nbsp;<span id="delete-info" attr-id="{$staff.staff_id}" attr-name="{$staff.staff_name}" attr-m="home" attr-c="staff" attr-a="deleteStaff"><i class="fa fa-trash-o fa-fw"></i></span></td>
+                  </tr>
+                </volist>
+                </tbody>
+              </table>
+
+                <div class="pagination" >{$pageRes}</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">修改员工信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" class="form-control" name="staff_name" id="staff_name" placeholder="请输入员工姓名">
+                        </div>
+                        <div class="form-group">
+                            <label>手机号码</label>
+                            <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="请输入手机号码">
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号码</label>
+                            <input type="text" class="form-control" name="idcard" id="idcard" placeholder="请输入身份证号码">
+                        </div>
+
+                        <div class="form-group">
+                            <label>所属部门</label>
+                            <select class="form-control" name="department_id" id="department_id">
+                                <option value="0">请选择</option>
+                                <volist name="departments" id="department">
+                                    <option value="{$department.department_id}">{$department.department_name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<label>基本工资</label>-->
+                            <!--<input type="text" class="form-control" name="base_pay" id="base_pay" placeholder="请输入员工基本工资">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label>银行卡号</label>-->
+                            <!--<input type="text" class="form-control" name="bank_card" id="bank_card" placeholder="请输入银行卡号">-->
+                        <!--</div>-->
+                        <!-- textarea -->
+                        <div class="form-group">
+                            <label>详细家庭住址</label>
+                            <textarea class="form-control" rows="3" name="address" id="address" placeholder="请输入详细家庭住址"></textarea>
+                        </div>
+                        <!-- select -->
+                        <div class="form-group">
+                            <label>入职时间</label>
+                            <input type="text" class="form-control sandbox-container" name="induction_time" id="induction_time" placeholder="请选择入职时间">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control sandbox-container" name="staff_id" id="staff_id">
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>
+                    <button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+增强模态
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

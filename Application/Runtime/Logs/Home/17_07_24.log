@@ -1,0 +1,304 @@
+[ 2017-07-24T22:15:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2017-07-24T22:15:16+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2017-07-24T22:15:47+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customers E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 565 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2017-07-24T22:18:44+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: customers E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-07-24T22:19:02+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customers E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.127008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-24T22:19:22+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customers E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 566 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2017-07-24T22:29:20+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: department_name E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 571 行.
+NOTIC: [8] Undefined index: recommender E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 575 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-07-24T22:29:26+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: department_name E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 571 行.
+NOTIC: [8] Undefined index: recommender E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 575 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-24T22:30:10+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: department_name E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 571 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2017-07-24T22:30:34+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: department_name E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 571 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-07-24T22:30:50+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: department_name E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 571 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.120007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-07-24T22:36:16+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+
+[ 2017-07-24T22:36:48+08:00 ] 127.0.0.1 /index.php?m=home&c=staff&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `bj_department` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `bj_department` WHERE `department_id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 577 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+NOTIC: [8] Undefined variable: customer E:\wwwroot\baojutouzi.com\Application\Runtime\Cache\Home\5673efea18de54beca1404fb76cb2e39.php 第 582 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2017-07-24T22:37:17+08:00 ] 127.0.0.1 /index.php?m=home&c=customer&a=editCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+

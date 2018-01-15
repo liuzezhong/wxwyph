@@ -1,0 +1,22 @@
+.search-line {
+    line-height: 45px;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-line {
+        line-height: 20px;
+    }
+}
+
+.thumbnail .caption {
+    padding: 0px;
+    color: #333;
+}
+
+/*
+caption {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: blue;
+    text-align: left;
+}*/

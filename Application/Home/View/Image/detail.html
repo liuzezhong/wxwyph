@@ -1,0 +1,123 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        外访资料
+        <small>外访资料记录表</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">外访资料</a></li>
+        <li><a href="#">详情</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+
+          <div class="col-xs-12">
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong>{$customer.name}</strong> &nbsp;&nbsp;借款金额：{$loan.principal}元&nbsp;&nbsp;&nbsp;&nbsp;借款日期：{$loan.create_time}&nbsp;&nbsp;&nbsp;&nbsp;共{$countImages}张外访资料
+              </div>
+              <div class="panel panel-default">
+                  <div class="panel-body panel-body-footer">
+                      <form class="form-inline search-line" action="/index.php" method="get">
+
+
+                          <a type="button" class="btn btn-default" href="{:U('home/image/index')}"><i class="fa fa-reply fa-fw"></i> 返回上页</a>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addInfoModal" id="add-info-modal" ><i class="fa fa-upload fa-fw"></i> 添加资料</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" id="image-guanlu"><i class="fa fa-gear fa-fw"></i> 批量管理</button>
+                          <button type="button" class="btn btn-warning" id="image-quxiaoguanli" style="display:none"><i class="fa fa-close fa-fw"></i> 取消管理</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" id="image-all-checked" style="display:none"><i class="fa fa-check-square-o fa-fw"></i> 全选/取消</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" id="image-delete" style="display:none"><i class="fa fa-trash-o fa-fw"></i> 删除资料</button>
+                          &nbsp;&nbsp;
+                          <!--<button type="button" class="btn btn-default" id="export-charge" style="display:none"><i class="fa fa-arrow-down fa-fw"></i> 下载资料</button>
+                          &nbsp;&nbsp;-->
+
+                      </form>
+
+
+                  </div>
+              </div>
+
+
+
+          </div>
+
+          <div class="row">
+              <div class="col-lg-12" id="layer-photos-demo">
+                  <volist name="images" id="image">
+                      <div class="col-xs-6 col-md-2" attr-id="{$image.image_id}" id="image-div" style="width: 200px;height: 250px;">
+                          <a href="#" class="thumbnail">
+                              <img src="{$image.suo}" class="img-responsive" layer-src="{$image.url}" style="width: 200px;height: 220px;">
+                              <div style="position:absolute;left:25px;top:5px;display: none;" class="image-check-div"><input type="checkbox" name="checkbox" value="{$image.image_id}"></div>
+                          </a>
+                      </div>
+                  </volist>
+              </div>
+
+
+              </div>
+          <div class="pagination" >{$pageRes}</div>
+          </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">上传外访资料</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <input id="file-0c" class="file" type="file" multiple data-preview-file-type="any">
+                        </div>
+                        <div id="hide-image-div">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record-image" attr-m="home" attr-c="Image" attr-a="saveLoanImage" attr-loan_id="{$loan_id}">保存外访资料</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

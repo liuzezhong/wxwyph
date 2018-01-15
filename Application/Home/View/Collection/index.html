@@ -1,0 +1,328 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        每日收款
+        <small>每日应收款表</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">每日应收款表</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+          <div class="col-xs-12">
+              <!-- Info boxes -->
+              <div class="row">
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box">
+                          <span class="info-box-icon bg-aqua"><i class="fa fa-history fa-fw"></i></span>
+
+                          <div class="info-box-content">
+                              <span class="info-box-text">当前日期</span>
+                              <span class="info-box-number">{$todayInfo}</span>
+                          </div>
+                          <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box">
+                          <span class="info-box-icon bg-red"><i class="fa fa-podcast fa-fw"></i></span>
+
+                          <div class="info-box-content">
+                              <span class="info-box-text">当日应收金额</span>
+                              <span class="info-box-number">{$sumSmoney}元</span>
+                          </div>
+                          <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+
+                  <!-- fix for small devices only -->
+                  <div class="clearfix visible-sm-block"></div>
+
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box">
+                          <span class="info-box-icon bg-green"><i class="fa fa-envelope-open fa-fw"></i></span>
+
+                          <div class="info-box-content">
+                              <span class="info-box-text">当日实收金额</span>
+                              <span class="info-box-number">{$sumRmoney}元</span>
+                          </div>
+                          <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box">
+                          <span class="info-box-icon bg-yellow"><i class="fa fa-users fa-fw"></i></span>
+
+                          <div class="info-box-content">
+                              <span class="info-box-text">当日应收人数</span>
+                              <span class="info-box-number">{$countPeople}人</span>
+                          </div>
+                          <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+          </div>
+
+
+
+
+
+
+
+          <!--</div>-->
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+                <div class="col-xs-12">
+                    <div class="panel panel-info">
+                        <div class="panel-body ">
+                            <form class="form-inline search-line" action="/index.php" method="get">
+                                <div class="form-group">
+                                    <label>还款时间&nbsp;</label>
+                                    <input type="text" class="form-control sandbox-container" name="search_datepicker" id="search_datepicker" placeholder="请选择贷款时间" value="{$input_datepicker}">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="form-group">
+                                    <label>还款状态&nbsp;</label>
+                                    <select class="form-control selectpicker show-tick" title="选择状态" data-size="8" name="search_loan_status" id="search_loan_status" data-width="fit" multiple>
+                                        <volist name="statusSearchArray" id="status">
+                                            <if condition="$status.selected eq 1">
+                                                <option value="{$status.id}" selected>{$status.name}</option>
+                                                <else />
+                                                <option value="{$status.id}">{$status.name}</option>
+                                            </if>
+                                        </volist>
+                                    </select>
+                                </div>
+                                <if condition="$userInfo.jurisdiction eq 2">
+                                    &nbsp;&nbsp;
+                                    <div class="form-group">
+                                        <label>所属公司&nbsp;</label>
+                                        <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                                            <volist name="companys" id="company">
+                                                <if condition="$company.selected eq 1">
+                                                    <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                                                    <else />
+                                                    <option value="{$company.company_id}">{$company.smallname}</option>
+                                                </if>
+                                            </volist>
+                                        </select>
+                                    </div>
+                                </if>
+                                &nbsp;&nbsp;
+                                <button type="button" class="btn btn-info" id="get-search-collection"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                                &nbsp;&nbsp;
+                                <button type="button" class="btn btn-default" id="export-collection"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th class="text-center">借款时间</th>
+                    <th class="text-center">客户姓名</th>
+                    <th class="text-center">客户电话</th>
+                    <th class="text-center">借款类型</th>
+                    <th class="text-center">借款本金(元）</th>
+                    <!--<th class="text-center">借款周期</th>-->
+                    <th class="text-center">还款时间</th>
+                    <th class="text-center">本次周期</th>
+                    <th class="text-center">应还金额（元）</th>
+                    <th class="text-center">实收金额（元）</th>
+                    <th class="text-center">客户经理</th>
+                    <if condition="$userInfo.jurisdiction eq 2">
+                        <th class="text-center">所属公司</th>
+                    </if>
+                    <th class="text-center">还款状态</th>
+                    <th class="text-center">短信提醒</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="repayToday" id="today">
+                    <tr>
+                        <td class="text-center">{$today.create_time|date="Y-m-d",###}</td>
+                        <td class="text-center"><a href="{:U('home/customer/index')}&name={$today.customer_name}">{$today.customer_name}</a></td>
+                        <td class="text-center">{$today.customer_phone}</td>
+                        <td class="text-center">{$today.product_name}</td>
+                        <td class="text-center"><a href="{:U('home/loan/index')}&loan_id={$today.loan_id}">{$today.principal}</a></td>
+
+                        <td class="text-center">{$today.cycle_name}</td>
+                        <td class="text-center">{$today.now_cyclical} / {$today.cyclical}</td>
+                        <td class="text-center danger">{$today.cyc_principal}</td>
+                        <td class="text-center success">{$today.r_money}</td>
+                        <td class="text-center">{$today.staff_name}</td>
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <td class="text-center">{$today.company_name}</td>
+                        </if>
+                        <td class="text-center">
+
+                            <if condition="$today.r_status eq 0">
+                                <span class="label label-warning" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">未还款</span>
+                                <elseif condition="$today.r_status eq -1" />
+                                <span class="label label-danger" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">逾期中</span>
+                                <elseif condition="$today.r_status eq 1" />
+                                <span class="label label-success" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">已还款</span>
+                            </if>
+
+
+                        </td>
+                        <if condition="$today.sendMessage eq 0">
+                            <td class="text-center"><button class="btn btn-default btn-xs" id="loan-sendmessage"
+                                                            attr-id="{$today.loan_id}" attr-m="home" attr-c="message"
+                                                            attr-a="getLoanMessage" attr-style="2"
+                                                            attr-nowdate="{$input_datepicker}">发送短信</button></td>
+
+                        <elseif condition="$today.sendMessage eq 1" />
+                            <td class="text-center"><button class="btn btn-success btn-xs" id="loan-sendmessage"
+                                                            attr-id="{$today.loan_id}" attr-m="home" attr-c="message"
+                                                            attr-a="getLoanMessage" attr-style="2"
+                                                            attr-nowdate="{$input_datepicker}">再发一次</button></td>
+                        </if>
+
+                    </tr>
+                </volist>
+                </tbody>
+              </table>
+                <div class="pagination" >{$pageRes}</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增记账记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>支出金额</label>
+                            <input type="text" class="form-control " name="money" placeholder="请输入支出金额" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>支出事项</label>
+                            <input type="text" class="form-control" name="matter" placeholder="请输入支出事项" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支出时间</label>
+                            <input type="text" class="form-control" name="gmt_create" id="gmt_create" placeholder="请选择支出时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="charge" attr-a="checkAdd">新增记录</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">编辑记账记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-edit-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>支出金额</label>
+                            <input type="text" class="form-control " name="money" id="edit-money" placeholder="请输入支出金额" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>支出事项</label>
+                            <input type="text" class="form-control" name="matter" id="edit-matter" placeholder="请输入支出事项" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支出时间</label>
+                            <input type="text" class="form-control" name="gmt_create" id="edit-gmt_create" placeholder="请选择支出时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark" id="edit-remark"></textarea>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <input type="hidden"  name="charge_id" id="edit-charge_id">
+                            <button type="button" class="btn btn-primary btn-block" id="edit-record" attr-m="home" attr-c="charge" attr-a="checkEditValue">修改信息</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

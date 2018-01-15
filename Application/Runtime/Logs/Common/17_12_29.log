@@ -1,0 +1,12 @@
+[ 2017-12-29T17:13:27+08:00 ] 192.168.103.87 /baojutouzi.com/index.php?m=sapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+ERR: 无法加载模块:Sapp
+
+[ 2017-12-29T17:15:52+08:00 ] 192.168.103.87 /baojutouzi.com/index.php?m=sapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+ERR: 无法加载模块:Sapp
+

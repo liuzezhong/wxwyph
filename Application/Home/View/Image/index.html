@@ -1,0 +1,224 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        外访资料
+        <small>外访资料记录表</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">外访资料</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+
+          <div class="col-xs-12">
+              <div class="panel panel-default">
+                  <div class="panel-body panel-body-footer">
+                      <form class="form-inline search-line" action="/index.php" method="get">
+                          <input type="hidden" name="m" value="home"/>
+                          <input type="hidden" name="c" value="charge"/>
+                          <input type="hidden" name="a" value="index"/>
+
+                          <div class="form-group">
+                              <label>客户姓名&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户姓名搜索" data-size="8" name="search_customer_id" id="search_customer_id" data-width="fit" multiple>
+                                  <volist name="customers" id="customer">
+                                      <if condition="$customer.selected eq 1">
+                                          <option value="{$customer.id}" selected>{$customer.name}</option>
+                                          <else />
+                                          <option value="{$customer.id}">{$customer.name}</option>
+                                      </if>
+
+                                  </volist>
+                              </select>
+                          </div>
+                          <if condition="$userInfo.jurisdiction eq 2">
+                              &nbsp;&nbsp;
+                              <div class="form-group">
+                                  <label>所属公司&nbsp;</label>
+                                  <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                                      <volist name="companys" id="company">
+                                          <if condition="$company.selected eq 1">
+                                              <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                                              <else />
+                                              <option value="{$company.company_id}">{$company.smallname}</option>
+                                          </if>
+                                      </volist>
+                                  </select>
+                              </div>
+                          </if>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" id="search-image"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                      </form>
+
+
+                  </div>
+              </div>
+
+
+
+          </div>
+        <div class="col-xs-12">
+
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <volist name="loans" id="loan">
+                                  <!--<div class="col-xs-6 col-md-3" style="width:160px;height: 200px;">-->
+                                      <!--<a href="#" class="thumbnail">-->
+                                          <!--<img src="{$loan.image}" class="img-responsive " style="width:150px;height:150px;">-->
+                                      <!--</a>-->
+                                  <!--</div>-->
+                                  <div class="col-md-2 col-sm-2" >
+                                      <a class="thumbnail" id="image-detail" attr-loan_id="{$loan.loan_id}" style="width:160px;height: 190px;cursor:pointer;">
+                                          <img src="{$loan.image}" class="img-responsive " style="width:150px;height:150px;">
+                                          <div style="position:absolute;left:25px;top:5px"><text style="color: white; font-size: 25px;">{$loan.coutImage}</text></div>
+                                          <div class="caption" >
+                                              <h6 class="text-center">{$loan.name}&nbsp;<small>{$loan[create_time]}</small></h6>
+                                              <!--<text class="text-center"><small>2016年4月15日</small></text>-->
+                                          </div>
+                                      </a>
+
+                                  </div>
+
+                              </volist>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+          <div class="pagination" >{$pageRes}</div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增记账记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>支出金额</label>
+                            <input type="text" class="form-control " name="money" placeholder="请输入支出金额" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>支出事项</label>
+                            <input type="text" class="form-control" name="matter" placeholder="请输入支出事项" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支出日期</label>
+                            <input type="text" class="form-control sandbox-container" name="gmt_create" id="gmt_create" placeholder="请选择支出时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark"></textarea>
+                        </div>
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <div class="form-group col-lg-12">
+                                <label>所属公司</label>
+                                <select class="form-control selectpicker show-tick" title="选择支出所属公司" data-size="8" name="company_id" >
+                                    <volist name="companys" id="company">
+                                        <option value="{$company.company_id}">{$company.smallname}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </if>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="charge" attr-a="checkAdd">新增记录</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">编辑记账记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-edit-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>支出金额</label>
+                            <input type="text" class="form-control " name="money" id="edit-money" placeholder="请输入支出金额" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>支出事项</label>
+                            <input type="text" class="form-control" name="matter" id="edit-matter" placeholder="请输入支出事项" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支出日期</label>
+                            <input type="text" class="form-control sandbox-container" name="gmt_create" id="edit-gmt_create" placeholder="请选择支出时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark" id="edit-remark"></textarea>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <input type="hidden"  name="charge_id" id="edit-charge_id">
+                            <button type="button" class="btn btn-primary btn-block" id="edit-record" attr-m="home" attr-c="charge" attr-a="checkEditValue">修改信息</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

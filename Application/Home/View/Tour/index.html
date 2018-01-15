@@ -1,0 +1,401 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        外访资料
+        <small>上门外访信息</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">上门外访信息</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+
+          <div class="col-xs-12">
+              <div class="panel panel-default">
+                  <div class="panel-body panel-body-footer">
+                      <form class="form-inline search-line" action="/index.php" method="get">
+                          <input type="hidden" name="m" value="home"/>
+                          <input type="hidden" name="c" value="charge"/>
+                          <input type="hidden" name="a" value="index"/>
+
+                          <div class="form-group">
+                              <label>客户姓名&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户姓名搜索" data-size="8" name="search_customer_id" id="search_customer_id" data-width="fit" multiple>
+                                  <volist name="customers" id="customer">
+                                      <if condition="$customer.selected eq 1">
+                                          <option value="{$customer.id}" selected>{$customer.name}</option>
+                                          <else />
+                                          <option value="{$customer.id}">{$customer.name}</option>
+                                      </if>
+
+                                  </volist>
+                              </select>
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>外访区域&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" title="按外访区域搜索" data-size="8" name="search_location_id" id="search_location_id" data-width="fit" multiple>
+                                  <volist name="locations" id="location">
+                                      <if condition="$location.selected eq 1">
+                                          <option value="{$location.location_id}" selected>{$location.name}</option>
+                                          <else />
+                                          <option value="{$location.location_id}">{$location.name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>外访经理&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_staff_id" id="search_staff_id" data-width="fit" multiple>
+                                  <volist name="staffs" id="staff">
+                                      <if condition="$staff.selected eq 1">
+                                          <option value="{$staff.staff_id}" selected>{$staff.staff_name}</option>
+                                          <else />
+                                          <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>收款方式&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" data-live-search="true" title="按收款方式搜索" data-size="8" name="search_staff_id" id="search_paystyle_id" data-width="fit" multiple>
+                                  <volist name="paystyles" id="pastyle">
+                                      <if condition="$pastyle.selected eq 1">
+                                          <option value="{$pastyle.style_id}" selected>{$pastyle.name}</option>
+                                          <else />
+                                          <option value="{$pastyle.style_id}">{$pastyle.name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>是否放款&nbsp;</label>
+                              <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_is_loan" id="search_is_loan" data-width="fit" multiple>
+                                  <volist name="isloans" id="isloan">
+                                      <if condition="$isloan.selected eq 1">
+                                          <option value="{$isloan.id}" selected>{$isloan.name}</option>
+                                          <else />
+                                          <option value="{$isloan.id}">{$isloan.name}</option>
+                                      </if>
+                                  </volist>
+                              </select>
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>外访时间&nbsp;</label>
+                              <input type="text" class="form-control" placeholder="按外访时间范围搜索" size="40" name="search_datepicker" value="{$input_datepicker}" id="reservationtime">
+                          </div>
+
+                          <if condition="$userInfo.jurisdiction eq 2">
+                              &nbsp;&nbsp;
+                              <div class="form-group">
+                                  <label>所属公司&nbsp;</label>
+                                  <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                                      <volist name="companys" id="company">
+                                          <if condition="$company.selected eq 1">
+                                              <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                                              <else />
+                                              <option value="{$company.company_id}">{$company.smallname}</option>
+                                          </if>
+                                      </volist>
+                                  </select>
+                              </div>
+                          </if>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" id="search-tour"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addInfoModal" id="add-info-modal"><i class="fa fa-plus fa-fw"></i> 添加记录</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" id="export-tour"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                      </form>
+
+
+                  </div>
+              </div>
+
+
+
+          </div>
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+
+                <h5><text class="text-info">支出金额合计：{$sum_money}（元）</text></h5>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th class="text-center">外访时间</th>
+                    <th class="text-center">客户姓名</th>
+                    <th class="text-center">手机号码</th>
+                    <th class="text-center">外访区域</th>
+                    <th class="text-center">外访经理</th>
+                    <th class="text-center">外访费用</th>
+                    <th class="text-center">收款方式</th>
+                    <th class="text-center">是否放款</th>
+                    <th class="text-center">备注信息</th>
+                    <if condition="$userInfo.jurisdiction eq 2">
+                        <th class="text-center">所属公司</th>
+                    </if>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="tours" id="tour">
+                    <tr>
+                        <td class="text-center">{$tour.gmt_tour}</td>
+                        <td class="text-center">{$tour.customer_name}</td>
+                        <td class="text-center">{$tour.customer_phone}</td>
+                        <td class="text-center">{$tour.location_name}</td>
+                        <td class="text-center">{$tour.staff_name}</td>
+                        <td class="text-center">{$tour.money}</td>
+                        <td class="text-center">{$tour.paystyle_name}</td>
+                        <td class="text-center">
+                            <if condition="$tour.loan_id neq 0">
+                                <a href="{:U('home/loan/index')}&loan_id={$tour.loan_id}">{$tour.is_loan}</a>
+                                <else />
+                                {$tour.is_loan}
+                            </if>
+                            </td>
+                        <td class="text-center">{$tour.remark}</td>
+
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <td class="text-center">{$tour.company_name}</td>
+                        </if>
+                        <td class="text-center"><span id="edit-tour" attr-id="{$tour.tour_id}" attr-m="home" attr-c="tour" attr-a="editTour" data-toggle="modal" data-target="#editInfoModal"><i class="fa fa-edit fa-fw"></i></span>&nbsp;<span id="delete-info" attr-id="{$tour.tour_id}" attr-name="{$tour.customer_name}的外访记录" attr-m="home" attr-c="tour" attr-a="deleteTour"><i class="fa fa-trash-o fa-fw"></i></span></td>
+                    </tr>
+                </volist>
+                </tbody>
+              </table>
+                <div class="pagination" >{$pageRes}</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增记账记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>客户姓名</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户姓名" data-size="8" id="customer_id" name="customer_id">
+                                <volist name="customers" id="customer">
+                                    <option value="{$customer.id}">{$customer.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访区域</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访区域" data-size="8" id="location_id" name="location_id" >
+                                <volist name="locations" id="location">
+                                    <option value="{$location.location_id}">{$location.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访经理</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" id="staff_id" name="staff_id" >
+                                <volist name="staffs" id="staff">
+                                    <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访费用</label>
+                            <input type="text" class="form-control " name="money" placeholder="请输入外访费用" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支付方式</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择支付方式" data-size="8" id="style_id" name="style_id" >
+                                <volist name="paystyles" id="paystyle">
+                                    <option value="{$paystyle.style_id}">{$paystyle.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+
+
+
+                        <div class="form-group col-lg-12">
+                            <label class="radio-inline">
+                                <input type="radio" name="is_loan" id="is_loan" value="0" checked> 未放款
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="is_loan" id="no_loan" value="1"> 已放款
+                            </label>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访时间</label>
+                            <input type="text" class="form-control sandbox-container" name="gmt_tour" placeholder="请选择外访时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark"></textarea>
+                        </div>
+
+
+
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <div class="form-group col-lg-12">
+                                <label>所属公司</label>
+                                <select class="form-control selectpicker show-tick" title="选择支出所属公司" data-size="8" name="company_id" >
+                                    <volist name="companys" id="company">
+                                        <option value="{$company.company_id}">{$company.smallname}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </if>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="tour" attr-a="checkAdd">新增记账记录</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">编辑外访记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-edit-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>客户姓名</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户姓名" data-size="8" id="edit-customer_id" name="customer_id">
+                                <volist name="customers" id="customer">
+                                    <option value="{$customer.id}">{$customer.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访区域</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访区域" data-size="8" id="edit-location_id" name="location_id" >
+                                <volist name="locations" id="location">
+                                    <option value="{$location.location_id}">{$location.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访经理</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" id="edit-staff_id" name="staff_id" >
+                                <volist name="staffs" id="staff">
+                                    <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访费用</label>
+                            <input type="text" class="form-control " name="money" placeholder="请输入外访费用" id="edit-money" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>支付方式</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择支付方式" data-size="8" id="edit-style_id" name="style_id" >
+                                <volist name="paystyles" id="paystyle">
+                                    <option value="{$paystyle.style_id}">{$paystyle.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label class="radio-inline">
+                                <input type="radio" name="is_loan" id="edit-no_loan" value="0"> 未放款
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="is_loan" id="edit-is_loan" value="1"> 已放款
+                            </label>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>外访时间</label>
+                            <input type="text" class="form-control sandbox-container" name="gmt_tour" placeholder="请选择外访时间" id="edit-gmt_tour">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark" id="edit-remark"></textarea>
+                        </div>
+                        <input type="hidden" id="edit-tour_id" name="tour_id">
+                        <div class="form-group col-lg-12">
+                            <input type="hidden"  name="charge_id" id="edit-charge_id">
+                            <button type="button" class="btn btn-primary btn-block" id="edit-record" attr-m="home" attr-c="tour" attr-a="checkEditValue">修改信息</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

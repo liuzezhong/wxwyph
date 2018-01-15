@@ -1,0 +1,180 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        新增借款信息
+        <small>请仔细填写</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#">借款记录</a></li>
+        <li class="active">添加记录</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+          <!-- /.box -->
+          <!-- general form elements disabled -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">请填写借款记录信息</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form" id="baoju-form">
+                <!-- text input -->
+                <div class="form-group col-lg-6">
+                  <label>客户姓名</label>
+                  <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户姓名" data-size="8" id="customer_id" name="customer_id" onchange="addLoanSelectCustomer()">
+                    <volist name="customers" id="customer">
+                      <option value="{$customer.id}">{$customer.name}</option>
+                    </volist>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>手机号码</label>
+                  <input type="text" class="form-control " id="phone" placeholder="请输入手机号码">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>身份证号码</label>
+                  <input type="text" class="form-control" id="idcard" placeholder="请输入身份证号码" >
+                </div>
+
+                <div class="form-group col-lg-6">
+                  <label>产品类型</label>
+                  <select class="form-control selectpicker show-tick" title="请选择产品类型" data-size="5" name="product_id" id="product_id" onchange="addLoanSelectProduct()">
+                    <volist name="products" id="product">
+                      <option value="{$product.product_id}">{$product.product_name}</option>
+                    </volist>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>还款时间</label>
+                  <select class="form-control" id="cycle_id"  >
+                    <option value="0">请选择</option>
+                    <volist name="cycles" id="cycle">
+                      <option value="{$cycle.cycle_id}">{$cycle.cycle_name}</option>
+                    </volist>
+                  </select>
+                </div>
+                <div id="cycle-append">
+
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>贷款金额</label>
+                  <input type="text" class="form-control automatic " name="principal" id="principal" placeholder="请输入贷款本金">
+                </div>
+                <div class="form-group col-lg-6">
+                   <label>每期利息</label>
+                   <input type="text" class="form-control automatic" name="cyc_interest" id="cyc_interest" placeholder="请输入每期产生利息">
+                </div>
+                <div class="form-group col-lg-6">
+                   <label>还款周期</label>
+                   <input type="text" class="form-control automatic" name="cyclical" id="cyclical" placeholder="请输入还款周期数">
+                </div>
+                <!-- textarea -->
+                <div class="form-group col-lg-6">
+                  <label>每期还款</label>
+                  <input type="text" class="form-control" name="cyc_principal" id="cyc_principal" placeholder="请输入每期应还金额">
+                </div>
+                <div class="form-group col-lg-6" style="display: none">
+                  <label>预计利息</label>
+                  <input type="text" class="form-control" name="interest" id="interest" placeholder="请输入预计贷款利息">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>手续费</label>
+                  <select class="form-control selectpicker show-tick" multiple title="请选择手续费项目" data-selected-text-format="count > 4" data-size="5" id="poundage">
+                    <volist name="poundages" id="poundage">
+                      <option value="{$poundage.poundage_id}">{$poundage.poundage_name}</option>
+                    </volist>
+                  </select>
+                  <!--<input type="text" class="form-control" name="poundage" placeholder="请输入手续费">-->
+                </div>
+                <div id="poundage-append">
+
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>保证金</label>
+                  <input type="text" class="form-control automatic" name="bond" id="bond" placeholder="请输入保证金金额">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>同行返点</label>
+                  <input type="text" class="form-control automatic" name="rebate" id="rebate" placeholder="请输入同行返点金额">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>实际到账</label>
+                  <input type="text" class="form-control" name="arrival" id="arrival" placeholder="请输入客户实际到账金额">
+                </div>
+                <!-- select -->
+                <div class="form-group col-lg-6">
+                  <label>公司支出</label>
+                  <input type="text" class="form-control" name="expenditure" id="expenditure" placeholder="请输入公司实际支出金额">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>客户经理</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户经理" data-size="8" name="staff_id">
+                        <volist name="staffs" id="staff">
+                            <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                        </volist>
+                    </select>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>外访经理</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" name="foreign_id" id="foreign_id" onchange="addTourInfo()">
+                        <volist name="staffs" id="staff">
+                            <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                        </volist>
+                    </select>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label>借贷日期</label>
+                  <input type="text" class="form-control sandbox-container" name="create_time" placeholder="请选择贷款时间">
+                </div>
+                <!--<if condition="$userInfo.jurisdiction eq 2">
+                  <div class="form-group col-lg-6">
+                    <label>所属公司</label>
+                    <select class="form-control selectpicker show-tick" title="选择借款所属公司" data-size="8" name="company_id" >
+                      <volist name="companys" id="company">
+                        <option value="{$company.company_id}">{$company.smallname}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </if>-->
+                <div class="form-group col-lg-12">
+                  <label>上传外访资料（可多张）</label>
+                  <input id="file-0c" class="file" type="file" multiple data-preview-file-type="any">
+                </div>
+                <div id="hide-image-div">
+                </div>
+                <div class="form-group col-lg-12">
+                  <button type="button" class="btn btn-primary btn-block" id="add-record-loan" attr-m="home" attr-c="loan" attr-a="checkAdd"><i class="fa fa-check"></i>&nbsp;确认提交</button>
+                </div>
+
+
+              </form>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<include file="Index/footer" />

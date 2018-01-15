@@ -1,0 +1,52 @@
+[ 2017-11-17T10:07:29+08:00 ] 127.0.0.1 /index.php?m=home&c=customer&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `bj_customer` ORDER BY create_time asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 3 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001124s ]
+
+[ 2017-11-17T10:07:30+08:00 ] 127.0.0.1 /index.php?m=home&c=customer&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_customer` ORDER BY create_time asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_staff`  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+

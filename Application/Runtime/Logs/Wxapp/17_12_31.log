@@ -1,0 +1,12 @@
+[ 2017-12-31T00:01:06+08:00 ] 192.168.2.100 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'spRuLfQxlCuZWOWN' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "ovor40Li5z4dgIasMrUyKScbqbSo" ) LIMIT 1   [ RunTime:0.0002s ]
+

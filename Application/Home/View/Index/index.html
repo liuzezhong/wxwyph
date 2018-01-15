@@ -1,0 +1,261 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        本月数据概览
+        <small>数据概览</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>{$sumLoanExpenditure}</h3>
+
+              <p>本月放款总额（元）</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">查看更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>{$sumRepayRmoney}<sup style="font-size: 20px"></sup></h3>
+
+              <p>本月收款总额（元）</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer">查看更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>{$countLoanByDate}</h3>
+
+              <p>本月借款人次</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">查看更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>{$sumRepayLmoney}</h3>
+
+              <p>本月利润总额（元）</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">查看更多 <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <!-- /.row -->
+      <!-- Main row -->
+      <section class="content">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-body panel-body-footer">
+                <form class="form-inline search-line" action="/index.php" method="get">
+                  <input type="hidden" name="m" value="home"/>
+                  <input type="hidden" name="c" value="charge"/>
+                  <input type="hidden" name="a" value="index"/>
+
+                  <div class="form-group">
+                    <label>客户姓名&nbsp;</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户姓名搜索" data-size="8" name="search_customer_id" id="search_customer_id" data-width="fit" multiple>
+                      <volist name="customers" id="customer">
+                        <if condition="$customer.selected eq 1">
+                          <option value="{$customer.id}" selected>{$customer.name}</option>
+                          <else />
+                          <option value="{$customer.id}">{$customer.name}</option>
+                        </if>
+
+                      </volist>
+                    </select>
+                  </div>
+                  &nbsp;&nbsp;
+                  <div class="form-group">
+                    <label>外访区域&nbsp;</label>
+                    <select class="form-control selectpicker show-tick" title="按外访区域搜索" data-size="8" name="search_location_id" id="search_location_id" data-width="fit" multiple>
+                      <volist name="locations" id="location">
+                        <if condition="$location.selected eq 1">
+                          <option value="{$location.location_id}" selected>{$location.name}</option>
+                          <else />
+                          <option value="{$location.location_id}">{$location.name}</option>
+                        </if>
+                      </volist>
+                    </select>
+                  </div>
+
+                  &nbsp;&nbsp;
+                  <div class="form-group">
+                    <label>外访经理&nbsp;</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_staff_id" id="search_staff_id" data-width="fit" multiple>
+                      <volist name="staffs" id="staff">
+                        <if condition="$staff.selected eq 1">
+                          <option value="{$staff.staff_id}" selected>{$staff.staff_name}</option>
+                          <else />
+                          <option value="{$staff.staff_id}">{$staff.staff_name}</option>
+                        </if>
+                      </volist>
+                    </select>
+                  </div>
+                  &nbsp;&nbsp;
+                  <div class="form-group">
+                    <label>收款方式&nbsp;</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按收款方式搜索" data-size="8" name="search_staff_id" id="search_paystyle_id" data-width="fit" multiple>
+                      <volist name="paystyles" id="pastyle">
+                        <if condition="$pastyle.selected eq 1">
+                          <option value="{$pastyle.style_id}" selected>{$pastyle.name}</option>
+                          <else />
+                          <option value="{$pastyle.style_id}">{$pastyle.name}</option>
+                        </if>
+                      </volist>
+                    </select>
+                  </div>
+                  &nbsp;&nbsp;
+                  <div class="form-group">
+                    <label>是否放款&nbsp;</label>
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_is_loan" id="search_is_loan" data-width="fit" multiple>
+                      <volist name="isloans" id="isloan">
+                        <if condition="$isloan.selected eq 1">
+                          <option value="{$isloan.id}" selected>{$isloan.name}</option>
+                          <else />
+                          <option value="{$isloan.id}">{$isloan.name}</option>
+                        </if>
+                      </volist>
+                    </select>
+                  </div>
+                  &nbsp;&nbsp;
+                  <div class="form-group">
+                    <label>外访时间&nbsp;</label>
+                    <input type="text" class="form-control" placeholder="按外访时间范围搜索" size="40" name="search_datepicker" value="{$input_datepicker}" id="reservationtime">
+                  </div>
+
+                  <if condition="$userInfo.jurisdiction eq 2">
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                      <label>所属公司&nbsp;</label>
+                      <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                        <volist name="companys" id="company">
+                          <if condition="$company.selected eq 1">
+                            <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                            <else />
+                            <option value="{$company.company_id}">{$company.smallname}</option>
+                          </if>
+                        </volist>
+                      </select>
+                    </div>
+                  </if>
+                  &nbsp;&nbsp;
+                  <button type="button" class="btn btn-info" id="search-tour"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                  &nbsp;&nbsp;
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addInfoModal" id="add-info-modal"><i class="fa fa-plus fa-fw"></i> 添加记录</button>
+                  &nbsp;&nbsp;
+                  <button type="button" class="btn btn-default" id="export-tour"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                </form>
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+
+                <h5><text class="text-info">支出金额合计：{$sum_money}（元）</text></h5>
+
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th class="text-center">月份</th>
+                    <th class="text-center">放款笔数</th>
+                    <th class="text-center">放款支出</th>
+                    <th class="text-center">还款笔数</th>
+                    <th class="text-center">月收本金</th>
+                    <th class="text-center">月收利息</th>
+                    <th class="text-center">月收违约金</th>
+                    <th class="text-center">月收款总和</th>
+                    <th class="text-center">现金支出</th>
+                    <th class="text-center">每月工资</th>
+                    <th class="text-center">每月社保</th>
+                    <th class="text-center">利润总额</th>
+
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="text-center">2018年2月</td>
+                    <td class="text-center">212</td>
+                    <td class="text-center">823823元</td>
+                    <td class="text-center">543</td>
+                    <td class="text-center">763232元</td>
+                    <td class="text-center">232423元</td>
+                    <td class="text-center">24241元</td>
+                    <td class="text-center">5352321元</td>
+                    <td class="text-center">425232元</td>
+                    <td class="text-center">42452元</td>
+                    <td class="text-center">6524元</td>
+                    <td class="text-center">232423元</td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="pagination" >{$pageRes}</div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+
+
+      </section>
+      <!-- /.row (main row) -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<include file="Index/footer" />

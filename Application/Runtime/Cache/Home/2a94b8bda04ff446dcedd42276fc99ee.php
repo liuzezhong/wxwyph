@@ -32,14 +32,14 @@
     <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="Public/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <link rel="stylesheet" href="Public/plugin/bootstrap-fileinput/css/fileinput.css">
+    <link rel="stylesheet" href="Public/Plugin/bootstrap-fileinput/css/fileinput.css">
 
     <link rel="stylesheet" href="Public/Plugin/bootstrap-select/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="Public/Home/css/common.css">
     <link rel="stylesheet" href="Public/Home/css/pagination.css">
 
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -347,11 +347,17 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">主菜单</li>
+                <li class="header">功能面板</li>
                 <li <?php if(($controller_name == 'Index') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                     <a href="<?php echo U('home/index/index');?>">
-                        <i class="fa fa-leanpub"></i> <span>公司概览</span>
+                        <i class="fa fa-leanpub"></i> <span>业务总览</span>
                     </a>
+                </li>
+
+                <li <?php if(($controller_name == 'Profit') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/profit/index');?>">
+                    <i class="fa fa-ticket"></i> <span>利润报表</span>
+                </a>
                 </li>
 
                 <li <?php if(($controller_name == 'collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
@@ -424,6 +430,11 @@
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
+                </a>
+                </li>
+                <li <?php if(($controller_name == 'Wage') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/wage/index');?>">
+                    <i class="fa fa-id-badge"></i> <span>工资管理</span>
                 </a>
                 </li>
                 <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
@@ -563,9 +574,9 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3><?php echo ($sumLoanExpenditure); ?></h3>
+              <h3><?php echo ($sumOfExpend); ?></h3>
 
-              <p>本月放款总额（元）</p>
+              <p>放款总支出总计（元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -578,9 +589,9 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3><?php echo ($sumRepayRmoney); ?><sup style="font-size: 20px"></sup></h3>
+              <h3><?php echo ($sumOfRmoney); ?><sup style="font-size: 20px"></sup></h3>
 
-              <p>本月收款总额（元）</p>
+              <p>收款总金额总计（元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -593,9 +604,9 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3><?php echo ($countLoanByDate); ?></h3>
+              <h3><?php echo ($sumOfOther); ?></h3>
 
-              <p>本月借款人次</p>
+              <p>现金工资支出总计 （元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -608,9 +619,9 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3><?php echo ($sumRepayLmoney); ?></h3>
+              <h3><?php echo ($sumOfProfit); ?></h3>
 
-              <p>本月利润总额（元）</p>
+              <p>利润总额总计（元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -633,55 +644,15 @@
                   <input type="hidden" name="c" value="charge"/>
                   <input type="hidden" name="a" value="index"/>
 
-                  <div class="form-group">
-                    <label>客户姓名&nbsp;</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户姓名搜索" data-size="8" name="search_customer_id" id="search_customer_id" data-width="fit" multiple>
-                      <?php if(is_array($customers)): $i = 0; $__LIST__ = $customers;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$customer): $mod = ($i % 2 );++$i; if($customer["selected"] == 1): ?><option value="<?php echo ($customer["id"]); ?>" selected><?php echo ($customer["name"]); ?></option>
-                          <?php else: ?>
-                          <option value="<?php echo ($customer["id"]); ?>"><?php echo ($customer["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
-                  </div>
-                  &nbsp;&nbsp;
-                  <div class="form-group">
-                    <label>外访区域&nbsp;</label>
-                    <select class="form-control selectpicker show-tick" title="按外访区域搜索" data-size="8" name="search_location_id" id="search_location_id" data-width="fit" multiple>
-                      <?php if(is_array($locations)): $i = 0; $__LIST__ = $locations;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$location): $mod = ($i % 2 );++$i; if($location["selected"] == 1): ?><option value="<?php echo ($location["location_id"]); ?>" selected><?php echo ($location["name"]); ?></option>
-                          <?php else: ?>
-                          <option value="<?php echo ($location["location_id"]); ?>"><?php echo ($location["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
-                  </div>
 
-                  &nbsp;&nbsp;
                   <div class="form-group">
-                    <label>外访经理&nbsp;</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_staff_id" id="search_staff_id" data-width="fit" multiple>
-                      <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i; if($staff["selected"] == 1): ?><option value="<?php echo ($staff["staff_id"]); ?>" selected><?php echo ($staff["staff_name"]); ?></option>
-                          <?php else: ?>
-                          <option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
+                    <label>开始年月&nbsp;</label>
+                      <input type="text" class="form-control sandbox-container-spacile" placeholder="请选择开始年月"  name="search_datepicker_start" id="search_datepicker_start" value="<?php echo ($input_datepicker_start); ?>" >
                   </div>
                   &nbsp;&nbsp;
                   <div class="form-group">
-                    <label>收款方式&nbsp;</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按收款方式搜索" data-size="8" name="search_staff_id" id="search_paystyle_id" data-width="fit" multiple>
-                      <?php if(is_array($paystyles)): $i = 0; $__LIST__ = $paystyles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pastyle): $mod = ($i % 2 );++$i; if($pastyle["selected"] == 1): ?><option value="<?php echo ($pastyle["style_id"]); ?>" selected><?php echo ($pastyle["name"]); ?></option>
-                          <?php else: ?>
-                          <option value="<?php echo ($pastyle["style_id"]); ?>"><?php echo ($pastyle["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
-                  </div>
-                  &nbsp;&nbsp;
-                  <div class="form-group">
-                    <label>是否放款&nbsp;</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按外访经理搜索" data-size="8" name="search_is_loan" id="search_is_loan" data-width="fit" multiple>
-                      <?php if(is_array($isloans)): $i = 0; $__LIST__ = $isloans;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$isloan): $mod = ($i % 2 );++$i; if($isloan["selected"] == 1): ?><option value="<?php echo ($isloan["id"]); ?>" selected><?php echo ($isloan["name"]); ?></option>
-                          <?php else: ?>
-                          <option value="<?php echo ($isloan["id"]); ?>"><?php echo ($isloan["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
-                  </div>
-                  &nbsp;&nbsp;
-                  <div class="form-group">
-                    <label>外访时间&nbsp;</label>
-                    <input type="text" class="form-control" placeholder="按外访时间范围搜索" size="40" name="search_datepicker" value="<?php echo ($input_datepicker); ?>" id="reservationtime">
+                    <label>截止年月&nbsp;</label>
+                    <input type="text" class="form-control sandbox-container-spacile" placeholder="请选择截止年月"  name="search_datepicker_end" id="search_datepicker_end" value="<?php echo ($input_datepicker_end); ?>" >
                   </div>
 
                   <?php if($userInfo["jurisdiction"] == 2): ?>&nbsp;&nbsp;
@@ -694,11 +665,8 @@
                       </select>
                     </div><?php endif; ?>
                   &nbsp;&nbsp;
-                  <button type="button" class="btn btn-info" id="search-tour"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
-                  &nbsp;&nbsp;
-                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addInfoModal" id="add-info-modal"><i class="fa fa-plus fa-fw"></i> 添加记录</button>
-                  &nbsp;&nbsp;
-                  <button type="button" class="btn btn-default" id="export-tour"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                  <button type="button" class="btn btn-info" id="search-lirun"><i class="fa fa-search fa-fw"></i> 立即搜索</button>&nbsp;&nbsp;
+                  <button type="button" class="btn btn-default" id="export-lirun"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
                 </form>
 
 
@@ -710,50 +678,53 @@
           </div>
           <div class="col-xs-12">
             <div class="box">
-              <div class="box-header">
-                <!--<h3 class="box-title">Data Table With Full Features</h3>-->
 
-                <h5><text class="text-info">支出金额合计：<?php echo ($sum_money); ?>（元）</text></h5>
-
-              </div>
               <!-- /.box-header -->
               <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th class="text-center">月份</th>
-                    <th class="text-center">放款笔数</th>
-                    <th class="text-center">放款支出</th>
-                    <th class="text-center">还款笔数</th>
-                    <th class="text-center">月收本金</th>
-                    <th class="text-center">月收利息</th>
-                    <th class="text-center">月收违约金</th>
-                    <th class="text-center">月收款总和</th>
-                    <th class="text-center">现金支出</th>
-                    <th class="text-center">每月工资</th>
-                    <th class="text-center">每月社保</th>
-                    <th class="text-center">利润总额</th>
+                    <th class="text-center">公司名称</th>
+                    <th class="text-center">今日单量</th>
+                    <th class="text-center">本月单量</th>
+                    <th class="text-center">本月单量</th>
+                    <th class="text-center">月放款总支出（元）</th>
+                    <!--<th class="text-center">还款笔数（次）</th>-->
+                    <!--<th class="text-center">月收本金（元）</th>-->
+                    <!--<th class="text-center">月收利息（元）</th>-->
+                    <!--<th class="text-center">月收违约金（元）</th>-->
+                    <th class="text-center">月收款总金额（元）</th>
+                    <th class="text-center">月外访总收入（元）</th>
+                    <th class="text-center">月现金支出（元）</th>
+                    <th class="text-center">月工资社保（元）</th>
+                    <th class="text-center">月利润总额（元）</th>
 
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td class="text-center">2018年2月</td>
-                    <td class="text-center">212</td>
-                    <td class="text-center">823823元</td>
-                    <td class="text-center">543</td>
-                    <td class="text-center">763232元</td>
-                    <td class="text-center">232423元</td>
-                    <td class="text-center">24241元</td>
-                    <td class="text-center">5352321元</td>
-                    <td class="text-center">425232元</td>
-                    <td class="text-center">42452元</td>
-                    <td class="text-center">6524元</td>
-                    <td class="text-center">232423元</td>
-                  </tr>
+                  <?php if(is_array($profits)): $i = 0; $__LIST__ = $profits;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$profit): $mod = ($i % 2 );++$i;?><tr>
+                      <td class="text-center"><?php echo ($profit["month"]); ?></td>
+                      <td class="text-center"><?php echo ($profit["loanTimes"]); ?></td>
+                      <td class="text-center"><?php echo ($profit["loanExpend"]); ?></td>
+                      <!--<td class="text-center"><?php echo ($profit["repayTimes"]); ?></td>-->
+                      <!--<td class="text-center"><?php echo ($profit["sumPrin"]); ?></td>-->
+                      <!--<td class="text-center"><?php echo ($profit["sumInter"]); ?></td>-->
+                      <!--<td class="text-center"><?php echo ($profit["sumBmoney"]); ?></td>-->
+                      <td class="text-center"><?php echo ($profit["sumRmoney"]); ?></td>
+                      <td class="text-center"><?php echo ($profit["sumTour"]); ?></td>
+                      <td class="text-center"><?php echo ($profit["sumCharge"]); ?></td>
+                      <td class="text-center"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center">
+                        <?php if($profit["profit"] < 0): ?><text class="text-danger"><?php echo ($profit["profit"]); ?></text>
+                          <?php else: ?>
+                          <text class="text-success"><?php echo ($profit["profit"]); ?></text><?php endif; ?>
+
+                        </td>
+
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
                   </tbody>
                 </table>
-                <div class="pagination" ><?php echo ($pageRes); ?></div>
               </div>
               <!-- /.box-body -->
             </div>
@@ -1023,8 +994,8 @@
 <script src="Public/Plugin/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="Public/Plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js"></script>
 
-<script src="Public/plugin/bootstrap-fileinput/js/fileinput.js"></script>
-<script src="Public/plugin/bootstrap-fileinput/js/locales/zh.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/fileinput.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/locales/zh.js"></script>
 
 <script src="Public/Dialog/layer/layer.js"></script>
 <script src="Public/Dialog/dialog.js"></script>

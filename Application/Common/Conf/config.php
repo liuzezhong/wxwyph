@@ -3,6 +3,7 @@ return array(
 	//'配置项'=>'配置值'
     'URL_MODEL' => 0,    //PATHINFO模式为1，0为默认模式
     'LOAD_EXT_CONFIG' => 'db',
+    'DEFAULT_CONTROLLER' => 'Collection',
     'WECHAT_SMALL_APPLICATION' => array(
         'APPID' => 'wx0343be3aa3adeb71',
         'APPSECRET' => '7d09c7cc7eaf7540d5ea1383eb3b82a6',

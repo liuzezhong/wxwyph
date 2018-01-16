@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="Public/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <link rel="stylesheet" href="Public/plugin/bootstrap-fileinput/css/fileinput.css">
+    <link rel="stylesheet" href="Public/Plugin/bootstrap-fileinput/css/fileinput.css">
 
     <link rel="stylesheet" href="Public/Plugin/bootstrap-select/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="Public/Home/css/common.css">
@@ -424,6 +424,11 @@
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
+                </a>
+                </li>
+                <li <?php if(($controller_name == 'Wage') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/wage/index');?>">
+                    <i class="fa fa-id-badge"></i> <span>工资管理</span>
                 </a>
                 </li>
                 <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
@@ -991,8 +996,8 @@
 <script src="Public/Plugin/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="Public/Plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js"></script>
 
-<script src="Public/plugin/bootstrap-fileinput/js/fileinput.js"></script>
-<script src="Public/plugin/bootstrap-fileinput/js/locales/zh.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/fileinput.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/locales/zh.js"></script>
 
 <script src="Public/Dialog/layer/layer.js"></script>
 <script src="Public/Dialog/dialog.js"></script>

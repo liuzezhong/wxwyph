@@ -32,12 +32,14 @@
     <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="Public/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="Public/Plugin/bootstrap-fileinput/css/fileinput.css">
 
     <link rel="stylesheet" href="Public/Plugin/bootstrap-select/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="Public/Home/css/common.css">
     <link rel="stylesheet" href="Public/Home/css/pagination.css">
 
-
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -348,7 +350,7 @@
                 <li class="header">主菜单</li>
                 <li <?php if(($controller_name == 'Index') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                     <a href="<?php echo U('home/index/index');?>">
-                        <i class="fa fa-area-chart"></i> <span>公司概览</span>
+                        <i class="fa fa-leanpub"></i> <span>公司概览</span>
                     </a>
                 </li>
 
@@ -407,9 +409,31 @@
                 </a>
                 </li>
 
+                <li <?php if(($controller_name == 'Tour') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/tour/index');?>">
+                    <i class="fa fa-car"></i> <span>外访记录</span>
+                </a>
+                </li>
+
+                <li <?php if(($controller_name == 'Overdue') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/overdue/index');?>">
+                    <i class="fa fa-firefox"></i> <span>逾期汇总</span>
+                </a>
+                </li>
+
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
+                </a>
+                </li>
+                <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/message/index');?>">
+                    <i class="fa fa-database"></i> <span>短信记录</span>
+                </a>
+                </li>
+                <li <?php if(($controller_name == 'Image') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/image/index');?>">
+                    <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
                 </li>
                 <!--<li class="treeview">-->
@@ -868,6 +892,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="Public/Plugin/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="Public/Plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js"></script>
+
+<script src="Public/Plugin/bootstrap-fileinput/js/fileinput.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/locales/zh.js"></script>
 
 <script src="Public/Dialog/layer/layer.js"></script>
 <script src="Public/Dialog/dialog.js"></script>

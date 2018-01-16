@@ -145,6 +145,14 @@ class LoanModel extends Model {
         return $res;
     }
 
+    public function sumLoanExpenditureByCondition($condition = array()) {
+
+        // 去除逻辑删除的数据
+        $condition['is_delete'] = array('neq',1);
+        $res =  $this->_db->where($condition)->sum('expenditure');
+        return $res;
+    }
+
     public function sumLoansByCondition($condition = array(), $filed = '') {
         // 去除逻辑删除的数据
         $condition['is_delete'] = array('neq',1);

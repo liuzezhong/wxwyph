@@ -9,6 +9,16 @@ $('.sandbox-container').datepicker({
     format:"yyyy-mm-dd"
 });
 
+$('.sandbox-container-spacile').datepicker({
+    language: "zh-CN",
+    orientation: "bottom auto",
+    todayHighlight: true,
+    format:"yyyy-mm",
+    startView: 1,
+    maxViewMode: 3,
+    minViewMode:1,
+});
+
 $('.selectpicker').selectpicker({
 
 });
@@ -401,6 +411,37 @@ $('body').on('click','.text-center #edit-charge',function () {
             $('#edit-gmt_create').val(result.charge.gmt_create);
             $('#edit-remark').val(result.charge.remark);
             $('#edit-charge_id').val(result.charge.charge_id);
+
+
+        }
+    },'JSON');
+});
+
+$('body').on('click','.text-center #edit-wageinfo',function () {
+    $('#baoju-form')[0].reset();
+
+    var id = $(this).attr('attr-id');
+    var m = $(this).attr('attr-m');
+    var c = $(this).attr('attr-c');
+    var a = $(this).attr('attr-a');
+
+    var postData = {
+        'id' : id,
+    };
+    var postUrl = "index.php?m="+ m + "&c=" + c + "&a=" + a;
+
+    $.post(postUrl,postData,function (result) {
+        if(result.status == 0) {
+            return dialog.error(result.message);
+        }
+        if(result.status == 1) {
+            console.log(result);
+            $('#edit-gmt_wage').val(result.wage.gmt_wage);
+            $('#edit-number').val(result.wage.number);
+            $('#edit-wage').val(result.wage.wage);
+            $('#edit-insur').val(result.wage.insur);
+            $('#edit-remark').val(result.wage.remark);
+            $('#edit-wage_id').val(result.wage.wage_id);
 
 
         }
@@ -1413,6 +1454,42 @@ $('#search-tour').on('click',function () {
     var getUrl = '/index.php?m=home&c=tour&a=index&search_datepicker=' + reservationtime + '&company_id=' + company_id + '&customer_id=' + customer_id + '&location_id=' + location_id
         + '&staff_id=' + staff_id + '&staff_id=' + staff_id + '&staff_id=' + staff_id + '&paystyle_id=' + paystyle_id + '&is_loan=' + is_loan;
 
+    window.location.href =getUrl;
+
+});
+
+$('#search-lirun').on('click',function () {
+    var search_datepicker_start = $('#search_datepicker_start').val();
+    var search_datepicker_end = $('#search_datepicker_end').val();
+    var company_id = $('#search_company').val();
+    var getUrl = '/index.php?m=home&c=index&a=index&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
+    window.location.href =getUrl;
+
+});
+
+$('#search-wage').on('click',function () {
+    var search_datepicker_start = $('#search_datepicker_start').val();
+    var search_datepicker_end = $('#search_datepicker_end').val();
+    var company_id = $('#search_company').val();
+    var getUrl = '/index.php?m=home&c=wage&a=index&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
+    window.location.href =getUrl;
+
+});
+
+$('#export-wage').on('click',function () {
+    var search_datepicker_start = $('#search_datepicker_start').val();
+    var search_datepicker_end = $('#search_datepicker_end').val();
+    var company_id = $('#search_company').val();
+    var getUrl = '/index.php?m=home&c=wage&a=export&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
+    window.location.href =getUrl;
+
+});
+
+$('#export-lirun').on('click',function () {
+    var search_datepicker_start = $('#search_datepicker_start').val();
+    var search_datepicker_end = $('#search_datepicker_end').val();
+    var company_id = $('#search_company').val();
+    var getUrl = '/index.php?m=home&c=index&a=export&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
     window.location.href =getUrl;
 
 });

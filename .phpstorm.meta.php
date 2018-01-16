@@ -18,6 +18,7 @@
 			'Loan' instanceof Wxapp\Model\LoanModel,
 			'Repayments' instanceof Wxapp\Model\RepaymentsModel,
 			'Admin' instanceof Home\Model\AdminModel,
+			'Wage' instanceof Home\Model\WageModel,
 			'Register' instanceof Home\Model\RegisterModel,
 			'Product' instanceof Wxapp\Model\ProductModel,
 			'Charge' instanceof Home\Model\ChargeModel,

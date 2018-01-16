@@ -1,0 +1,247 @@
+<include file="Index/header" />
+<include file="Index/nav" />
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        工资管理
+        <small>员工工资记录表</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 工资管理</a></li>
+        <li><a href="#">员工工资记录表</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+
+          <div class="col-xs-12">
+              <div class="panel panel-default">
+                  <div class="panel-body panel-body-footer">
+                      <form class="form-inline search-line">
+
+                          <div class="form-group">
+                              <label>开始年月&nbsp;</label>
+                              <input type="text" class="form-control sandbox-container-spacile" placeholder="请选择开始年月"  name="search_datepicker_start" id="search_datepicker_start" value="{$input_datepicker_start}" >
+                          </div>
+                          &nbsp;&nbsp;
+                          <div class="form-group">
+                              <label>截止年月&nbsp;</label>
+                              <input type="text" class="form-control sandbox-container-spacile" placeholder="请选择截止年月"  name="search_datepicker_end" id="search_datepicker_end" value="{$input_datepicker_end}" >
+                          </div>
+
+                          <if condition="$userInfo.jurisdiction eq 2">
+                              &nbsp;&nbsp;
+                              <div class="form-group">
+                                  <label>所属公司&nbsp;</label>
+                                  <select class="form-control selectpicker show-tick" title="按所属公司搜索" data-size="8" name="search_department" id="search_company" data-width="fit" multiple>
+                                      <volist name="companys" id="company">
+                                          <if condition="$company.selected eq 1">
+                                              <option value="{$company.company_id}" selected>{$company.smallname}</option>
+                                              <else />
+                                              <option value="{$company.company_id}">{$company.smallname}</option>
+                                          </if>
+                                      </volist>
+                                  </select>
+                              </div>
+                          </if>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" id="search-wage"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addInfoModal" id="add-info-modal"><i class="fa fa-plus fa-fw"></i> 添加记录</button>
+                          &nbsp;&nbsp;
+                          <button type="button" class="btn btn-default" id="export-wage"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                      </form>
+
+
+                  </div>
+              </div>
+
+
+
+          </div>
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+
+                <h5><text class="text-info">工资社保合计：{$sumTotal}（元）</text></h5>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <!--<th class="text-center">还款ID</th>-->
+                    <!--<th class="text-center">借款ID</th>-->
+                    <th class="text-center">月份</th>
+                    <th class="text-center">员工数（人）</th>
+                    <th class="text-center">员工工资总额（元）</th>
+                    <th class="text-center">员工社保总额（元）</th>
+                    <th class="text-center">合计（元）</th>
+                    <th class="text-center">备注</th>
+                    <if condition="$userInfo.jurisdiction eq 2">
+                        <th class="text-center">所属公司</th>
+                    </if>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="wages" id="wage">
+                    <tr>
+                        <!--<td class="text-center">{$repayment.repayments_id}</td>-->
+                        <!--<td class="text-center">{$repayment.loan_id}</a></td>-->
+                        <td class="text-center">{$wage.gmt_wage}</td>
+                        <td class="text-center">{$wage.number}</td>
+                        <td class="text-center">{$wage.wage}</td>
+                        <td class="text-center">{$wage.insur}</td>
+                        <td class="text-center">{$wage.total}</td>
+                        <td class="text-center">{$wage.remark}</td>
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <td class="text-center">{$wage.company_name}</td>
+                        </if>
+                        <td class="text-center"><span id="edit-wageinfo" attr-id="{$wage.wage_id}" attr-m="home" attr-c="wage" attr-a="editWage" data-toggle="modal" data-target="#editInfoModal"><i class="fa fa-edit fa-fw"></i></span>&nbsp;<span id="delete-info" attr-id="{$wage.wage_id}" attr-name="{$wage.gmt_wage}的工资记录" attr-m="home" attr-c="wage" attr-a="deleteWage"><i class="fa fa-trash-o fa-fw"></i></span></td>
+                    </tr>
+                </volist>
+                </tbody>
+              </table>
+                <div class="pagination" >{$pageRes}</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增工资记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>所属年月</label>
+                            <input type="text" class="form-control sandbox-container-spacile" name="gmt_wage" id="gmt_wage" placeholder="请选择发放时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>员工数</label>
+                            <input type="text" class="form-control " name="number" placeholder="请输入员工人数" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>员工工资合计</label>
+                            <input type="text" class="form-control" name="wage" placeholder="请输入员工工资合计" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>员工社保合计</label>
+                            <input type="text" class="form-control" name="insur" placeholder="请输入员工社保合计">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark"></textarea>
+                        </div>
+                        <if condition="$userInfo.jurisdiction eq 2">
+                            <div class="form-group col-lg-12">
+                                <label>所属公司</label>
+                                <select class="form-control selectpicker show-tick" title="选择支出所属公司" data-size="8" name="company_id" >
+                                    <volist name="companys" id="company">
+                                        <option value="{$company.company_id}">{$company.smallname}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </if>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="wage" attr-a="checkAdd">新增记录</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">编辑工资记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form role="form" id="baoju-edit-form">
+                        <!-- text input -->
+                        <div class="form-group col-lg-12">
+                            <label>所属年月</label>
+                            <input type="text" class="form-control sandbox-container-spacile" name="gmt_wage" id="edit-gmt_wage" placeholder="请选择发放时间">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>员工数</label>
+                            <input type="text" class="form-control " name="number" id="edit-number" placeholder="请输入员工人数" >
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>员工工资合计</label>
+                            <input type="text" class="form-control" name="wage" id="edit-wage" placeholder="请输入员工工资合计" >
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label>员工社保合计</label>
+                            <input type="text" class="form-control" name="insur" id="edit-insur" placeholder="请输入员工社保合计">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>备注信息</label>
+                            <textarea class="form-control" name="remark" id="edit-remark"></textarea>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <input type="hidden"  name="wage_id" id="edit-wage_id">
+                            <button type="button" class="btn btn-primary btn-block" id="edit-record" attr-m="home" attr-c="wage" attr-a="checkEditValue">修改信息</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- /.content-wrapper -->
+  <include file="Index/footer" />
+

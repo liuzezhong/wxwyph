@@ -1462,7 +1462,7 @@ $('#search-lirun').on('click',function () {
     var search_datepicker_start = $('#search_datepicker_start').val();
     var search_datepicker_end = $('#search_datepicker_end').val();
     var company_id = $('#search_company').val();
-    var getUrl = '/index.php?m=home&c=index&a=index&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
+    var getUrl = '/index.php?m=home&c=profit&a=index&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
     window.location.href =getUrl;
 
 });
@@ -1489,7 +1489,7 @@ $('#export-lirun').on('click',function () {
     var search_datepicker_start = $('#search_datepicker_start').val();
     var search_datepicker_end = $('#search_datepicker_end').val();
     var company_id = $('#search_company').val();
-    var getUrl = '/index.php?m=home&c=index&a=export&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
+    var getUrl = '/index.php?m=home&c=profit&a=export&search_datepicker_start=' + search_datepicker_start + '&search_datepicker_end=' + search_datepicker_end + '&company_id=' + company_id;
     window.location.href =getUrl;
 
 });

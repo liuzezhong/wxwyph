@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="Public/Home/css/pagination.css">
 
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -347,14 +347,22 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">主菜单</li>
-                <li <?php if(($controller_name == 'Index') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
-                    <a href="<?php echo U('home/index/index');?>">
-                        <i class="fa fa-leanpub"></i> <span>公司概览</span>
-                    </a>
-                </li>
+                <li class="header">功能面板</li>
+                <!--<li <?php if(($controller_name == 'Index') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>-->
+                    <!--<a href="<?php echo U('home/index/index');?>">-->
+                        <!--<i class="fa fa-leanpub"></i> <span>业务总览</span>-->
+                    <!--</a>-->
+                <!--</li>-->
 
-                <li <?php if(($controller_name == 'collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
+                <li <?php if(($controller_name == 'Profit') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/profit/index');?>">
+                    <i class="fa fa-ticket"></i> <span>利润报表</span>
+                </a>
+                </li>
+                <?php } ?>
+
+                <li <?php if(($controller_name == 'Collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/collection/index');?>">
                     <i class="fa fa-deafness"></i> <span>每日应收</span>
                 </a>
@@ -395,7 +403,7 @@
                         <span>借款记录</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                </span>
                     </a>
                     <ul class="treeview-menu">
                         <li <?php if(($controller_name == 'Loan') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/index');?>"><i class="fa fa-circle-o"></i> 贷款资料</a></li>
@@ -440,6 +448,22 @@
                 <a href="<?php echo U('home/image/index');?>">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
+                </li>
+
+                <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
+                <a href="#">
+                    <i class="fa fa-inbox"></i>
+                    <span>其它工具</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userInfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userinfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'changePwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changepwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminList')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminlist');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'wxuserList')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/wxuserList');?>"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
+                </ul>
                 </li>
                 <!--<li class="treeview">-->
                     <!--<a href="#">-->

@@ -62,6 +62,7 @@ class RegisterController extends Controller
                 'email' => $email,
                 'password' => md5($password),
                 'gmt_create' => date('Y-m-d H:i:s',time()),
+                'avatarUrl' => C('DEFAULT_AVATAR_URL'),
             );
             // 将注册信息写入数据库
             $create = D('Admin')->createAdmin($adminData);

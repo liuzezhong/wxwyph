@@ -417,6 +417,66 @@ $('body').on('click','.text-center #edit-charge',function () {
     },'JSON');
 });
 
+$('body').on('click','.text-center #edit-Admin',function () {
+    $('#baoju-form')[0].reset();
+
+    var id = $(this).attr('attr-id');
+    var m = $(this).attr('attr-m');
+    var c = $(this).attr('attr-c');
+    var a = $(this).attr('attr-a');
+
+    var postData = {
+        'id' : id,
+    };
+    var postUrl = "index.php?m="+ m + "&c=" + c + "&a=" + a;
+
+    $.post(postUrl,postData,function (result) {
+        if(result.status == 0) {
+            return dialog.error(result.message);
+        }
+        if(result.status == 1) {
+            console.log(result);
+            $('#edit-username').val(result.user.username);
+            $('#edit-phone').val(result.user.phone);
+            $('#edit-email').val(result.user.email);
+            $('#edit-department').val(result.user.department);
+            $('#edit-position').val(result.user.position);
+            $('#edit-user_id').val(result.user.user_id);
+            $('#edit-company_id').selectpicker('val',result.user.company_id);
+            $('#edit-jurisdiction').selectpicker('val',result.user.jurisdiction);
+
+        }
+    },'JSON');
+});
+
+$('body').on('click','.text-center #edit-Wxuser',function () {
+    $('#baoju-edit-form')[0].reset();
+
+    var id = $(this).attr('attr-id');
+    var m = $(this).attr('attr-m');
+    var c = $(this).attr('attr-c');
+    var a = $(this).attr('attr-a');
+
+    var postData = {
+        'id' : id,
+    };
+    var postUrl = "index.php?m="+ m + "&c=" + c + "&a=" + a;
+    $.post(postUrl,postData,function (result) {
+        if(result.status == 0) {
+            return dialog.error(result.message);
+        }
+        if(result.status == 1) {
+            console.log(result);
+            $('#edit-real_name').val(result.user.real_name);
+            $('#edit-status').selectpicker('val',result.user.status);
+            $('#edit-depart_id').selectpicker('val',result.user.depart_id);
+            $('#edit-company_id').selectpicker('val',result.user.company_id);
+            $('#edit-user_id').val(result.user.user_id);
+
+        }
+    },'JSON');
+});
+
 $('body').on('click','.text-center #edit-wageinfo',function () {
     $('#baoju-form')[0].reset();
 
@@ -1467,6 +1527,13 @@ $('#search-lirun').on('click',function () {
 
 });
 
+$('#search-admin').on('click',function () {
+    var company_id = $('#search_company').val();
+    var getUrl = '/index.php?m=home&c=other&a=adminList&company_id=' + company_id;
+    window.location.href =getUrl;
+
+});
+
 $('#search-wage').on('click',function () {
     var search_datepicker_start = $('#search_datepicker_start').val();
     var search_datepicker_end = $('#search_datepicker_end').val();
@@ -1601,6 +1668,18 @@ $('#file-0c').fileinput({
     }
 });
 
+$('#file-0c2').fileinput({
+    language: 'zh',
+    uploadUrl: "/index.php?m=home&c=image&a=ajaxUploadImage", //上传的
+}).on("fileuploaded", function(event, data) {
+    console.log(data.response);
+    if(data.response) {
+        //var imageUrl = '/' + data.response.res.file_data.savepath + data.response.res.file_data.savename;
+        var imageUrl = data.response.res.file_data.url;
+        $("#hide-image-div2").append('<input  type="hidden" value= ' + imageUrl + ' name="image[]">');
+    }
+});
+
 $('.text-center #foreign_image').on('click',function () {
     var loan_id = $(this).attr('attr-id');
     var postData = {
@@ -1721,4 +1800,29 @@ $('#image-quxiaoguanli').click(function () {
     $("#export-charge").css("display","none");
     $("#image-guanlu").css("display","inline");
     $(this).css("display","none");
+});
+
+$('.text-center #xiugaipwd').click(function () {
+   var user_id = $(this).attr('attr-id');
+
+
+    layer.prompt({title: '请输入密码', formType: 1}, function(pass, index){
+        layer.close(index);
+
+        var postData = {
+            user_id : user_id,
+            password : pass,
+        };
+        var postUrl = "index.php?m=home&c=other&a=changePasswordList";
+
+        $.post(postUrl,postData,function (result) {
+            if(result.status == 0) {
+                return dialog.msg(result.message);
+            }
+            if(result.status == 1) {
+                return dialog.msg(result.message,'');
+            }
+        },'JSON');
+
+    });
 });

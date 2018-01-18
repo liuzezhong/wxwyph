@@ -4,6 +4,7 @@ return array(
     'URL_MODEL' => 0,    //PATHINFO模式为1，0为默认模式
     'LOAD_EXT_CONFIG' => 'db',
     'DEFAULT_CONTROLLER' => 'Collection',
+    'DEFAULT_AVATAR_URL' => 'http://imgbj.xianshikeji.com/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png',
     'WECHAT_SMALL_APPLICATION' => array(
         'APPID' => 'wx0343be3aa3adeb71',
         'APPSECRET' => '7d09c7cc7eaf7540d5ea1383eb3b82a6',
@@ -40,4 +41,5 @@ return array(
     'QINIU_SUOTU_XIANGCE' => 'imageView2/1/w/200/h/200/interlace/1/q/75|imageslim',
     'QINIU_SUOTU_ZHAOPIAN' => 'imageView2/1/w/400/h/440/q/75|imageslim',
     'QINIU_SUOTU_WEIXIN' => 'imageView2/0/q/75|watermark/2/text/5LiH6LWi6bmP6L6J5YaF6YOo5a6i5oi36LWE5paZ77yM5Lil56aB56eB6Ieq5Lyg5pKt/font/5b6u6L2v6ZuF6buR/fontsize/700/fill/I0ZGRkZGRg==/dissolve/95/gravity/Center/dx/10/dy/10',
+
 );

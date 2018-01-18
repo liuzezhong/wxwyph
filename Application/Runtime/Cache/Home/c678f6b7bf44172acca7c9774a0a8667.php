@@ -403,7 +403,7 @@
                         <span>借款记录</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                </span>
                     </a>
                     <ul class="treeview-menu">
                         <li <?php if(($controller_name == 'Loan') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/index');?>"><i class="fa fa-circle-o"></i> 贷款资料</a></li>
@@ -448,6 +448,25 @@
                 <a href="<?php echo U('home/image/index');?>">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
+                </li>
+
+                <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
+                <a href="#">
+                    <i class="fa fa-inbox"></i>
+                    <span>其它工具</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userInfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userinfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'changePwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changepwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                    <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminList')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminlist');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'wxuserList')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/wxuserList');?>"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
+                    <?php } ?>
+
+                </ul>
                 </li>
                 <!--<li class="treeview">-->
                     <!--<a href="#">-->

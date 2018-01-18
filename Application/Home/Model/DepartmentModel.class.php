@@ -63,4 +63,12 @@ class DepartmentModel extends Model {
         }
         return $this->_db->where('id = ' . $id)->save($data);
     }
+
+    public function getDepartMentByID($id = 0) {
+        if(!$id) {
+            throw_exception('错误：函数getDepartMentByID查询条件为空！');
+        }
+        $condition['department_id'] = $id;
+        return $this->_db->where($condition)->find();
+    }
 }

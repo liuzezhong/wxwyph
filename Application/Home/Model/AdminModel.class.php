@@ -50,4 +50,41 @@ class AdminModel extends Model
         $condition['user_id'] = $user_id;
         return $this->where($condition)->find();
     }
+
+    public function getAdminByPhone($phone = '') {
+        if(!$phone) {
+            throw_exception('Admin Model AdminModel getAdminByPhone phone is null');
+        }
+        $condition['phone'] = $phone;
+        return $this->where($condition)->find();
+    }
+
+    public function updateAdmin($user_id = 0, $data = array()) {
+        if(!$user_id) {
+            throw_exception('Admin Model AdminModel updateAdmin user_id is null');
+        }
+        if(!$data) {
+            throw_exception('Admin Model AdminModel updateAdmin data is null');
+        }
+        $condition['user_id'] = $user_id;
+        return $this->where($condition)->save($data);
+    }
+
+    public function listAdmin($condition = array(), $page = 1, $pageSize = 10) {
+        $offset = ($page -1) * $pageSize;
+        $res =  $this->where($condition)->order('gmt_create desc')->limit($offset,$pageSize)->select();
+        return $res;
+    }
+
+    public function getCountAdmin($condition = array()) {
+        return $this->where($condition)->count();
+    }
+
+    public function deleteUserByID($user_id = 0) {
+        if(!$user_id) {
+            throw_exception('Home Model AdminModel deleteUserByID user_id is null');
+        }
+        $condition['user_id'] = $user_id;
+        return $this->where($condition)->delete();
+    }
 }

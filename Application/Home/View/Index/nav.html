@@ -353,7 +353,7 @@
                         <span>借款记录</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                </span>
                     </a>
                     <ul class="treeview-menu">
                         <li <if condition="($controller_name eq 'Loan') AND ($action_name eq 'index')">class="active"</if>><a href="{:U('home/loan/index')}"><i class="fa fa-circle-o"></i> 贷款资料</a></li>
@@ -398,6 +398,25 @@
                 <a href="{:U('home/image/index')}">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
+                </li>
+
+                <li <if condition="$controller_name eq 'Loan'">class=" treeview active"<else />class="treeview"</if>>
+                <a href="#">
+                    <i class="fa fa-inbox"></i>
+                    <span>其它工具</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'userinfo')">class="active"</if>><a href="{:U('home/other/userinfo')}"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'changepwd')">class="active"</if>><a href="{:U('home/other/changepwd')}"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                    <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
+                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'adminlist')">class="active"</if>><a href="{:U('home/other/adminlist')}"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'wxuserlist')">class="active"</if>><a href="{:U('home/other/wxuserList')}"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
+                    <?php } ?>
+
+                </ul>
                 </li>
                 <!--<li class="treeview">-->
                     <!--<a href="#">-->

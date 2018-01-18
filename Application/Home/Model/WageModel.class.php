@@ -39,7 +39,7 @@ class WageModel extends Model
             'gmt_wage' => $gmt_wage,
             'company_id' => $company_id,
         );
-
+        $condition['is_delete'] = array('neq',1);
         return $this->where($condition)->find();
     }
 

@@ -14159,3 +14159,498 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
 
+[ 2018-01-18T14:28:04+08:00 ] 127.0.0.1 /index.php?m=home&c=image&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `bj_admin` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_company`  [ RunTime:0.0098s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `bj_customer` WHERE `company_id` IN ('1','2','3','4') AND `status` <> -1 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0323s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0120s ]
+SQL: SELECT DISTINCT  `loan_id` FROM `bj_image` WHERE `company_id` IN ('1','2','3','4') LIMIT 0,24   [ RunTime:0.0105s ]
+SQL: SELECT DISTINCT  `loan_id` FROM `bj_image` WHERE `company_id` IN ('1','2','3','4')  [ RunTime:0.0124s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `bj_image` WHERE `company_id` IN ('1','2','3','4') LIMIT 1   [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1208 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0091s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 946 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1208 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1208 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1210 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0092s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 947 LIMIT 1   [ RunTime:0.0159s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1210 LIMIT 1   [ RunTime:0.0112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1210 LIMIT 1   [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1212 LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 948 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1212 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1212 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1203 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0089s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 940 LIMIT 1   [ RunTime:0.0091s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1203 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1203 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1205 LIMIT 1   [ RunTime:0.0121s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 945 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1205 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1205 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1193 LIMIT 1   [ RunTime:0.0132s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0089s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 929 LIMIT 1   [ RunTime:0.0091s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1193 LIMIT 1   [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1193 LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1194 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0094s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 930 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1194 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1194 LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1183 LIMIT 1   [ RunTime:0.0148s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0108s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 918 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1183 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1183 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1195 LIMIT 1   [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0108s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 933 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1195 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1195 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1184 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0115s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 919 LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1184 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1184 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1185 LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0103s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 920 LIMIT 1   [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1185 LIMIT 1   [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1185 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1186 LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0103s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 921 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1186 LIMIT 1   [ RunTime:0.0191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1186 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1187 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0105s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 922 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1187 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1187 LIMIT 1   [ RunTime:0.0114s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1190 LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0094s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 925 LIMIT 1   [ RunTime:0.0091s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1190 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1190 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1172 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 905 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1172 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1172 LIMIT 1   [ RunTime:0.0112s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1174 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 907 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1174 LIMIT 1   [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1174 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1171 LIMIT 1   [ RunTime:0.0124s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0141s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 904 LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1171 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1171 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1188 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 923 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1188 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1188 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1175 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0089s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 908 LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1175 LIMIT 1   [ RunTime:0.0121s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1175 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1179 LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0095s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 912 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1179 LIMIT 1   [ RunTime:0.0131s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1179 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1153 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0088s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 887 LIMIT 1   [ RunTime:0.0094s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1153 LIMIT 1   [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1153 LIMIT 1   [ RunTime:0.0163s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1156 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0092s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 889 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1156 LIMIT 1   [ RunTime:0.0102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1156 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1168 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0092s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 901 LIMIT 1   [ RunTime:0.0091s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1168 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1168 LIMIT 1   [ RunTime:0.0097s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1159 LIMIT 1   [ RunTime:0.0096s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 2 LIMIT 1   [ RunTime:0.0083s ]
+NOTIC: [8] Undefined index: gmt_create /Work/wwwroot/baojutouzi.com/Application/Home/Controller/ImageController.class.php 第 100 行.
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 892 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SELECT * FROM `bj_image` WHERE `loan_id` = 1159 LIMIT 1   [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1159 LIMIT 1   [ RunTime:0.0094s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 346 行.
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 346 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [8] Undefined index: selected /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 606 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+NOTIC: [2] Use of undefined constant create_time - assumed 'create_time' (this will throw an Error in a future version of PHP) /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php 第 648 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023369s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.041412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.041440s ]
+
+[ 2018-01-18T14:28:06+08:00 ] 127.0.0.1 /index.php?m=home&c=other&a=changePwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `bj_admin` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2018-01-18T14:28:29+08:00 ] 127.0.0.1 /index.php?m=home&c=other&a=changePwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `bj_admin` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2018-01-18T14:28:31+08:00 ] 127.0.0.1 /index.php?m=home&c=other&a=changePwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+SQL: SHOW COLUMNS FROM `bj_admin` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php 第 346 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2018-01-18T14:28:33+08:00 ] 127.0.0.1 /index.php?m=home&c=other&a=userInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `bj_admin` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0124s ]
+SQL: SELECT * FROM `bj_admin` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/84711a0a6c78bff0b251e2cac6305870.php 第 346 行.
+NOTIC: [8] Undefined variable: Think /Work/wwwroot/baojutouzi.com/Application/Runtime/Cache/Home/84711a0a6c78bff0b251e2cac6305870.php 第 346 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+

@@ -1,3 +1,55 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><?php echo $_SESSION['adminUser']['company']['subname']?> | 管理系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <link href="Public/AdminLTE/bower_components/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="Public/AdminLTE/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="Public/AdminLTE/dist/css/skins/_all-skins.min.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/morris.js/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- Datetime picker -->
+    <link rel="stylesheet" href="Public/AdminLTE/bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="Public/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="Public/Plugin/bootstrap-fileinput/css/fileinput.css">
+
+    <link rel="stylesheet" href="Public/Plugin/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="Public/Home/css/common.css">
+    <link rel="stylesheet" href="Public/Home/css/pagination.css">
+
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> -->
+</head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -252,7 +304,7 @@
                                     <a href="#" class="btn btn-default btn-flat">个人信息</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{:U('home/login/loginOut')}" class="btn btn-default btn-flat">退出登陆</a>
+                                    <a href="<?php echo U('home/login/loginOut');?>" class="btn btn-default btn-flat">退出登陆</a>
                                 </div>
                             </li>
                         </ul>
@@ -291,34 +343,32 @@
             </form>
 
             <?php
-                    $controller_name = $Think.CONTROLLER_NAME;
-                    $action_name = $Think.ACTION_NAME;
-            ?>
+ $controller_name = $Think.CONTROLLER_NAME; $action_name = $Think.ACTION_NAME; ?>
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">功能面板</li>
-                <!--<li <if condition="($controller_name eq 'Index') AND ($action_name eq 'index')">class="active"</if>>-->
-                    <!--<a href="{:U('home/index/index')}">-->
+                <!--<li <?php if(($controller_name == 'Index') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>-->
+                    <!--<a href="<?php echo U('home/index/index');?>">-->
                         <!--<i class="fa fa-leanpub"></i> <span>业务总览</span>-->
                     <!--</a>-->
                 <!--</li>-->
 
                 <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
-                <li <if condition="($controller_name eq 'Profit') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/profit/index')}">
+                <li <?php if(($controller_name == 'Profit') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/profit/index');?>">
                     <i class="fa fa-ticket"></i> <span>利润报表</span>
                 </a>
                 </li>
                 <?php } ?>
 
-                <li <if condition="($controller_name eq 'Collection') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/collection/index')}">
+                <li <?php if(($controller_name == 'Collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/collection/index');?>">
                     <i class="fa fa-deafness"></i> <span>每日应收</span>
                 </a>
                 </li>
 
-                <li <if condition="$controller_name eq 'Staff'">class=" treeview active"<else />class="treeview"</if>>
+                <li <?php if($controller_name == 'Staff'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-sitemap"></i>
                         <span>员工管理</span>
@@ -327,13 +377,13 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li <if condition="($controller_name eq 'Staff') AND ($action_name eq 'index')">class="active"</if>><a href="{:U('home/staff/index')}"><i class="fa fa-circle-o"></i> 员工信息</a></li>
-                        <li <if condition="($controller_name eq 'Staff') AND ($action_name eq 'add')">class="active"</if>><a href="{:U('home/staff/add')}"><i class="fa fa-circle-o"></i> 添加员工</a></li>
+                        <li <?php if(($controller_name == 'Staff') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/staff/index');?>"><i class="fa fa-circle-o"></i> 员工信息</a></li>
+                        <li <?php if(($controller_name == 'Staff') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/staff/add');?>"><i class="fa fa-circle-o"></i> 添加员工</a></li>
                     </ul>
                 </li>
 
 
-                <li <if condition="$controller_name eq 'Customer'">class=" treeview active"<else />class="treeview"</if>>
+                <li <?php if($controller_name == 'Customer'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-users"></i>
                         <span>客户管理</span>
@@ -342,12 +392,12 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li <if condition="($controller_name eq 'Customer') AND ($action_name eq 'index')">class="active"</if>><a href="{:U('home/customer/index')}"><i class="fa fa-circle-o"></i> 客户资料</a></li>
-                        <li <if condition="($controller_name eq 'Customer') AND ($action_name eq 'add')">class="active"</if>><a href="{:U('home/customer/add')}"><i class="fa fa-circle-o"></i> 添加客户</a></li>
+                        <li <?php if(($controller_name == 'Customer') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/customer/index');?>"><i class="fa fa-circle-o"></i> 客户资料</a></li>
+                        <li <?php if(($controller_name == 'Customer') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/customer/add');?>"><i class="fa fa-circle-o"></i> 添加客户</a></li>
                     </ul>
                 </li>
 
-                <li <if condition="$controller_name eq 'Loan'">class=" treeview active"<else />class="treeview"</if>>
+                <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-inbox"></i>
                         <span>借款记录</span>
@@ -356,51 +406,51 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li <if condition="($controller_name eq 'Loan') AND ($action_name eq 'index')">class="active"</if>><a href="{:U('home/loan/index')}"><i class="fa fa-circle-o"></i> 贷款资料</a></li>
-                        <li <if condition="($controller_name eq 'Loan') AND ($action_name eq 'add')">class="active"</if>><a href="{:U('home/loan/add')}"><i class="fa fa-circle-o"></i> 添加记录</a></li>
+                        <li <?php if(($controller_name == 'Loan') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/index');?>"><i class="fa fa-circle-o"></i> 贷款资料</a></li>
+                        <li <?php if(($controller_name == 'Loan') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/add');?>"><i class="fa fa-circle-o"></i> 添加记录</a></li>
                     </ul>
                 </li>
 
-                <li <if condition="($controller_name eq 'Repayments') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/repayments/index')}">
+                <li <?php if(($controller_name == 'Repayments') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/repayments/index');?>">
                     <i class="fa fa-google-wallet"></i> <span>还款记录</span>
                 </a>
                 </li>
 
-                <li <if condition="($controller_name eq 'Tour') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/tour/index')}">
+                <li <?php if(($controller_name == 'Tour') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/tour/index');?>">
                     <i class="fa fa-car"></i> <span>外访记录</span>
                 </a>
                 </li>
 
-                <li <if condition="($controller_name eq 'Overdue') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/overdue/index')}">
+                <li <?php if(($controller_name == 'Overdue') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/overdue/index');?>">
                     <i class="fa fa-firefox"></i> <span>逾期汇总</span>
                 </a>
                 </li>
 
-                <li <if condition="($controller_name eq 'Charge') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/charge/index')}">
+                <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
                 </a>
                 </li>
-                <li <if condition="($controller_name eq 'Wage') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/wage/index')}">
+                <li <?php if(($controller_name == 'Wage') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/wage/index');?>">
                     <i class="fa fa-id-badge"></i> <span>工资管理</span>
                 </a>
                 </li>
-                <li <if condition="($controller_name eq 'Message') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/message/index')}">
+                <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/message/index');?>">
                     <i class="fa fa-database"></i> <span>短信记录</span>
                 </a>
                 </li>
-                <li <if condition="($controller_name eq 'Image') AND ($action_name eq 'index')">class="active"</if>>
-                <a href="{:U('home/image/index')}">
+                <li <?php if(($controller_name == 'Image') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/image/index');?>">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
                 </li>
 
-                <li <if condition="$controller_name eq 'Loan'">class=" treeview active"<else />class="treeview"</if>>
+                <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                 <a href="#">
                     <i class="fa fa-inbox"></i>
                     <span>其它工具</span>
@@ -409,11 +459,11 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'userinfo')">class="active"</if>><a href="{:U('home/other/userInfo')}"><i class="fa fa-circle-o"></i> 个人资料</a></li>
-                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'changepwd')">class="active"</if>><a href="{:U('home/other/changePwd')}"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userInfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userInfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'changepwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changePwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
                     <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
-                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'adminlist')">class="active"</if>><a href="{:U('home/other/adminList')}"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
-                    <li <if condition="($controller_name eq 'Other') AND ($action_name eq 'wxuserlist')">class="active"</if>><a href="{:U('home/other/wxuserList')}"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminlist')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminList');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'wxuserlist')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/wxuserList');?>"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
                     <?php } ?>
 
                 </ul>
@@ -522,3 +572,378 @@
         </section>
         <!-- /.sidebar -->
     </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        修改账户密码
+        <small>修改密码</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 账户密码</a></li>
+        <li><a href="#">修改密码</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+          <!-- /.box -->
+          <!-- general form elements disabled -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">修改密码</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form role="form" id="baoju-form">
+                <!-- text input -->
+                <div class="form-group col-lg-12">
+                  <label>请输入旧密码</label>
+                  <input type="password" class="form-control " name="old_password" placeholder="请输入旧密码">
+                </div>
+                <div class="form-group col-lg-12">
+                  <label>请输入新密码</label>
+                  <input type="password" class="form-control " name="new_password" placeholder="请输入新密码">
+                </div>
+                <div class="form-group col-lg-12">
+                  <label>请再次输入新密码</label>
+                  <input type="password" class="form-control " name="new_password2" placeholder="请再次输入新密码">
+                </div>
+
+                <div class="form-group col-lg-12">
+                  <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="other" attr-a="checkPwd"><i class="fa fa-check"></i>&nbsp;修改密码</button>
+                </div>
+
+
+              </form>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<!--<footer class="main-footer">-->
+    <!--<div class="pull-right hidden-xs">-->
+        <!--<b>Version</b> 2.4.0-->
+    <!--</div>-->
+    <!--<strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights-->
+    <!--reserved.-->
+<!--</footer>-->
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                            <p>Will be 23 on April 24th</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                            <p>New phone +1(800)555-1234</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                            <p>nora@example.com</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                            <p>Execution time 5 seconds</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+            <h3 class="control-sidebar-heading">Tasks Progress</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript:void(0)">
+                        <h4 class="control-sidebar-subheading">
+                            Custom Template Design
+                            <span class="label label-danger pull-right">70%</span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <h4 class="control-sidebar-subheading">
+                            Update Resume
+                            <span class="label label-success pull-right">95%</span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <h4 class="control-sidebar-subheading">
+                            Laravel Integration
+                            <span class="label label-warning pull-right">50%</span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <h4 class="control-sidebar-subheading">
+                            Back End Framework
+                            <span class="label label-primary pull-right">68%</span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+                <h3 class="control-sidebar-heading">General Settings</h3>
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Report panel usage
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+
+                    <p>
+                        Some information about this general settings option
+                    </p>
+                </div>
+                <!-- /.form-group -->
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Allow mail redirect
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+
+                    <p>
+                        Other sets of options are available
+                    </p>
+                </div>
+                <!-- /.form-group -->
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Expose author name in posts
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+
+                    <p>
+                        Allow the user to show his name in blog posts
+                    </p>
+                </div>
+                <!-- /.form-group -->
+
+                <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Show me as online
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+                </div>
+                <!-- /.form-group -->
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Turn off notifications
+                        <input type="checkbox" class="pull-right">
+                    </label>
+                </div>
+                <!-- /.form-group -->
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Delete chat history
+                        <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                    </label>
+                </div>
+                <!-- /.form-group -->
+            </form>
+        </div>
+        <!-- /.tab-pane -->
+    </div>
+</aside>
+<!-- /.control-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+     immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="Public/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="Public/AdminLTE/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="Public/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="Public/AdminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="Public/AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="Public/AdminLTE/bower_components/datatables-responsive/dataTables.responsive.js"></script>
+<!-- Morris.js charts -->
+<script src="Public/AdminLTE/bower_components/raphael/raphael.min.js"></script>
+<script src="Public/AdminLTE/bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="Public/AdminLTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="Public/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="Public/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="Public/AdminLTE/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="Public/AdminLTE/bower_components/moment/min/moment.min.js"></script>
+<script src="Public/AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="Public/AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="Public/Plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<!--datetimepicker-->
+<script src="Public/AdminLTE/bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="Public/AdminLTE/bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="Public/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="Public/AdminLTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="Public/AdminLTE/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="Public/AdminLTE/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="Public/AdminLTE/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="Public/Plugin/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="Public/Plugin/bootstrap-select/js/i18n/defaults-zh_CN.min.js"></script>
+
+<script src="Public/Plugin/bootstrap-fileinput/js/fileinput.js"></script>
+<script src="Public/Plugin/bootstrap-fileinput/js/locales/zh.js"></script>
+
+<script src="Public/Dialog/layer/layer.js"></script>
+<script src="Public/Dialog/dialog.js"></script>
+
+<script src="Public/AdminLTE/dist/js/demo.js"></script>
+<script src="Public/Home/js/common.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example1').DataTable({
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+
+            },
+            /*responsive: true,    //自适应
+            paging: true,       //分页
+            searching:true,    //搜索
+            ordering:true,     //排序
+            info:true,         //信息
+            lengthChange: true,
+            autoWidth   : false,*/
+
+            responsive: true,    //自适应
+            paging: false,       //分页
+            searching:false,    //搜索
+            ordering:false,     //排序
+            info:false,         //信息
+            lengthChange: true,
+            autoWidth   : false,
+
+        });
+    });
+</script>
+</body>
+</html>

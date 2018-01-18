@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/Model/UserModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Other/adminList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Other/changePwd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Other/userInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/RegisterController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/RegisterController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/AdminModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/AdminModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/DepartmentModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/DepartmentModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/WageModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/WageModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/nav.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Login/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Login/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5673efea18de54beca1404fb76cb2e39.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5673efea18de54beca1404fb76cb2e39.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/56e9c7dd2a6a3ed1a859e44fc4e8f04b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/56e9c7dd2a6a3ed1a859e44fc4e8f04b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/67d6cdd0cc4f72cad38240f6e53499de.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/67d6cdd0cc4f72cad38240f6e53499de.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/79509babd324336d48b8b31c0d8bd3fb.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/79509babd324336d48b8b31c0d8bd3fb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/82e9bc9fd8aafbc7f662301afa568116.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/82e9bc9fd8aafbc7f662301afa568116.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/981c566e083c9948dc813d3c79ab2b52.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/981c566e083c9948dc813d3c79ab2b52.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b68fbe840bf885051ed23d04b5ec1de9.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b68fbe840bf885051ed23d04b5ec1de9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b957662f09b461b84eeeb4c19f0a0521.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b957662f09b461b84eeeb4c19f0a0521.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/bc8e8dcc2fe39de9730c9290b1603329.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/bc8e8dcc2fe39de9730c9290b1603329.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c678f6b7bf44172acca7c9774a0a8667.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c678f6b7bf44172acca7c9774a0a8667.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_16.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_16.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/common.js" afterPath="$PROJECT_DIR$/Public/Home/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/admin/login.js" afterPath="$PROJECT_DIR$/Public/js/admin/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_18.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_18.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nav.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="408" column="23" lean-forward="true" selection-start-line="408" selection-start-column="23" selection-end-line="408" selection-end-column="23" />
+            <state relative-caret-position="575">
+              <caret line="417" column="0" lean-forward="true" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OtherController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OtherController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
+            <state relative-caret-position="616">
               <caret line="874" column="9" lean-forward="false" selection-start-line="874" selection-start-column="9" selection-end-line="874" selection-end-column="9" />
               <folding>
                 <element signature="e#122#142#0#PHP" expanded="true" />
@@ -159,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search-lirun</find>
       <find>edit</find>
       <find>edit-charge</find>
       <find>input_datepicker_start</find>
@@ -189,6 +158,7 @@
       <find>getDepartMentByID</find>
       <find>edit-record</find>
       <find>baoju-form</find>
+      <find>deleteWxUser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,8 +216,8 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html" />
         <option value="$PROJECT_DIR$/Application/Home/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/nav.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/nav.html" />
       </list>
     </option>
   </component>
@@ -502,18 +472,18 @@
       <workItem from="1515634058903" duration="11485000" />
       <workItem from="1515777332027" duration="32757000" />
       <workItem from="1516063940639" duration="24037000" />
-      <workItem from="1516236938327" duration="10992000" />
+      <workItem from="1516236938327" duration="11712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219942000" />
+    <option name="totallyTimeSpent" value="220662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1737" y="30" width="1820" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13131869" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18406594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -924,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="408" column="23" lean-forward="true" selection-start-line="408" selection-start-column="23" selection-end-line="408" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Loan/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1612">
@@ -971,7 +933,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
+        <state relative-caret-position="616">
           <caret line="874" column="9" lean-forward="false" selection-start-line="874" selection-start-column="9" selection-end-line="874" selection-end-column="9" />
           <folding>
             <element signature="e#122#142#0#PHP" expanded="true" />
@@ -986,6 +948,14 @@
             <element signature="e#23347#24186#0#PHP" expanded="false" />
             <element signature="e#24192#25662#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="417" column="0" lean-forward="true" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

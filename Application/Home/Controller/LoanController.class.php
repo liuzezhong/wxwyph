@@ -154,7 +154,6 @@ class LoanController extends CommonController {
                     }
                 }
             }
-            $condition = array();
             //1.2 获取当前页码
             $now_page = I('request.page',1,'intval');
             $page_size = I('request.pageSize',10,'intval');

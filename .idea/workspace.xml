@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_19.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_19.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,17 +16,17 @@
       <file leaf-file-name="LoanController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="192" column="42" lean-forward="true" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
+            <state relative-caret-position="688">
+              <caret line="156" column="24" lean-forward="true" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
               <folding>
-                <element signature="e#14537#15960#0#PHP" expanded="false" />
-                <element signature="e#15997#25606#0#PHP" expanded="false" />
-                <element signature="e#25612#33787#0#PHP" expanded="false" />
-                <element signature="e#33793#34988#0#PHP" expanded="false" />
-                <element signature="e#34994#38016#0#PHP" expanded="false" />
-                <element signature="e#38022#46600#0#PHP" expanded="false" />
-                <element signature="e#46606#47986#0#PHP" expanded="false" />
-                <element signature="e#48028#49805#0#PHP" expanded="false" />
+                <element signature="e#14503#15926#0#PHP" expanded="false" />
+                <element signature="e#15963#25572#0#PHP" expanded="false" />
+                <element signature="e#25578#33753#0#PHP" expanded="false" />
+                <element signature="e#33759#34954#0#PHP" expanded="false" />
+                <element signature="e#34960#37982#0#PHP" expanded="false" />
+                <element signature="e#37988#46566#0#PHP" expanded="false" />
+                <element signature="e#46572#47952#0#PHP" expanded="false" />
+                <element signature="e#47994#49771#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -155,8 +150,8 @@
         <option value="$PROJECT_DIR$/Application/Home/Controller/ChargeController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
       </list>
     </option>
   </component>
@@ -434,12 +429,12 @@
       <workItem from="1515777332027" duration="32757000" />
       <workItem from="1516063940639" duration="24037000" />
       <workItem from="1516236938327" duration="12151000" />
-      <workItem from="1516277115294" duration="23805000" />
+      <workItem from="1516277115294" duration="24770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244906000" />
+    <option name="totallyTimeSpent" value="245871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1725" y="23" width="2000" height="1057" extended-state="0" />
@@ -908,17 +903,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="192" column="42" lean-forward="true" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
+        <state relative-caret-position="688">
+          <caret line="156" column="24" lean-forward="true" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
           <folding>
-            <element signature="e#14537#15960#0#PHP" expanded="false" />
-            <element signature="e#15997#25606#0#PHP" expanded="false" />
-            <element signature="e#25612#33787#0#PHP" expanded="false" />
-            <element signature="e#33793#34988#0#PHP" expanded="false" />
-            <element signature="e#34994#38016#0#PHP" expanded="false" />
-            <element signature="e#38022#46600#0#PHP" expanded="false" />
-            <element signature="e#46606#47986#0#PHP" expanded="false" />
-            <element signature="e#48028#49805#0#PHP" expanded="false" />
+            <element signature="e#14503#15926#0#PHP" expanded="false" />
+            <element signature="e#15963#25572#0#PHP" expanded="false" />
+            <element signature="e#25578#33753#0#PHP" expanded="false" />
+            <element signature="e#33759#34954#0#PHP" expanded="false" />
+            <element signature="e#34960#37982#0#PHP" expanded="false" />
+            <element signature="e#37988#46566#0#PHP" expanded="false" />
+            <element signature="e#46572#47952#0#PHP" expanded="false" />
+            <element signature="e#47994#49771#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

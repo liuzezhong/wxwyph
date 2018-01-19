@@ -209,7 +209,7 @@
                   <tr>
 
                       <td class="text-center">{$loan.create_time|date="Y-m-d",###}</td>
-                      <td class="text-center">{$loan.gmt_overdue|date="Y-m-d",###}</td>
+                      <td class="text-center">{$loan.gmt_overdue}</td>
                       <td class="text-center"><a href="{:U('home/customer/index')}&name={$loan.customer_name}">{$loan.customer_name}</a></td>
                       <td class="text-center">{$loan.customer_phone}</td>
                       <td class="text-center">{$loan.product_name}</td>

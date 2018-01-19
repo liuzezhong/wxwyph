@@ -128,6 +128,12 @@ class LoanController extends CommonController {
                 $e_time = strtotime(substr($search_datepicker,24,19));
                 $condition['create_time'] = array('BETWEEN',array($s_time,$e_time));
                 $this->assign('input_datepicker',$search_datepicker);
+            }else {
+                $s_time = strtotime(date('Y-m',time()));
+                $e_time = strtotime(date('Y-m',time()) . ' +1 month -1 second');
+                $condition['create_time'] = array('BETWEEN',array($s_time,$e_time));
+                //2018-01-01 00:00:00 至 2018-01-31 23:59:59
+                $this->assign('input_datepicker',date('Y-m-d H:i:s',$s_time) . ' 至 ' . date('Y-m-d H:i:s',$e_time));
             }
 
             if(I('get.company_id','','string') && I('get.company_id','','string') != 'undefined') {

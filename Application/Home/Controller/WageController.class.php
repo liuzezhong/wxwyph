@@ -99,6 +99,7 @@ class WageController extends CommonController
             'sumWage' => $sumWage,
             'sumInsur' => $sumInsur,
             'sumTotal' => $sumTotal,
+            'pageRes' => $pageRes,
 
         ));
         $this->display();

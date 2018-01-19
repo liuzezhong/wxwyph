@@ -459,7 +459,7 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userInfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userInfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userinfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userInfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
                     <li <?php if(($controller_name == 'Other') AND ($action_name == 'changepwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changePwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
                     <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
                     <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminlist')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminList');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>

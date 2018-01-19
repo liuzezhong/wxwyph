@@ -459,9 +459,13 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userInfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userinfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
-                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'changePwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changepwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
-                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminList')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminlist');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'userinfo')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/userInfo');?>"><i class="fa fa-circle-o"></i> 个人资料</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'changepwd')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/changePwd');?>"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                    <?php if($_SESSION['adminUser']['jurisdiction'] == 2) { ?>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'adminlist')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/adminList');?>"><i class="fa fa-circle-o"></i> 后台用户管理</a></li>
+                    <li <?php if(($controller_name == 'Other') AND ($action_name == 'wxuserlist')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/other/wxuserList');?>"><i class="fa fa-circle-o"></i> 微信用户管理</a></li>
+                    <?php } ?>
+
                 </ul>
                 </li>
                 <!--<li class="treeview">-->
@@ -754,7 +758,7 @@
                 <?php if(is_array($loans)): $i = 0; $__LIST__ = $loans;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$loan): $mod = ($i % 2 );++$i;?><tr>
 
                       <td class="text-center"><?php echo (date("Y-m-d",$loan["create_time"])); ?></td>
-                      <td class="text-center"><?php echo (date("Y-m-d",$loan["gmt_overdue"])); ?></td>
+                      <td class="text-center"><?php echo ($loan["gmt_overdue"]); ?></td>
                       <td class="text-center"><a href="<?php echo U('home/customer/index');?>&name=<?php echo ($loan["customer_name"]); ?>"><?php echo ($loan["customer_name"]); ?></a></td>
                       <td class="text-center"><?php echo ($loan["customer_phone"]); ?></td>
                       <td class="text-center"><?php echo ($loan["product_name"]); ?></td>

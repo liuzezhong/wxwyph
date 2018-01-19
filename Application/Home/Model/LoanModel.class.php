@@ -191,4 +191,7 @@ class LoanModel extends Model {
         return $this->_db->where($condition)->save($data);
     }
 
+    public function findLoanByALLCondition($condition = array()) {
+        return $this->_db->where($condition)->find();
+    }
 }

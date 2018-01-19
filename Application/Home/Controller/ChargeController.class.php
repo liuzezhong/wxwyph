@@ -28,7 +28,14 @@ class ChargeController extends CommonController
             $e_time = substr($search_datepicker,24,19);
             $condition['gmt_create'] = array('BETWEEN',array($s_time,$e_time));
             $this->assign('input_datepicker',$search_datepicker);
+        }else {
+            $s_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time())));
+            $e_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time()) . ' +1 month -1 second'));
+            $condition['gmt_create'] = array('BETWEEN',array($s_time,$e_time));
+            //2018-01-01 00:00:00 至 2018-01-31 23:59:59
+            $this->assign('input_datepicker',$s_time . ' 至 ' . $e_time);
         }
+
 
         if(I('get.company_id','','string') && I('get.company_id','','string') != 'undefined') {
             $companySearchArray = explode(',',I('get.company_id','','string'));

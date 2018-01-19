@@ -199,6 +199,7 @@ class OverdueController extends CommonController
         //手续费类型列表
         $poundages = D('Poundage')->selectALLPoundage();
         foreach($loans as $key => $value) {
+
             // 获取公司信息
             $company = D('Company')->getCompanyByID($value['company_id']);
             $loans[$key]['company_name'] = $company['smallname'];
@@ -295,6 +296,12 @@ class OverdueController extends CommonController
                 $staff = D('Staff')->findStaffByCondition('staff_id',$value['foreign_id']);
                 $loans[$key]['foreign_name'] = $staff['staff_name'];
             }
+            if($value['gmt_overdue'] != 0) {
+                $loans[$key]['gmt_overdue'] = date('Y-m-d',$value['gmt_overdue']);
+            }else {
+                $loans[$key]['gmt_overdue'] = '';
+            }
+
         }
 
         $this->assign(array(

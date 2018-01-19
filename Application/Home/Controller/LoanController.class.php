@@ -120,20 +120,10 @@ class LoanController extends CommonController {
 
             if(I('get.reservationtime','','string')) {
                 $search_datepicker = I('get.reservationtime','','string');
-                // 将2017-11-17 12:30:00 至 2017-11-25 15:30:20
-                // 分解为
-                // 2017-11-17 12:30:00
-                // 2017-11-25 15:30:20
                 $s_time = strtotime(substr($search_datepicker,0,19));
                 $e_time = strtotime(substr($search_datepicker,24,19));
                 $condition['create_time'] = array('BETWEEN',array($s_time,$e_time));
                 $this->assign('input_datepicker',$search_datepicker);
-            }else {
-//                $s_time = strtotime(date('Y-m',time()));
-//                $e_time = strtotime(date('Y-m',time()) . ' +1 month -1 second');
-//                $condition['create_time'] = array('BETWEEN',array($s_time,$e_time));
-//                //2018-01-01 00:00:00 至 2018-01-31 23:59:59
-//                $this->assign('input_datepicker',date('Y-m-d H:i:s',$s_time) . ' 至 ' . date('Y-m-d H:i:s',$e_time));
             }
 
             if(I('get.company_id','','string') && I('get.company_id','','string') != 'undefined') {
@@ -149,7 +139,6 @@ class LoanController extends CommonController {
                 $condition['company_id'] = array('IN',$companySearchArray);
             }else {
                 // 如果账户权限为普通管理员，那么只能查找所属公司的数据，否则默认全部数据
-
                 if($userInfo['jurisdiction'] == 1) {
                     $condition['company_id'] = $userInfo['company_id'];
                 }else if($userInfo['jurisdiction'] == 2){
@@ -165,7 +154,7 @@ class LoanController extends CommonController {
                     }
                 }
             }
-
+            $condition = array();
             //1.2 获取当前页码
             $now_page = I('request.page',1,'intval');
             $page_size = I('request.pageSize',10,'intval');
@@ -193,16 +182,21 @@ class LoanController extends CommonController {
             //周期列表
             $cycles = D('Cycle')->selectALLCycle();
             $sum_rmoney = 0;
-            foreach ($loansBak as $key => $item) {
+
+            $loansIdArray = array_column($loansBak,'loan_id');
+            $sum_rmoney = D('Repayments')->getSumofRemoneyByLoanIDArray($loansIdArray);
+
+            /*foreach ($loansBak as $key => $item) {
                 // 获取已经收款金额
                 $repayment_rmoney = D('Repayments')->getSumOfRmoneyByLoanID($item['loan_id']);
                 if(!$repayment_rmoney) {
                     $repayment_rmoney = 0;
                 }
                 $sum_rmoney = $sum_rmoney + $repayment_rmoney;
-            }
+            }*/
             //手续费类型列表
             $poundages = D('Poundage')->selectALLPoundage();
+
             foreach($loans as $key => $value) {
                 // 获取公司信息
                 $company = D('Company')->getCompanyByID($value['company_id']);
@@ -317,52 +311,6 @@ class LoanController extends CommonController {
                 $loans[$key]['is_bond_name'] = $value['is_bond'] == 0 ? '未退还保证金' : '已退还保证金';
             }
 
-
-            /*foreach ($loans as $key => $item) {
-                // 计算贷款的时期是周几
-                $weekDay = date("w",$item['create_time']) > 0 ? date("w",$item['create_time']) : 7;
-                // 零用贷或车贷
-                if($item['product_id'] == 1 || $item['product_id'] == 4) {
-                    // 计算增加的天数
-                    $add_data = 7 + ($item['juti_data'] - $weekDay) + ($item['cyclical'] - 1) * 7;
-                    // 换算最终时间
-                    $exp_time = strtotime(date('Y-m-d H:i:s',$item['create_time']) . ' + ' . $add_data . ' day');
-                    // 写入数据库
-                    $res = D('Loan')->updateLoanByID($item['loan_id'],array('exp_time' => $exp_time));
-
-                }else if($item['product_id'] == 2 || $item['product_id'] == 5) {
-                    // 打卡或者红包贷
-                    $exp_time = strtotime(date('Y-m-d H:i:s',$item['create_time']) . ' + ' . ($item['cyclical']-1) . ' day');
-                    $res = D('Loan')->updateLoanByID($item['loan_id'],array('exp_time' => $exp_time));
-                }else if($item['product_id'] == 3) {
-                    $exp_time = strtotime(date('Y-m-d H:i:s',$item['create_time']) . ' + ' . ($item['juti_data']-1) . ' day');
-                    $res = D('Loan')->updateLoanByID($item['loan_id'],array('exp_time' => $exp_time));
-                }
-            }*/
-
-
-            /*$test_create_time = '1511280000';
-            $test_loan_id = 9;
-
-            $product_id = 3; //1零用贷 2打卡
-            $cyclical = 30;
-            $juti_data = 22;
-            $da = date("w",$test_create_time);
-            if($da == 0) {
-                $da = 7;
-            }
-            if($product_id == 1 || $product_id == 4) {
-                // 零用贷或车贷
-                $adddata = 7 + ($juti_data - $da) + ($cyclical - 1) * 7;
-                $huankuan_data = strtotime(date('Y-m-d H:i:s',$test_create_time) . ' +'.$adddata.' day');
-            }else if($product_id == 2 || $product_id == 5) {
-                // 打卡或红包贷
-                $huankuan_data = strtotime(date('Y-m-d H:i:s',$test_create_time) . ' +'.($cyclical-1).' day');
-
-            }else if($product_id == 3) {
-                // 空放
-                $huankuan_data = strtotime(date('Y-m-d H:i:s',$test_create_time) . ' +'.($juti_data-1).' day');
-            }*/
             $this->assign(array(
                 'loans' => $loans,
                 'customers' => $customers,

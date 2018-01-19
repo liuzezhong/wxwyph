@@ -193,6 +193,18 @@ class RepaymentsModel extends Model
         return $this->where($condition)->sum('r_money');
     }
 
+    public function getSumofRemoneyByLoanIDArray($loanIDArray = array()) {
+        if(!$loanIDArray ) {
+            throw_exception('Home Model RepaymentsModel getSumofRemoneyByLoanIDArray data is null');
+        }
+        $condition['is_delete'] = array('neq',1);
+        $condition['loan_id'] = array('IN',$loanIDArray);
+        return $this->where($condition)->sum('r_money');
+
+
+
+    }
+
     /**
      * 根据借款ID计算违约金总额
      * @param int $loan_id

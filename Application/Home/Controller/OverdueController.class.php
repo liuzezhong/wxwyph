@@ -184,7 +184,24 @@ class OverdueController extends CommonController
         $sum_rmoney = 0;
         $repayment_smoney = 0;
         $profit_money = 0;
+
+        $loansIdArray = array_column($loansBak,'loan_id');
+        $sum_rmoney = D('Repayments')->getSumofRemoneyByLoanIDArray($loansIdArray);
+
+
+
         foreach ($loansBak as $key => $item) {
+
+            // 获取剩余应还
+            $repayment_smoney = $repayment_smoney + ($item['cyc_principal'] * $item['cyclical']);
+            // 利润
+            $profit_money = $profit_money - $item['expenditure'];
+        }
+
+        $repayment_smoney = $repayment_smoney - $sum_rmoney;
+        $profit_money = $profit_money + $sum_rmoney;
+
+        /*foreach ($loansBak as $key => $item) {
             // 获取已经收款金额
             $repayment_rmoney = D('Repayments')->getSumOfRmoneyByLoanID($item['loan_id']);
             if(!$repayment_rmoney) {
@@ -195,7 +212,8 @@ class OverdueController extends CommonController
             $repayment_smoney = $repayment_smoney + ($item['cyc_principal'] * $item['cyclical'] - $repayment_rmoney);
             // 利润
             $profit_money = $profit_money + ($repayment_rmoney - $item['expenditure']);
-        }
+        }*/
+
         //手续费类型列表
         $poundages = D('Poundage')->selectALLPoundage();
         foreach($loans as $key => $value) {

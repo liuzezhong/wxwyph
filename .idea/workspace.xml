@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/TourController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/TourController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/CompanyModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/CompanyModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Charge/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Charge/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Collection/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Collection/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Customer/add.html" afterPath="$PROJECT_DIR$/Application/Home/View/Customer/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Customer/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Customer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Image/detail.html" afterPath="$PROJECT_DIR$/Application/Home/View/Image/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Image/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Image/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Loan/add.html" afterPath="$PROJECT_DIR$/Application/Home/View/Loan/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Loan/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Loan/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Message/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Overdue/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Overdue/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Repayments/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Repayments/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Staff/add.html" afterPath="$PROJECT_DIR$/Application/Home/View/Staff/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Tour/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Tour/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/0c7e12dd402e2c5818ba7b3c614d6ab2.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/0c7e12dd402e2c5818ba7b3c614d6ab2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5047e228c7acd2d93cbf6d09a960c47c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5047e228c7acd2d93cbf6d09a960c47c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/5eef2c04f39ec8320117565c6aed2845.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/67d6cdd0cc4f72cad38240f6e53499de.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/67d6cdd0cc4f72cad38240f6e53499de.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/79509babd324336d48b8b31c0d8bd3fb.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/79509babd324336d48b8b31c0d8bd3fb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/981c566e083c9948dc813d3c79ab2b52.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/981c566e083c9948dc813d3c79ab2b52.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b24bf65fb6eef15415be8cccfbdcd6eb.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b24bf65fb6eef15415be8cccfbdcd6eb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b68fbe840bf885051ed23d04b5ec1de9.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b68fbe840bf885051ed23d04b5ec1de9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b957662f09b461b84eeeb4c19f0a0521.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b957662f09b461b84eeeb4c19f0a0521.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/bc8e8dcc2fe39de9730c9290b1603329.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/bc8e8dcc2fe39de9730c9290b1603329.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c678f6b7bf44172acca7c9774a0a8667.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c678f6b7bf44172acca7c9774a0a8667.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/common.js" afterPath="$PROJECT_DIR$/Public/Home/js/common.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,31 +47,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoanController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php">
+      <file leaf-file-name="OtherController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="120" column="59" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+            <state relative-caret-position="442">
+              <caret line="3742" column="31" lean-forward="false" selection-start-line="3742" selection-start-column="20" selection-end-line="3742" selection-end-column="31" />
+              <folding>
+                <element signature="e#242#413#0#PHP" expanded="false" />
+                <element signature="e#419#3732#0#PHP" expanded="false" />
+                <element signature="e#3834#5737#0#PHP" expanded="false" />
+                <element signature="e#5743#8783#0#PHP" expanded="false" />
+                <element signature="e#8789#9617#0#PHP" expanded="false" />
+                <element signature="e#9623#13721#0#PHP" expanded="false" />
+                <element signature="e#13727#14848#0#PHP" expanded="false" />
+                <element signature="e#14854#18968#0#PHP" expanded="false" />
+                <element signature="e#18974#19813#0#PHP" expanded="false" />
+                <element signature="e#19819#23341#0#PHP" expanded="false" />
+                <element signature="e#23347#24186#0#PHP" expanded="false" />
+                <element signature="e#24192#25662#0#PHP" expanded="false" />
+                <element signature="e#25668#26509#0#PHP" expanded="false" />
+                <element signature="e#26515#245493#0#PHP" expanded="false" />
+                <element signature="e#245499#249556#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxuserList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="102" column="370" lean-forward="false" selection-start-line="102" selection-start-column="358" selection-end-line="102" selection-end-column="370" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoanModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php">
+      <file leaf-file-name="RepaymentsModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="97" column="64" lean-forward="false" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YuqiController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="210" column="21" lean-forward="true" selection-start-line="210" selection-start-column="21" selection-end-line="210" selection-end-column="21" />
+            <state relative-caret-position="567">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -46,8 +96,8 @@
       <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="32" selection-end-column="2" />
+            <state relative-caret-position="588">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,11 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>editWxuser</find>
-      <find>$depart_id</find>
-      <find>edit-record</find>
-      <find>baoju-form</find>
-      <find>deleteWxUser</find>
       <find>getDepartMentByID</find>
       <find>updateWxuserByID</find>
       <find>findCustomerByCondition</find>
@@ -94,6 +139,11 @@
       <find>selectLoanByCustomerID</find>
       <find>searchYuqiByName</find>
       <find>getLoansByCustomer</find>
+      <find>change-repay</find>
+      <find>change-loan</find>
+      <find>selectAllBycondition</find>
+      <find>save</find>
+      <find>listRepaymentsByCondition</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,19 +152,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Common/Model/StaffModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Model/CompanyModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/CollectionController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Model/LocationModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Model/TourModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Model/RepaymentsModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Wxapp/Model/RepaymentsModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Repayments/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Tour/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/TourModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Wxapp/Model/CustomerModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/footer.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Loan/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/header.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Wage/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
@@ -134,24 +172,36 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html" />
         <option value="$PROJECT_DIR$/Application/Home/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/nav.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Overdue/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/MessageController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/TourController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ChargeController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
-        <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Collection/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/CompanyModel.class.php" />
+        <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/TourController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Staff/add.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Customer/add.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Customer/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Loan/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Loan/add.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Repayments/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Tour/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Overdue/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Charge/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Image/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Image/detail.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
       </list>
     </option>
@@ -171,9 +221,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
+    <option name="x" value="8" />
+    <option name="y" value="23" />
     <option name="width" value="2000" />
-    <option name="height" value="951" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -227,27 +278,49 @@
               <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Common" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Wxapp" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Wxapp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Wxapp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Common" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baojutouzi.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Other" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="baojutouzi.com" type="b2602c69:ProjectViewProjectNode" />
@@ -422,18 +495,18 @@
       <workItem from="1516063940639" duration="24037000" />
       <workItem from="1516236938327" duration="12151000" />
       <workItem from="1516277115294" duration="29644000" />
-      <workItem from="1516375794719" duration="3543000" />
+      <workItem from="1516375794719" duration="18185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254288000" />
+    <option name="totallyTimeSpent" value="268930000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2000" height="951" extended-state="0" />
+    <frame x="8" y="23" width="2000" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -460,113 +533,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Public/Home/js/common.js</url>
-          <line>748</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Overdue/userInfo.html" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/RegisterController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/changePwd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/userInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/ChargeModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="56" column="49" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Charge/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/adminList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="85" column="86" lean-forward="true" selection-start-line="85" selection-start-column="86" selection-end-line="85" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/admin/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="39" column="15" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1263">
-          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Wage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="169" column="29" lean-forward="true" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/WageModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Loan/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1612">
-          <caret line="339" column="52" lean-forward="false" selection-start-line="339" selection-start-column="42" selection-end-line="339" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="417" column="0" lean-forward="true" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/AdminModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
@@ -577,13 +548,6 @@
             <element signature="e#888#1147#0#PHP" expanded="false" />
             <element signature="e#1415#1805#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="102" column="370" lean-forward="false" selection-start-line="102" selection-start-column="358" selection-end-line="102" selection-end-column="370" />
         </state>
       </provider>
     </entry>
@@ -599,6 +563,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
           <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding>
+            <element signature="e#263#475#0#PHP" expanded="false" />
+            <element signature="e#481#734#0#PHP" expanded="false" />
+            <element signature="e#740#1133#0#PHP" expanded="false" />
+            <element signature="e#1238#1565#0#PHP" expanded="false" />
+            <element signature="e#2042#2421#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,28 +578,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/StaffModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/CustomerModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -654,31 +603,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Overdue/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="211" column="70" lean-forward="true" selection-start-line="211" selection-start-column="70" selection-end-line="211" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="81" column="63" lean-forward="false" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/TourController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="146" column="40" lean-forward="false" selection-start-line="146" selection-start-column="40" selection-end-line="146" selection-end-column="40" />
-          <folding>
-            <element signature="e#8592#11348#0#PHP" expanded="false" />
-            <element signature="e#11354#12173#0#PHP" expanded="false" />
-            <element signature="e#12179#14920#0#PHP" expanded="false" />
-            <element signature="e#14925#15809#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4335">
-          <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ChargeController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -720,26 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CollectionController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="203" column="71" lean-forward="false" selection-start-line="203" selection-start-column="71" selection-end-line="203" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CommonController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
           <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CustomerController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1429">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -775,49 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3990">
-          <caret line="195" column="48" lean-forward="false" selection-start-line="195" selection-start-column="20" selection-end-line="195" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="643" column="5" lean-forward="false" selection-start-line="643" selection-start-column="5" selection-end-line="643" selection-end-column="5" />
-          <folding>
-            <element signature="e#122#142#0#PHP" expanded="true" />
-            <element signature="e#242#413#0#PHP" expanded="false" />
-            <element signature="e#419#3732#0#PHP" expanded="false" />
-            <element signature="e#3834#5737#0#PHP" expanded="false" />
-            <element signature="e#5743#8783#0#PHP" expanded="false" />
-            <element signature="e#8789#9617#0#PHP" expanded="false" />
-            <element signature="e#9623#13721#0#PHP" expanded="false" />
-            <element signature="e#13727#14848#0#PHP" expanded="false" />
-            <element signature="e#14854#18968#0#PHP" expanded="false" />
-            <element signature="e#18974#19813#0#PHP" expanded="false" />
-            <element signature="e#19819#23341#0#PHP" expanded="false" />
-            <element signature="e#23347#24186#0#PHP" expanded="false" />
-            <element signature="e#24192#25662#0#PHP" expanded="false" />
-            <element signature="e#25668#26509#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/MessageController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4935">
           <caret line="242" column="30" lean-forward="false" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34440">
-          <caret line="1640" column="37" lean-forward="false" selection-start-line="1640" selection-start-column="37" selection-end-line="1640" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -846,38 +712,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-          <folding>
-            <element signature="e#14503#15926#0#PHP" expanded="false" />
-            <element signature="e#15963#25572#0#PHP" expanded="false" />
-            <element signature="e#25578#33753#0#PHP" expanded="false" />
-            <element signature="e#33759#34954#0#PHP" expanded="false" />
-            <element signature="e#34960#37982#0#PHP" expanded="false" />
-            <element signature="e#37988#46566#0#PHP" expanded="false" />
-            <element signature="e#46572#47952#0#PHP" expanded="false" />
-            <element signature="e#47994#49771#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Message/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding>
-            <marker date="1516351397264" expanded="false" signature="8195:8209" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,10 +744,266 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/CompanyModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="34" column="58" lean-forward="false" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/ChargeModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/CollectionModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CollectionController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="203" column="71" lean-forward="false" selection-start-line="203" selection-start-column="71" selection-end-line="203" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Collection/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="207" column="62" lean-forward="false" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="745" column="35" lean-forward="false" selection-start-line="745" selection-start-column="35" selection-end-line="745" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CustomerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/TourController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding>
+            <element signature="e#211#8043#0#PHP" expanded="false" />
+            <element signature="e#11543#12362#0#PHP" expanded="false" />
+            <element signature="e#12368#15109#0#PHP" expanded="false" />
+            <element signature="e#15114#15998#0#PHP" expanded="false" />
+            <element signature="e#16004#21031#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/StaffModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/CustomerModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="326" column="13" lean-forward="true" selection-start-line="214" selection-start-column="12" selection-end-line="326" selection-end-column="13" />
+          <folding>
+            <element signature="e#15306#16729#0#PHP" expanded="false" />
+            <element signature="e#16766#26375#0#PHP" expanded="false" />
+            <element signature="e#34562#35757#0#PHP" expanded="false" />
+            <element signature="e#35763#38785#0#PHP" expanded="false" />
+            <element signature="e#38791#47369#0#PHP" expanded="false" />
+            <element signature="e#47375#48755#0#PHP" expanded="false" />
+            <element signature="e#48797#50574#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="201" column="52" lean-forward="false" selection-start-line="201" selection-start-column="52" selection-end-line="201" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Staff/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Customer/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Loan/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Loan/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Repayments/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Tour/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1943">
+          <caret line="207" column="62" lean-forward="false" selection-start-line="207" selection-start-column="62" selection-end-line="207" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Overdue/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Charge/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Message/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="146" column="62" lean-forward="false" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
+          <folding>
+            <marker date="1516449252302" expanded="false" signature="8193:8207" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Image/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Image/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Customer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/wxuserList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="102" column="370" lean-forward="false" selection-start-line="102" selection-start-column="358" selection-end-line="102" selection-end-column="370" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="3742" column="31" lean-forward="false" selection-start-line="3742" selection-start-column="20" selection-end-line="3742" selection-end-column="31" />
+          <folding>
+            <element signature="e#242#413#0#PHP" expanded="false" />
+            <element signature="e#419#3732#0#PHP" expanded="false" />
+            <element signature="e#3834#5737#0#PHP" expanded="false" />
+            <element signature="e#5743#8783#0#PHP" expanded="false" />
+            <element signature="e#8789#9617#0#PHP" expanded="false" />
+            <element signature="e#9623#13721#0#PHP" expanded="false" />
+            <element signature="e#13727#14848#0#PHP" expanded="false" />
+            <element signature="e#14854#18968#0#PHP" expanded="false" />
+            <element signature="e#18974#19813#0#PHP" expanded="false" />
+            <element signature="e#19819#23341#0#PHP" expanded="false" />
+            <element signature="e#23347#24186#0#PHP" expanded="false" />
+            <element signature="e#24192#25662#0#PHP" expanded="false" />
+            <element signature="e#25668#26509#0#PHP" expanded="false" />
+            <element signature="e#26515#245493#0#PHP" expanded="false" />
+            <element signature="e#245499#249556#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="32" selection-end-column="2" />
+        <state relative-caret-position="588">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

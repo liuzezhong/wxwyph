@@ -48,6 +48,22 @@ class LoanController extends CommonController {
 
             if(I('get.customer_id','','string')) {
                 $customerSearchArray = explode(',',I('get.customer_id','','string'));
+                // 搜索客户信息
+                /*$customerInfoCondition = array(
+                    'id' => array('IN',$customerSearchArray),
+                    'company_id' => $companyCondition['company_id'],
+                );
+
+                $customerInfo = D('Customer')->selectALLCustomerOnlyByCondition($customerInfoCondition);
+
+                $customerNameArray = array_column($customerInfo,'name');
+                $customerNameInfoCondition = array(
+                    'name' => array('IN',$customerNameArray),
+                    'company_id' => $companyCondition['company_id'],
+                );
+                $customerNameInfo = D('Customer')->selectALLCustomerOnlyByCondition($customerNameInfoCondition);
+                $customerSearchArrayId = array_column($customerNameInfo,'id');*/
+
                 $condition['customer_id'] = array('IN',$customerSearchArray);
                 foreach ($customers as $key => $item) {
                     $customers[$key]['selected'] = 0;

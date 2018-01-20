@@ -25,7 +25,7 @@ class RepaymentsModel extends Model
         // 剔除逻辑删除的数据
         $condition['is_delete'] = array('neq',1);
         $offset = ($page -1) * $pageSize;
-        $res =  $this->where($condition)->order('gmt_create desc')->limit($offset,$pageSize)->select();
+        $res =  $this->where($condition)->order('gmt_repay desc')->limit($offset,$pageSize)->select();
         return $res;
     }
 

@@ -722,6 +722,7 @@
                     <?php if($userInfo["jurisdiction"] == 2): ?><th class="text-center">所属公司</th><?php endif; ?>
                     <th class="text-center">还款状态</th>
                     <th class="text-center">短信提醒</th>
+                    <th class="text-center">备注</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -758,6 +759,7 @@
                                                             attr-id="<?php echo ($today["loan_id"]); ?>" attr-m="home" attr-c="message"
                                                             attr-a="getLoanMessage" attr-style="2"
                                                             attr-nowdate="<?php echo ($input_datepicker); ?>">再发一次</button></td><?php endif; ?>
+                        <td class="text-center"><?php echo ($today["remark"]); ?></td>
 
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>

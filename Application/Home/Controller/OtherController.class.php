@@ -2357,7 +2357,7 @@ class OtherController extends CommonController
         // 8.借款周期	9.手续费	10.保证金	11.同行反点	12.实际到账	13.实际支出	14.客户经理	15.上门经理
         //16.客户状态	17.客户地址	18.总已还款期数	19.总还款金额
 
-        $data_array = '2017.5.27	莫家培222	13921118277	20000	400	560	零用贷	周五	50	3000	2000	2000	15000	17000	顾峰		还款中	无锡	32	30720
+        /*$data_array = '2017.5.27	莫家培222	13921118277	20000	400	560	零用贷	周五	50	3000	2000	2000	15000	17000	顾峰		还款中	无锡	32	30720
 2017.7.17	邵传坚0903	15251677808	10000	334	276	零用贷	周一	30	2400	500	1950	7100	9050	朱新约	成乃柏	还款中	盐城	26	15860
 2017.8.2	姚敏晓2514	15261539610	10000	334	346	零用贷	周二	30	1500	1000	1400	7500	8900	朱新约	成乃柏	还款中	无锡新区	23	15640
 2017.8.15	顾敏俊1216	18015361213	6000	300	220	零用贷	周一	20	1200	600	600	4200	4800	顾峰		还款中	无锡南长	18	9360
@@ -3248,9 +3248,9 @@ class OtherController extends CommonController
 2017.12.9	陆铸军6519	13382888508	63000	12000	0	空放	10	1	10000	0	3000	50000	53000	信息部		还款中		3	36000
 2017.12.25	杨文凯3515	13093087928	10000	2500	0	空放	22	1	2500	0	750	7500	8250	罗		还款中		1	2500
 2017.12.29	杨艳3529	15251638698	10000	2500	0	空放	22	1	2500	0	750	7500	8250	信息部		还款中		0	0
-2017.12.31	江巍波	0	100000	20000	0	空放	22	1	20000	0	4000	80000	84000	信息部		还款中		0	0';
+2017.12.31	江巍波	0	100000	20000	0	空放	22	1	20000	0	4000	80000	84000	信息部		还款中		0	0';*/
 
-
+        exit();
         $data = explode("\n",$data_array);
         foreach ($data as $key => $value) {
             $item = explode("\t", $value);
@@ -3639,15 +3639,119 @@ class OtherController extends CommonController
                     $repay_id = D('Repayments')->addRepayments($repayData);
                 }
             }
-
-
-
-
         }
+    }
+
+    public function changeCustomer() {
+        /*$allLoans = D('Loan')->selectAllBycondition();
+        foreach ($allLoans as $key => $item) {
+            $oldStaff = D('Staff')->getStaffByID($item['staff_id']);
+            $staffCondition = array(
+                'staff_name' => $oldStaff['staff_name'],
+                'company_id' => $item['company_id'],
+            );
+            $staffCompany = D('Staff')->findOneStaffByCondition($staffCondition);
+            if(!$staffCompany) {
+                $staffData = array(
+                    'staff_name' => $oldStaff['staff_name'],
+                    'phone_number' => $oldStaff['phone_number'],
+                    'idcard' => $oldStaff['idcard'],
+                    'department_id' => $oldStaff['department_id'],
+                    'address' => $oldStaff['address'],
+                    'induction' => $item['create_time'],
+                    'create_time' => $item['create_time'],
+                    'company_id' => $item['company_id'],
+                    'is_old' => 2,
+                );
+                $newStaff = D('Staff')->addStaff($staffData);
+                $staff_id = $newStaff;
+            }else {
+                $staff_id = $staffCompany['staff_id'];
+            }
+
+            if($item['foreign_id']) {
+                $oldForeign = D('Staff')->getStaffByID($item['foreign_id']);
+                $foreignCondition = array(
+                    'staff_name' => $oldForeign['staff_name'],
+                    'company_id' => $item['company_id'],
+                );
+                $foreignCompany = D('Staff')->findOneStaffByCondition($staffCondition);
+                if(!$staffCompany) {
+                    $foreignData = array(
+                        'staff_name' => $oldForeign['staff_name'],
+                        'phone_number' => $oldForeign['phone_number'],
+                        'idcard' => $oldForeign['idcard'],
+                        'department_id' => $oldForeign['department_id'],
+                        'address' => $oldForeign['address'],
+                        'induction' => $item['create_time'],
+                        'create_time' => $item['create_time'],
+                        'company_id' => $item['company_id'],
+                        'is_old' => 2,
+                    );
+                    $newForeign = D('Staff')->addStaff($foreignData);
+                    $foreign_id = $newForeign;
+                }else {
+                    $foreign_id = $staffCompany['staff_id'];
+                }
+            }else {
+                $foreign_id = '';
+            }
 
 
+            // 查看是否存在客户信息
+            $oldCustomer = D('Customer')->getCustomerByID($item['customer_id']);
+            $customerCondition = array(
+                'name' => $oldCustomer['name'],
+                'company_id' => $item['company_id'],
+            );
+            $customerCompany = D('Customer')->findOneCustomerByCondition($customerCondition);
+            if(!$customerCompany) {
+                $customerData = array(
+                    'name' => $oldCustomer['name'],
+                    'phone' => $oldCustomer['phone'],
+                    'address' => $oldCustomer['address'],
+                    'recommender' => $staff_id,
+                    'create_time' => $item['create_time'],
+                    'company_id' => $item['company_id'],
+                    'is_old' => 2,
+                );
+                $newCustomer = D('Customer')->addCustomer($customerData);
+                $customer_id = $newCustomer;
+            }else {
+                $customer_id = $customerCompany['id'];
+            }
 
+            if($staff_id != $item['staff_id'] || $customer_id != $item['staff_id'] || $foreign_id != $item['foreign_id']) {
+                //更新信息
+                $loanData = array(
+                    'staff_id' => $staff_id,
+                    'customer_id' => $customer_id,
+                    'foreign_id' => $foreign_id,
+                );
+                $updateLoan = D('Loan')->updateLoanByID($item['loan_id'],$loanData);
+            }
+        }*/
+    }
 
+    public function setLoanINC() {
+        /*$allLoans = D('Loan')->selectAllBycondition();
+        foreach ($allLoans as $key => $item) {
+            $customer_loantime = D('Customer')->setIncLoanTimes($item['customer_id']);
+        }*/
+    }
+
+    public function changeRepay() {
+        $condition['gmt_repay'] = array('GT','2018-01-01 00:00:00');
+        $condition['is_old'] = 1;
+        $repays = D('Repayments')->listRepaymentsByCondition($condition);
+
+        foreach ($repays as $key => $item) {
+            $loan = D('Loan')->getLoanByID($item['loan_id']);
+            if($loan['loan_status'] == 1 && $loan['is_old'] == 1) {
+                $repaysData['gmt_repay'] = '2017-12-31 16:00:00';
+                $re = D('Repayments')->updateRepayments($item['repayments_id'],$repaysData);
+            }
+        }
     }
 
 }

@@ -582,9 +582,8 @@
         <small>请仔细填写</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
-        <li><a href="#">借款记录</a></li>
-        <li class="active">添加记录</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 借款记录</a></li>
+        <li><a href="#">添加记录</a></li>
       </ol>
     </section>
 
@@ -687,13 +686,13 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <label>客户经理</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户经理" data-size="8" name="staff_id">
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户经理" data-size="8" name="staff_id" >
                         <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i;?><option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                 </div>
                 <div class="form-group col-lg-6">
                   <label>外访经理</label>
-                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" name="foreign_id" id="foreign_id" onchange="addTourInfo()">
+                    <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" name="foreign_id" id="foreign_id" onchange="addTourInfo()" multiple>
                         <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i;?><option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                 </div>

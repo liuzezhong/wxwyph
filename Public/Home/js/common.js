@@ -735,7 +735,8 @@ $('body').on('click','.text-center #change-loan-status',function () {
 
     layer.msg('将交易状态修改为', {
         time: 10000, //20s后自动关闭
-        btn: ['已逾期','还款中','已结清'],
+        btn: ['已逾期','还款中','已结清','取消'],
+        area: '380px',
         yes: function (index, layero) {
             changeLoanStatus(loan_id,loan_status,-1,0); //已逾期
         },
@@ -764,7 +765,8 @@ $('body').on('click','.text-center #change-repay-status',function () {
     var b_money = 0;
     layer.msg('将交易状态修改为', {
         time: 10000, //20s后自动关闭
-        btn: ['正常还款','超时还款','逾期未还'],
+        area: '400px',
+        btn: ['正常还款','超时还款','逾期未还','取消'],
         yes: function (index, layero) {
             addRepaymentsAuto(loan_id,now_cyclical,re_status,1,b_money); //已逾期
         },

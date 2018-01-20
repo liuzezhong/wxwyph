@@ -161,6 +161,7 @@
                     </if>
                     <th class="text-center">还款状态</th>
                     <th class="text-center">短信提醒</th>
+                    <th class="text-center">备注</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -204,6 +205,7 @@
                                                             attr-a="getLoanMessage" attr-style="2"
                                                             attr-nowdate="{$input_datepicker}">再发一次</button></td>
                         </if>
+                        <td class="text-center">{$today.remark}</td>
 
                     </tr>
                 </volist>

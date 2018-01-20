@@ -583,8 +583,8 @@
         <small>上门外访信息</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
-        <li><a href="#">上门外访信息</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 上门外访信息</a></li>
+        <li><a href="#">外访信息信息列表</a></li>
       </ol>
     </section>
 
@@ -743,7 +743,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">新增记账记录</h4>
+                <h4 class="modal-title" id="myModalLabel">新增外访记录</h4>
             </div>
             <div class="modal-body">
                 <div class="row">

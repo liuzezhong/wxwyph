@@ -32,6 +32,6 @@ class CompanyModel extends Model
      * @return mixed
      */
     public function selectAllCompany($condition = array()) {
-        return $this->where($condition)->select();
+        return $this->where($condition)->order('gmt_create')->select();
     }
 }

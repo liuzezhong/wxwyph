@@ -125,20 +125,11 @@ class TourController extends CommonController
 
         if(I('get.search_datepicker','','string')) {
             $search_datepicker = I('get.search_datepicker','','string');
-            // 将2017-11-17 12:30:00 至 2017-11-25 15:30:20
-            // 分解为
-            // 2017-11-17 12:30:00
-            // 2017-11-25 15:30:20
+
             $s_time = substr($search_datepicker,0,19);
             $e_time = substr($search_datepicker,24,19);
             $condition['gmt_tour'] = array('BETWEEN',array($s_time,$e_time));
             $this->assign('input_datepicker',$search_datepicker);
-        }else {
-            /*$s_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time())));
-            $e_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time()) . ' +1 month -1 second'));
-            $condition['gmt_tour'] = array('BETWEEN',array($s_time,$e_time));
-            //2018-01-01 00:00:00 至 2018-01-31 23:59:59
-            $this->assign('input_datepicker',$s_time . ' 至 ' . $e_time);*/
         }
 
         if(I('get.company_id','','string') && I('get.company_id','','string') != 'undefined') {
@@ -298,6 +289,24 @@ class TourController extends CommonController
         $gmt_tour = str_replace('年','-',$gmt_tour);
         $gmt_tour = str_replace('月','-',$gmt_tour);
         $gmt_tour = str_replace('日','-',$gmt_tour);
+
+        // 查询是否存在借款记录
+        $loanCondition = array(
+            'customer_id' => $customer_id,
+            'foreign_id' => $staff_id,
+            'create_time' => strtotime($gmt_tour),
+            'company_id' => $company_id,
+        );
+
+        $loan = D('Loan')->selectAllBycondition($loanCondition);
+
+        if(!$loan) {
+            $loan_id = 0;
+        }else {
+            $loan_id = $loan[0]['loan_id'];
+            $is_loan = 1;
+        }
+
         $data = array(
             'customer_id' => $customer_id,
             'location_id' => $location_id,
@@ -309,10 +318,19 @@ class TourController extends CommonController
             'paystyle_id' => $style_id,
             'gmt_create' => date('Y-m-d H:i:s',time()),
             'gmt_tour' => $gmt_tour,
+            'loan_id' => $loan_id,
         );
 
         try {
             $tour = D('Tour')->addTour($data);
+
+            if($loan_id) {
+                // 借款表更新数据
+                $loanNewData = array(
+                    'tour_id' => $tour,
+                );
+                $updateLoan = D('Loan')->updateLoanByID($loan_id,$loanNewData);
+            }
             if(!$tour) {
                 $this->ajaxReturn(array(
                     'status' => 0,

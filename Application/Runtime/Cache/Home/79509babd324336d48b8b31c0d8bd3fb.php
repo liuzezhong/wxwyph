@@ -583,7 +583,7 @@
         <small>现金日记账表</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 现金记账表</a></li>
         <li><a href="#">现金日记账</a></li>
       </ol>
     </section>

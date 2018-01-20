@@ -28,7 +28,8 @@ class LoanModel extends Model {
     public function selectAllBycondition($condition = array()) {
         // 去除逻辑删除的数据
         $condition['is_delete'] = array('neq',1);
-        return $this->_db->where($condition)->order('create_time desc')->select();
+        $res = $this->_db->where($condition)->order('create_time desc')->select();
+        return $res;
     }
 
     public function countLoans($condition = array()) {

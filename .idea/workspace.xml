@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/2018/01/06/5a50c42da6118.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uploads/2018/01/06/5a50c42da98ab.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Message/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/455a6242d1c94ccc41106a388080363b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b0e6b55275fb1c8ce32bff965ba58eae.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b0e6b55275fb1c8ce32bff965ba58eae.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_19.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_19.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/common.js" afterPath="$PROJECT_DIR$/Public/Home/js/common.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="588">
@@ -100,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="206" column="60" lean-forward="false" selection-start-line="206" selection-start-column="52" selection-end-line="206" selection-end-column="60" />
+            <state relative-caret-position="437">
+              <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -238,8 +227,8 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
       </list>
     </option>
   </component>
@@ -257,7 +246,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="25" />
     <option name="width" value="2000" />
     <option name="height" value="951" />
@@ -509,18 +498,18 @@
       <workItem from="1516063940639" duration="24037000" />
       <workItem from="1516236938327" duration="12151000" />
       <workItem from="1516277115294" duration="29644000" />
-      <workItem from="1516375794719" duration="1616000" />
+      <workItem from="1516375794719" duration="2016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252361000" />
+    <option name="totallyTimeSpent" value="252761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2000" height="951" extended-state="0" />
+    <frame x="0" y="25" width="2000" height="951" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.231" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -940,23 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-          <folding>
-            <element signature="e#14503#15926#0#PHP" expanded="false" />
-            <element signature="e#15963#25572#0#PHP" expanded="false" />
-            <element signature="e#25578#33753#0#PHP" expanded="false" />
-            <element signature="e#33759#34954#0#PHP" expanded="false" />
-            <element signature="e#34960#37982#0#PHP" expanded="false" />
-            <element signature="e#37988#46566#0#PHP" expanded="false" />
-            <element signature="e#46572#47952#0#PHP" expanded="false" />
-            <element signature="e#47994#49771#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,18 +947,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="206" column="60" lean-forward="false" selection-start-line="206" selection-start-column="52" selection-end-line="206" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
+          <folding>
+            <element signature="e#14503#15926#0#PHP" expanded="false" />
+            <element signature="e#15963#25572#0#PHP" expanded="false" />
+            <element signature="e#25578#33753#0#PHP" expanded="false" />
+            <element signature="e#33759#34954#0#PHP" expanded="false" />
+            <element signature="e#34960#37982#0#PHP" expanded="false" />
+            <element signature="e#37988#46566#0#PHP" expanded="false" />
+            <element signature="e#46572#47952#0#PHP" expanded="false" />
+            <element signature="e#47994#49771#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
           <folding />
         </state>
       </provider>

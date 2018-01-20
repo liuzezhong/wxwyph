@@ -6,8 +6,8 @@ return array(
     'DEFAULT_CONTROLLER' => 'Collection',
     'DEFAULT_AVATAR_URL' => 'http://imgbj.xianshikeji.com/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png',
     'WECHAT_SMALL_APPLICATION' => array(
-        'APPID' => 'wx0343be3aa3adeb71',
-        'APPSECRET' => '7d09c7cc7eaf7540d5ea1383eb3b82a6',
+        'APPID' => 'wx0454c08974dc7d66',
+        'APPSECRET' => '29cce1874999158f55bc11ecc21423b6',
     ),
     'ALIYUN_MESSAGE_CONFIG' => array(
         'product' => 'Dysmsapi',

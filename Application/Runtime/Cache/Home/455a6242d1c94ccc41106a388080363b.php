@@ -719,10 +719,10 @@
                             <label>手机号码</label>
                             <input type="text" class="form-control " name="phone" id="phone" placeholder="请输入手机号码">
                         </div>
-                        <div class="form-group col-lg-12" style="display: none;">
+                       <!-- <div class="form-group col-lg-12" style="display: none;">
                             <label>身份证号码</label>
                             <input type="text" class="form-control"  id="idcard" placeholder="请输入身份证号码" >
-                        </div>
+                        </div>-->
 
                         <div class="form-group col-lg-12" style="display: none;">
                             <label>短信签名</label>

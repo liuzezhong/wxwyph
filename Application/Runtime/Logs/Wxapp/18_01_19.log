@@ -1,0 +1,1321 @@
+[ 2018-01-19T23:31:45+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0190s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /var/www/wxwyph.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/var/www/wxwyph.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ())) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ()), index) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php) called at [/var/www/wxwyph.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+
+[ 2018-01-19T23:31:46+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /var/www/wxwyph.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/var/www/wxwyph.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ())) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ()), index) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php) called at [/var/www/wxwyph.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /var/www/wxwyph.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/var/www/wxwyph.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/var/www/wxwyph.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ())) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([] => Think\View Object ([] => Array (),[] => ),[] => Array ()), index) called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/var/www/wxwyph.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/var/www/wxwyph.com/ThinkPHP/ThinkPHP.php) called at [/var/www/wxwyph.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+
+[ 2018-01-19T23:31:47+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: openid /Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php 第 24 行.
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2018-01-19T23:34:15+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0009s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ())) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ()), index) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php) called at [/Work/wwwroot/baojutouzi.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ())) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ()), index) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php) called at [/Work/wwwroot/baojutouzi.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+
+[ 2018-01-19T23:34:16+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0007s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding' at line 1
+ [ SQL语句 ] : SELECT * FROM `bj_session` WHERE ( session3key = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>系统发生错误</title>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+html{ overflow-y: scroll; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+img{ border: 0; }
+.error{ padding: 24px 48px; }
+.face{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+h1{ font-size: 32px; line-height: 48px; }
+.error .content{ padding-top: 10px}
+.error .info{ margin-bottom: 12px; }
+.error .info .title{ margin-bottom: 3px; }
+.error .info .title h3{ color: #000; font-weight: 700; font-size: 16px; }
+.error .info .text{ line-height: 24px; }
+.copyright{ padding: 12px 48px; color: #999; }
+.copyright a{ color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="error">
+<p class="face">:(</p>
+<h1>SessionModel findSessionByOpenID openid is null</h1>
+<div class="content">
+	<div class="info">
+		<div class="title">
+			<h3>错误位置</h3>
+		</div>
+		<div class="text">
+			<p>FILE: /Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php &#12288;LINE: 820</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="title">
+			<h3>TRACE</h3>
+		</div>
+		<div class="text">
+			<p>#0  Think\Think::halt(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Common/functions.php:820]<br />
+#1  throw_exception(SessionModel findSessionByOpenID openid is null) called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Model/SessionModel.class.php:32]<br />
+#2  Wxapp\Model\SessionModel->findSessionByOpenID() called at [/Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php:24]<br />
+#3  Wxapp\Controller\LoginController->index()<br />
+#4  ReflectionMethod->invoke(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ())) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:173]<br />
+#5  Think\App::invokeAction(Wxapp\Controller\LoginController Object ([ * view] => Think\View Object ([ * tVar] => Array (),[ * theme] => ),[ * config] => Array ()), index) called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:110]<br />
+#6  Think\App::exec() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/App.class.php:204]<br />
+#7  Think\App::run() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/Library/Think/Think.class.php:120]<br />
+#8  Think\Think::start() called at [/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php:97]<br />
+#9  require(/Work/wwwroot/baojutouzi.com/ThinkPHP/ThinkPHP.php) called at [/Work/wwwroot/baojutouzi.com/index.php:24]<br />
+</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="copyright">
+<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup>3.2.3</sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+</div>
+</body>
+</html>
+' ) LIMIT 1  
+
+[ 2018-01-19T23:34:16+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bj_session` WHERE ( openid = 'oi_Y55CCThy8B8pwc3541JJcL5_g' ) LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: unionid /Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php 第 30 行.
+SQL: INSERT INTO `bj_session` (`session3key`,`openid`,`session_key`,`unionid`,`create_time`) VALUES ('Kh8hwOYhNYkpdE6k','oi_Y55CCThy8B8pwc3541JJcL5_g','2W+HnDeq2Am1P7PanobI2g==',NULL,'1516376056') [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `bj_wxuser` (`openid`,`gmt_create`) VALUES ('oi_Y55CCThy8B8pwc3541JJcL5_g','2018-01-19 23:34:16') [ RunTime:0.0005s ]
+
+[ 2018-01-19T23:34:32+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:34:33+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:35:14+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:35:14+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:35:50+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:35:50+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:36:10+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:36:10+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:36:46+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:36:46+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:37:04+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:37:05+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:37:42+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:37:42+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:37:58+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:37:59+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000276s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:38:10+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:38:10+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:38:18+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:38:18+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:41:20+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:41:21+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:42:15+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:42:15+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:42:17+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:42:17' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0035s ]
+
+[ 2018-01-19T23:42:17+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-01-19T23:43:03+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:43:05+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:43:05' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0006s ]
+
+[ 2018-01-19T23:43:05+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0014s ]
+
+[ 2018-01-19T23:43:19+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:43:27+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:45:26+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000225s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:45:26+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:45:28+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000254s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:45:28' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0057s ]
+
+[ 2018-01-19T23:45:28+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:45:41+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:45:41+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:48:26+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:48:27+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:48:28+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:48:28' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0010s ]
+
+[ 2018-01-19T23:48:28+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:51:49+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:51:49+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:51:50+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:51:50' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0023s ]
+
+[ 2018-01-19T23:51:51+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:52:04+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:54:06+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:54:06+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:54:50+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:54:51+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:55:16+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:17+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:26+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:26+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000232s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:27+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:55:27' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0030s ]
+
+[ 2018-01-19T23:55:27+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:31+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:34+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:55:54+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:54+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:55:55+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:55:55' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0023s ]
+
+[ 2018-01-19T23:55:55+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:56:31+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:56:31+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-01-19T23:56:32+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:56:32' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0057s ]
+
+[ 2018-01-19T23:56:32+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:56:35+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-01-19T23:56:36+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `bj_wxuser` SET `gmt_modify`='2018-01-19 23:56:36' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0057s ]
+
+[ 2018-01-19T23:56:36+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:56:39+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:56:41+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:56:42+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-19T23:56:52+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-19T23:56:53+08:00 ] 192.168.2.236 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'Kh8hwOYhNYkpdE6k' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0002s ]
+

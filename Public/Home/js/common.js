@@ -1631,9 +1631,9 @@ $('#param_yulan').on('click',function () {
     if(!phone) {
         return dialog.msg('请先选择客户名');
     }
-    if(!idcard) {
+    /*if(!idcard) {
         return dialog.msg('请先选择客户名');
-    }
+    }*/
     if(!company_name || !kefu_phone) {
         return dialog.msg('请先选择客户名');
     }

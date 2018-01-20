@@ -44,6 +44,8 @@ class LoginController extends \Think\Controller
         $user = D('user')->getUserByOpenID($openArray['openid']);
         if(!$user) {
             $openArray['gmt_create'] = date('Y-m-d H:i:s',time());
+            $openArray['nickname'] = '访客';
+            $openArray['avatarurl'] = C('DEFAULT_AVATAR_URL');
             $saveUserInfo = D('User')->saveUserInfo($openArray);
         }
 
@@ -54,6 +56,12 @@ class LoginController extends \Think\Controller
     public function checkSession() {
         if($_POST['sessionKey']) {
             $sessionKey = json_decode($_POST['sessionKey']);
+            if(!$sessionKey) {
+                $this->ajaxReturn(array(
+                    'status' => 0,
+                    'message' => 'session3key不存在'
+                ));
+            }
             $session = D('session')->findSessionBySession3key($sessionKey);
             if($session) {
                 $this->ajaxReturn(array(
@@ -134,9 +142,9 @@ class LoginController extends \Think\Controller
         $session3key = I('post.sessionKey','','');
 
         $companyInfo = array(
-            'title' => '无锡万盈鹏辉企业管理',
+            'title' => '万盈鹏辉企业管理',
             'subtitle' => 'WUXI WANYING PENGHUI INVESTMENT CO. LTD',
-            'content' => '无锡市万盈鹏辉企业管理有限公司承接空放、零用贷、红包贷打卡贷、车子一抵二抵、配偶车、亲属车。本地人（江阴，宜兴）只要一张身份证就可以。外地人有房，有车，家人在无锡，满足任一个条件就可以。',
+            'content' => '万赢鹏辉企业管理是对企业生产经营活动进行计划、组织、指挥、协调和控制等一系列活动，尽可能利用企业的人力、物力、财力、信息等资源，实现多、快、好、省的目标，取得最大的投入产出效率。',
             'location' => '无锡市梁溪区华光大厦6楼',
             'date' => '周一 至 周六 9:00—18:00',
             'phone' => '18261525818  15895351351',
@@ -172,13 +180,13 @@ class LoginController extends \Think\Controller
                 ));
             }
 
-            if($user['status'] == 0) {
+            /*if($user['status'] == 0) {
                 $this->ajaxReturn(array(
                     'status' => 0,
                     'message' => '无权限！',
                     'companyInfo' => $companyInfo,
                 ));
-            }
+            }*/
 
 
             $this->ajaxReturn(array(
@@ -196,10 +204,12 @@ class LoginController extends \Think\Controller
 
     public function getUserInfo() {
         $session3key = I('post.sessionKey','','');
+        $functionArray = array('查内部客户信息','查交易信息记录','内部客户信息查询','交易记录信息查询');
         if(!$session3key) {
             $this->ajaxReturn(array(
                 'status' => 0,
                 'message' => 'session3key不存在，无权限！',
+                'functionArray' => $functionArray,
             ));
         }
         try {
@@ -208,6 +218,7 @@ class LoginController extends \Think\Controller
                 $this->ajaxReturn(array(
                     'status' => 0,
                     'message' => 'session不存在，无权限！',
+                    'functionArray' => $functionArray,
                 ));
             }
             $openid = $session['openid'];
@@ -216,14 +227,15 @@ class LoginController extends \Think\Controller
                 $this->ajaxReturn(array(
                     'status' => 0,
                     'message' => '用户不存在，无权限！',
+                    'functionArray' => $functionArray,
                 ));
             }
-            if($user['status'] == 0) {
+            /*if($user['status'] == 0) {
                 $this->ajaxReturn(array(
                     'status' => 0,
                     'message' => '无权限！',
                 ));
-            }
+            }*/
             $company = D('Company')->getCompanyByID($user['company_id']);
             if($user['depart_id'] == 1 || $user['depart_id'] == 7) {
                 $user['company_name'] = '万盈鹏辉企业管理';
@@ -237,6 +249,7 @@ class LoginController extends \Think\Controller
                 'status' => 1,
                 'message' => '有权限！',
                 'userInfo' => $user,
+                'functionArray' => $functionArray,
             ));
         }catch (Exception $exception) {
             $this->ajaxReturn(array(

@@ -90,6 +90,14 @@ class LoanModel extends Model {
         return $this->_db->where($condition)->select();
     }
 
+    public function selectLoanByCustomerIDNotOK($customer_id = 0) {
+        if(!$customer_id) {
+            throw_exception('错误：函数selectLoanByCustomerID查询条件为空！');
+        }
+        $condition['customer_id'] = $customer_id;
+        return $this->_db->where($condition)->order('create_time desc')->select();
+    }
+
     /**
      * 根据客户ID批量搜索借款信息
      * @param array $idList

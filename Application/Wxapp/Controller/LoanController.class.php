@@ -71,7 +71,7 @@ class LoanController extends Controller
 
             foreach ($customers as $key => $item) {
                 $loans = array();
-                $loans = D('Loan')->selectLoanByCustomerID($item['id']);
+                $loans = D('Loan')->selectLoanByCustomerIDNotOK($item['id']);
                 if(!$loans) {
                     unset($customers[$key]);
                     continue;
@@ -81,7 +81,9 @@ class LoanController extends Controller
 
                 $company = D('Company')->getCompanyByID($item['company_id']);
                 $customers[$key]['company_name'] = $company['smallname'];
-
+                if(!$item['idcard']) {
+                    $customers[$key]['idcard'] = '未录入身份证号码';
+                }
             }
             if(!$customers) {
                 $this->ajaxReturn(array(
@@ -116,7 +118,7 @@ class LoanController extends Controller
         }
 
         try {
-            $loans = D('Loan')->selectLoanByCustomerID($customer_id);
+            $loans = D('Loan')->selectLoanByCustomerIDNotOK($customer_id);
 
             foreach ($loans as $i => $j) {
                 $loans[$i]['create_time'] = date('Y年m月d日',$j['create_time']);

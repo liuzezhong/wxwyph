@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php" afterPath="$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,117 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OtherController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="643" column="5" lean-forward="false" selection-start-line="643" selection-start-column="5" selection-end-line="643" selection-end-column="5" />
-              <folding>
-                <element signature="e#122#142#0#PHP" expanded="true" />
-                <element signature="e#242#413#0#PHP" expanded="false" />
-                <element signature="e#419#3732#0#PHP" expanded="false" />
-                <element signature="e#3834#5737#0#PHP" expanded="false" />
-                <element signature="e#5743#8783#0#PHP" expanded="false" />
-                <element signature="e#8789#9617#0#PHP" expanded="false" />
-                <element signature="e#9623#13721#0#PHP" expanded="false" />
-                <element signature="e#13727#14848#0#PHP" expanded="false" />
-                <element signature="e#14854#18968#0#PHP" expanded="false" />
-                <element signature="e#18974#19813#0#PHP" expanded="false" />
-                <element signature="e#19819#23341#0#PHP" expanded="false" />
-                <element signature="e#23347#24186#0#PHP" expanded="false" />
-                <element signature="e#24192#25662#0#PHP" expanded="false" />
-                <element signature="e#25668#26509#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/MessageController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4935">
-              <caret line="242" column="30" lean-forward="false" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoanController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
+        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-              <folding>
-                <element signature="e#14503#15926#0#PHP" expanded="false" />
-                <element signature="e#15963#25572#0#PHP" expanded="false" />
-                <element signature="e#25578#33753#0#PHP" expanded="false" />
-                <element signature="e#33759#34954#0#PHP" expanded="false" />
-                <element signature="e#34960#37982#0#PHP" expanded="false" />
-                <element signature="e#37988#46566#0#PHP" expanded="false" />
-                <element signature="e#46572#47952#0#PHP" expanded="false" />
-                <element signature="e#47994#49771#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Message/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-              <folding>
-                <marker date="1516351397264" expanded="false" signature="8195:8209" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="120" column="59" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php">
+      <file leaf-file-name="LoanModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+            <state relative-caret-position="541">
+              <caret line="97" column="64" lean-forward="false" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
+      <file leaf-file-name="YuqiController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Wxapp/Model/SessionModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Home/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34440">
-              <caret line="1640" column="37" lean-forward="false" selection-start-line="1640" selection-start-column="37" selection-end-line="1640" selection-end-column="37" />
+            <state relative-caret-position="581">
+              <caret line="210" column="21" lean-forward="true" selection-start-line="210" selection-start-column="21" selection-end-line="210" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -140,9 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>¸Z¸¸¸¸¸¸˝</find>
-      <find>checkExist</find>
-      <find>edit-Admin</find>
       <find>edit-Wxuser</find>
       <find>editWxuser</find>
       <find>$depart_id</find>
@@ -170,6 +84,9 @@
       <find>SessionModel findSessionByOpenID openid is null</find>
       <find>无权限</find>
       <find>getUserInfo</find>
+      <find>searchLoanByName</find>
+      <find>getLoansByCustomer</find>
+      <find>selectLoanByCustomerID</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/Model/UploadImageModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Model/StaffModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Model/CompanyModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CollectionController.class.php" />
@@ -190,8 +106,6 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Tour/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Model/TourModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Model/CustomerModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/footer.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Loan/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/header.html" />
@@ -227,8 +141,11 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Message/index.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
         <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoginController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php" />
       </list>
     </option>
   </component>
@@ -246,7 +163,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="25" />
     <option name="width" value="2000" />
     <option name="height" value="951" />
@@ -498,18 +415,18 @@
       <workItem from="1516063940639" duration="24037000" />
       <workItem from="1516236938327" duration="12151000" />
       <workItem from="1516277115294" duration="29644000" />
-      <workItem from="1516375794719" duration="2016000" />
+      <workItem from="1516375794719" duration="3359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252761000" />
+    <option name="totallyTimeSpent" value="254104000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2000" height="951" extended-state="1" />
+    <frame x="0" y="25" width="2000" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,21 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Profit/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="121" column="77" lean-forward="false" selection-start-line="121" selection-start-column="65" selection-end-line="121" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="44" selection-end-line="142" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Other/add.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Overdue/userInfo.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/RegisterController.class.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -937,24 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Message/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding>
-            <marker date="1516351397264" expanded="false" signature="8195:8209" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
@@ -976,6 +860,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Message/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <marker date="1516351397264" expanded="false" signature="8195:8209" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/LoanController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="120" column="59" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Model/LoanModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="97" column="64" lean-forward="false" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wxapp/Controller/YuqiController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="210" column="21" lean-forward="true" selection-start-line="210" selection-start-column="21" selection-end-line="210" selection-end-column="21" />
           <folding />
         </state>
       </provider>

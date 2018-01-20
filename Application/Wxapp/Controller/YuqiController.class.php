@@ -164,6 +164,7 @@ class YuqiController extends Controller
             }
             $customers = D('Customer')->getCustomerBycondition($condition);
 
+
             if(!$customers) {
                 $this->ajaxReturn(array(
                     'status' => 0,
@@ -203,6 +204,10 @@ class YuqiController extends Controller
                         $customers[$key]['loan_id'] = $last_loan['loan_id'];
                         $company = D('Company')->getCompanyByID($item['company_id']);
                         $customers[$key]['company_name'] = $company['smallname'];
+                        if(!$item['idcard']) {
+                            $customers[$key]['idcard'] = '未录入身份证信息';
+                        }
+
                     }
                 }
 

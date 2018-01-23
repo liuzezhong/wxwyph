@@ -3,6 +3,12 @@
  */
 var dialog = {
     //错误弹出层
+    msg_fast : function (message) {
+        layer.msg(message, {
+            time: 1000
+        });
+    },
+
     msg : function (message) {
         layer.msg(message);
     },

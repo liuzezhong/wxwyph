@@ -538,7 +538,7 @@ class RepaymentsController extends CommonController
             if($now_repay) {
                 $this->ajaxReturn(array(
                     'status' => 0,
-                    'message' => '该周期已有还款记录！',
+                    'message' => '该周期已有还款记录',
                 ));
             }
             // 获取借款记录信息
@@ -546,7 +546,7 @@ class RepaymentsController extends CommonController
             if(!$loan) {
                 $this->ajaxReturn(array(
                     'status' => 0,
-                    'message' => '借款信息记录不存在！',
+                    'message' => '借款信息记录不存在',
                 ));
             }
 
@@ -578,12 +578,12 @@ class RepaymentsController extends CommonController
             if(!$newAdd) {
                 $this->ajaxReturn(array(
                     'status' => 0,
-                    'message' => '还款记录写入失败！',
+                    'message' => '还款记录写入失败',
                 ));
             }
             $this->ajaxReturn(array(
                 'status' => 1,
-                'message' => '还款成功！',
+                'message' => '还款成功',
             ));
 
         }else if($new_re_status == -1) {
@@ -592,14 +592,111 @@ class RepaymentsController extends CommonController
             if(!$chageLoan) {
                 $this->ajaxReturn(array(
                     'status' => 0,
-                    'message' => '设置逾期失败，请稍后再试！'
+                    'message' => '设置逾期失败，请稍后再试'
                 ));
             }
             $this->ajaxReturn(array(
                 'status' => 1,
-                'message' => '设置逾期成功！'
+                'message' => '设置逾期成功'
             ));
         }
+
+
+    }
+
+    public function addRepaymentsAutoCheckbox(){
+
+        $imageValue = I('post.imageValue');
+        $today = I('post.nowdate','','string');
+        if(!$imageValue) {
+            $this->ajaxReturn(array(
+                'status' => 0,
+                'message' => '请选择一条记录',
+            ));
+        }
+
+        foreach($imageValue as $key => $item) {
+
+            $loan = array();
+            $loan = D('Loan')->getLoanByID($item);
+            if(!$loan) {
+                $this->ajaxReturn(array(
+                    'status' => 0,
+                    'message' => '借款信息记录不存在',
+                ));
+            }
+
+            // 获取已还周期
+            $now_cyclical = 0;
+            // 当前时间
+            $phase_data = (strtotime($today) - $loan['create_time']) / 86400;
+            if($loan['product_id'] == 1 || $loan['product_id'] == 4) {
+                // 零用贷 车贷
+                $now_cyclical = round($phase_data / 7);
+                // $now_cyclical = intval($phase_data / 7);
+                if($now_cyclical == 0 ) {
+                    $now_cyclical = $now_cyclical + 1;
+                }
+            }else if($loan['product_id'] == 2 || $loan['product_id'] == 5) {
+                // 打卡 // 红包贷
+                $now_cyclical = round($phase_data + 1);
+            }else if($loan['product_id'] == 3) {
+                // 空放
+                $now_cyclical = round($phase_data / $loan['juti_data']);
+            }
+
+
+            $loan_id = $loan['loan_id'];
+
+            // 新的状态  1 正常还款 2是超时还款 3 是未还款
+            $new_re_status = 1;
+            $b_money = 0;
+
+            $now_repay = D('Repayments')->checkCycles($loan_id,$now_cyclical);
+            if($now_repay) {
+                $this->ajaxReturn(array(
+                    'status' => 0,
+                    'message' => '该周期已有还款记录',
+                ));
+            }
+            // 获取借款记录信息
+
+
+            $r_money = $loan['cyc_principal'];
+
+            $userInfo = $this->getUserNowInfo();
+            // 封装写入数据
+            $autoData = array(
+                'loan_id' => $loan_id,
+                'cycles' => $now_cyclical,
+                's_money' => $loan['cyc_principal'],
+                'r_money' => $r_money,
+                'b_money' => $b_money,
+                'gmt_create' => date('Y-m-d H:i:s',time()),
+                'staff_id' => $userInfo['staff_id'],    // 收款人，根据当前登录用户
+                'pay_style' => 1,
+                'remark' => '',
+                'gmt_repay' => date('Y-m-d H:i:s',time()),
+                'company_id' => $loan['company_id'],
+            );
+            // 写入数据库
+            $newAdd = D('Repayments')->addRepayments($autoData);
+            // 返回结果
+            if(!$newAdd) {
+                $this->ajaxReturn(array(
+                    'status' => 0,
+                    'message' => '还款记录写入失败',
+                ));
+            }
+
+
+
+        }
+
+        $this->ajaxReturn(array(
+            'status' => 1,
+            'message' => '批量还款成功',
+        ));
 
 
     }

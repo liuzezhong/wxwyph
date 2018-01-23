@@ -198,8 +198,13 @@
                     <th class="text-center">剩余应还</th>
                     <th class="text-center">损益情况</th>
                     <th class="text-center">客户经理</th>
-                    <th class="text-center">更改状态</th>
-                    <if condition="$userInfo.jurisdiction eq 2">
+
+                    <th class="text-center">外访经理</th>
+                    <if condition="$userInfo.jurisdiction neq 3">
+                        <th class="text-center">更改状态</th>
+                    </if>
+                    <th class="text-center">外访资料</th>
+                    <if condition="$userInfo.jurisdiction neq 1">
                         <th class="text-center">所属公司</th>
                     </if>
                 </tr>
@@ -210,14 +215,29 @@
 
                       <td class="text-center">{$loan.create_time|date="Y-m-d",###}</td>
                       <td class="text-center">{$loan.gmt_overdue}</td>
-                      <td class="text-center"><a href="{:U('home/customer/index')}&name={$loan.customer_name}">{$loan.customer_name}</a></td>
+                      <if condition="$userInfo.jurisdiction eq 3">
+                          <td class="text-center">{$loan.customer_name}</td>
+                          <else />
+                          <td class="text-center"><a href="{:U('home/customer/index')}&name={$loan.customer_name}">{$loan.customer_name}</a></td>
+                      </if>
+
                       <td class="text-center">{$loan.customer_phone}</td>
                       <td class="text-center">{$loan.product_name}</td>
-                      <td class="text-center info"><a href="{:U('home/loan/index')}&loan_id={$loan.loan_id}">{$loan.principal}</a></td>
+                      <if condition="$userInfo.jurisdiction eq 3">
+                          <td class="text-center info">{$loan.principal}</td>
+                          <else />
+                          <td class="text-center info"><a href="{:U('home/loan/index')}&loan_id={$loan.loan_id}">{$loan.principal}</a></td>
+                      </if>
+
                       <td class="text-center">{$loan.expenditure}</td>
                       <td class="text-center warning">{$loan.cyc_principal}</td>
                       <td class="text-center">{$loan.cycle_name}</td>
-                      <td class="text-center"><a href="{:U('home/repayments/index')}&search_loan_id={$loan.loan_id}">{$loan.repay_cyclical}</a></td>
+                      <if condition="$userInfo.jurisdiction eq 3">
+                          <td class="text-center">{$loan.repay_cyclical}</td>
+                          <else />
+                          <td class="text-center"><a href="{:U('home/repayments/index')}&search_loan_id={$loan.loan_id}">{$loan.repay_cyclical}</a></td>
+                      </if>
+
                       <td class="text-center success">{$loan.repayment_rmoney}</td>
                       <td class="text-center danger">{$loan.repayment_smoney}</td>
                       <td class="text-center">
@@ -230,15 +250,29 @@
                               </td>
                       <td class="text-center">{$loan.staff_name}</td>
                       <td class="text-center">
-                          <if condition="$loan.loan_status eq 0">
-                              <span class="label label-warning" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">还款中</span>
-                              <elseif condition="$loan.loan_status eq -1" />
-                              <span class="label label-danger" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">已逾期</span>
-                              <elseif condition="$loan.loan_status eq 1" />
-                              <span class="label label-success" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">已结清</span>
+                          {$loan.foreign_name}
+                      </td>
+                      <if condition="$userInfo.jurisdiction neq 3">
+                          <td class="text-center">
+                              <if condition="$loan.loan_status eq 0">
+                                  <span class="label label-warning" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">还款中</span>
+                                  <elseif condition="$loan.loan_status eq -1" />
+                                  <span class="label label-danger" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">已逾期</span>
+                                  <elseif condition="$loan.loan_status eq 1" />
+                                  <span class="label label-success" id="change-loan-status" attr-id="{$loan.loan_id}" attr-status="{$loan.loan_status}" attr-m="home" attr-c="loan" attr-a="changeStatus">已结清</span>
+                              </if>
+                          </td>
+                      </if>
+
+                      <td class="text-center">
+                          <if condition="$loan.is_image eq 1">
+                              <a id="foreign_image" attr-id="{$loan.loan_id}">查看</a>
+                              <else />
+                              暂无
                           </if>
                       </td>
-                      <if condition="$userInfo.jurisdiction eq 2">
+
+                      <if condition="$userInfo.jurisdiction neq 1">
                           <td class="text-center">{$loan.company_name}</td>
                       </if>
                  </tr>

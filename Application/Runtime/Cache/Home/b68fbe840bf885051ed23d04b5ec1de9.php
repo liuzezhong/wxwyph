@@ -362,12 +362,15 @@
                 </li>
                 <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/collection/index');?>">
                     <i class="fa fa-deafness"></i> <span>每日应收</span>
                 </a>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Staff'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-sitemap"></i>
@@ -381,8 +384,9 @@
                         <li <?php if(($controller_name == 'Staff') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/staff/add');?>"><i class="fa fa-circle-o"></i> 添加员工</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
-
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Customer'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-users"></i>
@@ -396,7 +400,9 @@
                         <li <?php if(($controller_name == 'Customer') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/customer/add');?>"><i class="fa fa-circle-o"></i> 添加客户</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-inbox"></i>
@@ -410,18 +416,25 @@
                         <li <?php if(($controller_name == 'Loan') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/add');?>"><i class="fa fa-circle-o"></i> 添加记录</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Repayments') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/repayments/index');?>">
                     <i class="fa fa-google-wallet"></i> <span>还款记录</span>
                 </a>
                 </li>
+                <?php } ?>
 
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Tour') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/tour/index');?>">
                     <i class="fa fa-car"></i> <span>外访记录</span>
                 </a>
                 </li>
+                <?php } ?>
+
 
                 <li <?php if(($controller_name == 'Overdue') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/overdue/index');?>">
@@ -429,26 +442,39 @@
                 </a>
                 </li>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Wage') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/wage/index');?>">
                     <i class="fa fa-id-badge"></i> <span>工资管理</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/message/index');?>">
                     <i class="fa fa-database"></i> <span>短信记录</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Image') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/image/index');?>">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
                 </li>
+                <?php } ?>
+
+
 
                 <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                 <a href="#">
@@ -750,8 +776,11 @@
                     <th class="text-center">剩余应还</th>
                     <th class="text-center">损益情况</th>
                     <th class="text-center">客户经理</th>
-                    <th class="text-center">更改状态</th>
-                    <?php if($userInfo["jurisdiction"] == 2): ?><th class="text-center">所属公司</th><?php endif; ?>
+
+                    <th class="text-center">外访经理</th>
+                    <?php if($userInfo["jurisdiction"] != 3): ?><th class="text-center">更改状态</th><?php endif; ?>
+                    <th class="text-center">外访资料</th>
+                    <?php if($userInfo["jurisdiction"] != 1): ?><th class="text-center">所属公司</th><?php endif; ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -759,14 +788,23 @@
 
                       <td class="text-center"><?php echo (date("Y-m-d",$loan["create_time"])); ?></td>
                       <td class="text-center"><?php echo ($loan["gmt_overdue"]); ?></td>
-                      <td class="text-center"><a href="<?php echo U('home/customer/index');?>&name=<?php echo ($loan["customer_name"]); ?>"><?php echo ($loan["customer_name"]); ?></a></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center"><?php echo ($loan["customer_name"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center"><a href="<?php echo U('home/customer/index');?>&name=<?php echo ($loan["customer_name"]); ?>"><?php echo ($loan["customer_name"]); ?></a></td><?php endif; ?>
+
                       <td class="text-center"><?php echo ($loan["customer_phone"]); ?></td>
                       <td class="text-center"><?php echo ($loan["product_name"]); ?></td>
-                      <td class="text-center info"><a href="<?php echo U('home/loan/index');?>&loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["principal"]); ?></a></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center info"><?php echo ($loan["principal"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center info"><a href="<?php echo U('home/loan/index');?>&loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["principal"]); ?></a></td><?php endif; ?>
+
                       <td class="text-center"><?php echo ($loan["expenditure"]); ?></td>
                       <td class="text-center warning"><?php echo ($loan["cyc_principal"]); ?></td>
                       <td class="text-center"><?php echo ($loan["cycle_name"]); ?></td>
-                      <td class="text-center"><a href="<?php echo U('home/repayments/index');?>&search_loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["repay_cyclical"]); ?></a></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center"><?php echo ($loan["repay_cyclical"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center"><a href="<?php echo U('home/repayments/index');?>&search_loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["repay_cyclical"]); ?></a></td><?php endif; ?>
+
                       <td class="text-center success"><?php echo ($loan["repayment_rmoney"]); ?></td>
                       <td class="text-center danger"><?php echo ($loan["repayment_smoney"]); ?></td>
                       <td class="text-center">
@@ -777,13 +815,23 @@
                               </td>
                       <td class="text-center"><?php echo ($loan["staff_name"]); ?></td>
                       <td class="text-center">
-                          <?php if($loan["loan_status"] == 0): ?><span class="label label-warning" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">还款中</span>
-                              <?php elseif($loan["loan_status"] == -1): ?>
-                              <span class="label label-danger" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已逾期</span>
-                              <?php elseif($loan["loan_status"] == 1): ?>
-                              <span class="label label-success" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已结清</span><?php endif; ?>
+                          <?php echo ($loan["foreign_name"]); ?>
                       </td>
-                      <?php if($userInfo["jurisdiction"] == 2): ?><td class="text-center"><?php echo ($loan["company_name"]); ?></td><?php endif; ?>
+                      <?php if($userInfo["jurisdiction"] != 3): ?><td class="text-center">
+                              <?php if($loan["loan_status"] == 0): ?><span class="label label-warning" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">还款中</span>
+                                  <?php elseif($loan["loan_status"] == -1): ?>
+                                  <span class="label label-danger" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已逾期</span>
+                                  <?php elseif($loan["loan_status"] == 1): ?>
+                                  <span class="label label-success" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已结清</span><?php endif; ?>
+                          </td><?php endif; ?>
+
+                      <td class="text-center">
+                          <?php if($loan["is_image"] == 1): ?><a id="foreign_image" attr-id="<?php echo ($loan["loan_id"]); ?>">查看</a>
+                              <?php else: ?>
+                              暂无<?php endif; ?>
+                      </td>
+
+                      <?php if($userInfo["jurisdiction"] != 1): ?><td class="text-center"><?php echo ($loan["company_name"]); ?></td><?php endif; ?>
                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
               </table>

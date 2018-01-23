@@ -199,7 +199,12 @@ class LoanController extends CommonController {
             $sum_rmoney = 0;
 
             $loansIdArray = array_column($loansBak,'loan_id');
-            $sum_rmoney = D('Repayments')->getSumofRemoneyByLoanIDArray($loansIdArray);
+            if($loansIdArray) {
+                $sum_rmoney = D('Repayments')->getSumofRemoneyByLoanIDArray($loansIdArray);
+            }else {
+                $sum_rmoney = '0.00';
+            }
+
 
             /*foreach ($loansBak as $key => $item) {
                 // 获取已经收款金额
@@ -535,6 +540,7 @@ class LoanController extends CommonController {
             if($userInfo['jurisdiction'] == 2) {
                 $xlsCell  = array(
                     array('id','序号'),
+                    array('loan_id','借款编号'),
                     array('create_time','借款日期'),
 
                     array('customer_name','客户姓名'),
@@ -554,7 +560,7 @@ class LoanController extends CommonController {
                     array('expenditure','实际支出'),
                     array('staff_name','客户经理'),
                     array('foreign_name','上门经理'),
-
+                    array('foreign_id','上门经理ID'),
                     array('exp_time','到期日期'),
                     array('loan_status','借款状态'),
                     array('repay_cyclical','已还期数'),
@@ -566,6 +572,7 @@ class LoanController extends CommonController {
             }else {
                 $xlsCell  = array(
                     array('id','序号'),
+                    array('loan_id','借款编号'),
                     array('create_time','借款日期'),
 
                     array('customer_name','客户姓名'),
@@ -585,6 +592,7 @@ class LoanController extends CommonController {
                     array('expenditure','实际支出'),
                     array('staff_name','客户经理'),
                     array('foreign_name','上门经理'),
+                    array('foreign_id','上门经理ID'),
 
                     array('exp_time','到期日期'),
                     array('loan_status','借款状态'),

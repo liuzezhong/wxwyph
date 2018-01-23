@@ -306,4 +306,10 @@ class RepaymentsModel extends Model
         $condition['loan_id'] = $loan_id;
         return $this->where($condition)->order('gmt_repay desc')->select();
     }
+
+    public function deleteRepayByLoanID($loan_id = 0) {
+        $condition['loan_id'] = $loan_id;
+        return $this->where($condition)->delete();
+    }
+
 }

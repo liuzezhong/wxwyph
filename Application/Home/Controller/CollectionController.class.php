@@ -12,6 +12,10 @@ namespace Home\Controller;
 class CollectionController extends CommonController
 {
     public function index() {
+
+        if(session('adminUser')['jurisdiction'] == 3) {
+            $this->redirect('home/overdue/index');
+        }
         $companys = D('Company')->selectAllCompany();
         $userInfo = $this->getUserNowInfo();
 

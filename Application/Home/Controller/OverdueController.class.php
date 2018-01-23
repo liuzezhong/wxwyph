@@ -320,6 +320,14 @@ class OverdueController extends CommonController
                 $loans[$key]['gmt_overdue'] = '';
             }
 
+            // 查询图片信息
+            $images = D('Image')->selectImageByLoanID($value['loan_id']);
+            if(!$images) {
+                $loans[$key]['is_image'] = 0;
+            }else {
+                $loans[$key]['is_image'] = 1;
+            }
+
         }
 
         $this->assign(array(

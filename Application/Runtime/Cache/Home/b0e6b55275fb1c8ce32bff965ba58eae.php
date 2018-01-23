@@ -582,9 +582,8 @@
         <small>请仔细填写</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
-        <li><a href="#">客户管理</a></li>
-        <li class="active">添加客户</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 客户管理</a></li>
+        <li><a href="#">添加客户</a></li>
       </ol>
     </section>
 

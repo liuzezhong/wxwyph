@@ -555,6 +555,8 @@ $('body').on('click','.text-center #loan-sendmessage',function (){
     var style = $(this).attr('attr-style');
     var nowdate = $(this).attr('attr-nowdate');
     var key = 0;
+
+    var that = this;
     var postData = {
         'id' : id,
         'style' : style,
@@ -583,7 +585,9 @@ $('body').on('click','.text-center #loan-sendmessage',function (){
                     if (result.status == 0) {
                         return dialog.msg(result.message);
                     }else if (result.status == 1) {
-                        return dialog.msg_url(result.message,jumpUrl);
+                        $(that).attr('class','btn btn-success btn-xs');
+                        $(that).text('再发一次');
+                        return dialog.msg_fast(result.message);
                     }
                 });
                 layer.close(index);
@@ -763,29 +767,101 @@ $('body').on('click','.text-center #change-repay-status',function () {
     var now_cyclical = $(this).attr('attr-cyclical');
     var re_status = $(this).attr('attr-status');
     var b_money = 0;
+    var that = this;
     layer.msg('将交易状态修改为', {
         time: 10000, //20s后自动关闭
         area: '400px',
         btn: ['正常还款','超时还款','逾期未还','取消'],
         yes: function (index, layero) {
-            addRepaymentsAuto(loan_id,now_cyclical,re_status,1,b_money); //已逾期
+            //addRepaymentsAuto(this,loan_id,now_cyclical,re_status,1,b_money); //已逾期
+            var new_re_status = 1;
+            if(new_re_status == re_status) {
+                return dialog.msg('未做修改！');
+            }
+            var postUrl = 'index.php?m=home&c=repayments&a=addRepaymentsAuto';
+            var postData = {
+                'loan_id' : loan_id,
+                'now_cyclical' : now_cyclical,
+                'new_re_status' : new_re_status,
+                'b_money' : b_money,
+            };
+
+            $.post(postUrl,postData,function (result) {
+                if(result.status == 0) {
+                    return dialog.msg(result.message);
+                }
+                if(result.status == 1) {
+                    $(that).attr('class','label label-success');
+                    $(that).text('已结清');
+                    return dialog.msg_fast(result.message);
+
+                    /*return dialog.msg_url(result.message,jumpUrl);*/
+                }
+            },'JSON');
         },
         btn2: function (index,layero) {
             layer.prompt({title: '请输入违约金额', formType: 3}, function(pass, index){
                 layer.close(index);
                 b_money = pass;
-                addRepaymentsAuto(loan_id,now_cyclical,re_status,2,b_money); //未还款
+                //addRepaymentsAuto(loan_id,now_cyclical,re_status,2,b_money); //未还款
+                var new_re_status = 2;
+                if(new_re_status == re_status) {
+                    return dialog.msg('未做修改！');
+                }
+                var postUrl = 'index.php?m=home&c=repayments&a=addRepaymentsAuto';
+                var postData = {
+                    'loan_id' : loan_id,
+                    'now_cyclical' : now_cyclical,
+                    'new_re_status' : new_re_status,
+                    'b_money' : b_money,
+                };
+
+                $.post(postUrl,postData,function (result) {
+                    if(result.status == 0) {
+                        return dialog.msg(result.message);
+                    }
+                    if(result.status == 1) {
+                        $(that).attr('class','label label-success');
+                        $(that).text('已结清');
+                        return dialog.msg_fast(result.message);
+                        /*return dialog.msg_url(result.message,jumpUrl);*/
+                    }
+                },'JSON');
             });
 
         },
         btn3: function (index,layero) {
-            addRepaymentsAuto(loan_id,now_cyclical,re_status,-1,b_money); //已还款
+            //addRepaymentsAuto(loan_id,now_cyclical,re_status,-1,b_money); //已还款
+            var new_re_status = -1;
+            if(new_re_status == re_status) {
+                return dialog.msg('未做修改！');
+            }
+            var postUrl = 'index.php?m=home&c=repayments&a=addRepaymentsAuto';
+            var postData = {
+                'loan_id' : loan_id,
+                'now_cyclical' : now_cyclical,
+                'new_re_status' : new_re_status,
+                'b_money' : b_money,
+            };
+
+            $.post(postUrl,postData,function (result) {
+                if(result.status == 0) {
+                    return dialog.msg(result.message);
+                }
+                if(result.status == 1) {
+                    $(that).attr('class','label label-danger');
+                    $(that).text('已逾期');
+
+                    return dialog.msg_fast(result.message);
+                    /*return dialog.msg_url(result.message,jumpUrl);*/
+                }
+            },'JSON');
         }
     });
 
 });
 
-function addRepaymentsAuto(loan_id,now_cyclical,re_status,new_re_status,b_money) {
+function addRepaymentsAuto(that,loan_id,now_cyclical,re_status,new_re_status,b_money) {
     if(new_re_status == re_status) {
         return dialog.msg('未做修改！');
     }
@@ -796,7 +872,16 @@ function addRepaymentsAuto(loan_id,now_cyclical,re_status,new_re_status,b_money)
         'new_re_status' : new_re_status,
         'b_money' : b_money,
     };
-    ajaxPost_msg(postUrl,postData,'');
+
+    $.post(postUrl,postData,function (result) {
+        if(result.status == 0) {
+            return dialog.msg(result.message);
+        }
+        if(result.status == 1) {
+            $(that).attr('class','label-success');
+            /*return dialog.msg_url(result.message,jumpUrl);*/
+        }
+    },'JSON');
 }
 
 $('.form-group .automatic').change(function () {
@@ -1729,6 +1814,40 @@ $('#image-all-checked').on('click',function () {
         }
     })
 });
+
+$('#checkbox-loanstatus').on('click',function () {
+    var nowdate = $(this).attr('attr-date');
+    var imageValue =[];
+    $('input[name="checkbox"]:checked').each(function(){
+        imageValue.push($(this).val());
+    });
+
+    if(imageValue.length == 0) {
+        return dialog.msg('请选择一条记录');
+    }
+    console.log(imageValue);
+
+    var postData = {
+        'imageValue' : imageValue,
+        'nowdate' : nowdate,
+    };
+    var postUrl = "index.php?m=home&c=repayments&a=addRepaymentsAutoCheckbox";
+    var jumpUrl = window.location.href;
+    layer.open({
+        type : 0,
+        title : '请确定',
+        btn : ['是','否'],
+        icon : 3,
+        closeBtn : 2,
+        content : "是否批量收款",
+        scrollbar : true,
+        yes : function () {
+            //执行跳转
+            ajaxPost(postUrl,postData,jumpUrl);   //抛送ajax请求
+        }
+    });
+});
+
 
 $('#image-delete').on('click',function () {
     var imageValue =[];

@@ -731,35 +731,64 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
+                    <th class="text-center success" rowspan="2" >月份</th>
+                    <th class="text-center warning" colspan="3">业务情况</th>
+                    <th class="text-center info" colspan="4">月收入情况</th>
+                    <th class="text-center danger" colspan="3">月支出情况</th>
+                    <th class="text-center success" rowspan="2">利润合计</th>
+                  </tr>
+                  <tr>
+
+                    <th class="text-center warning">月单量</th>
+                    <th class="text-center warning">月结清数</th>
+                    <th class="text-center warning">月逾期数</th>
+
+                    <th class="text-center info">月收本金</th>
+                    <th class="text-center info">月收利息</th>
+                    <th class="text-center info">月收违约金</th>
+                    <th class="text-center info">月结清利润</th>
+
+                    <th class="text-center danger">月工资支出</th>
+                    <th class="text-center danger">月社保支出</th>
+                    <th class="text-center danger">月现金支出</th>
+
+
+
+
+                  </tr>
+                  <!--<tr>
                     <th class="text-center">月份</th>
                     <th class="text-center">月借款人次（笔）</th>
                     <th class="text-center">月放款总支出（元）</th>
-                    <!--<th class="text-center">还款笔数（次）</th>-->
-                    <!--<th class="text-center">月收本金（元）</th>-->
-                    <!--<th class="text-center">月收利息（元）</th>-->
-                    <!--<th class="text-center">月收违约金（元）</th>-->
+                    &lt;!&ndash;<th class="text-center">还款笔数（次）</th>&ndash;&gt;
+                    &lt;!&ndash;<th class="text-center">月收本金（元）</th>&ndash;&gt;
+                    &lt;!&ndash;<th class="text-center">月收利息（元）</th>&ndash;&gt;
+                    &lt;!&ndash;<th class="text-center">月收违约金（元）</th>&ndash;&gt;
                     <th class="text-center">月收款总金额（元）</th>
                     <th class="text-center">月外访总收入（元）</th>
                     <th class="text-center">月现金支出（元）</th>
                     <th class="text-center">月工资社保（元）</th>
                     <th class="text-center">月利润总额（元）</th>
-
-                  </tr>
+                  </tr>-->
                   </thead>
                   <tbody>
                   <?php if(is_array($profits)): $i = 0; $__LIST__ = $profits;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$profit): $mod = ($i % 2 );++$i;?><tr>
-                      <td class="text-center"><?php echo ($profit["month"]); ?></td>
-                      <td class="text-center"><?php echo ($profit["loanTimes"]); ?></td>
-                      <td class="text-center"><?php echo ($profit["loanExpend"]); ?></td>
+                      <td class="text-center success"><?php echo ($profit["month"]); ?></td>
+                      <td class="text-center warning"><?php echo ($profit["loanTimes"]); ?></td>
+                      <td class="text-center warning"><?php echo ($profit["loanExpend"]); ?></td>
                       <!--<td class="text-center"><?php echo ($profit["repayTimes"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumPrin"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumInter"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumBmoney"]); ?></td>-->
-                      <td class="text-center"><?php echo ($profit["sumRmoney"]); ?></td>
-                      <td class="text-center"><?php echo ($profit["sumTour"]); ?></td>
-                      <td class="text-center"><?php echo ($profit["sumCharge"]); ?></td>
-                      <td class="text-center"><?php echo ($profit["sumWage"]); ?></td>
-                      <td class="text-center">
+                      <td class="text-center warning"><?php echo ($profit["sumRmoney"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumTour"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumCharge"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center success">
                         <?php if($profit["profit"] < 0): ?><text class="text-danger"><?php echo ($profit["profit"]); ?></text>
                           <?php else: ?>
                           <text class="text-success"><?php echo ($profit["profit"]); ?></text><?php endif; ?>

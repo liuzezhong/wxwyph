@@ -16,6 +16,9 @@ use Think\Page2;
 class LoanController extends CommonController {
     public function index() {
         try {
+            if(session('adminUser')['jurisdiction'] == 3) {
+                $this->redirect('home/overdue/index');
+            }
 
             $condition = array();
             $companyCondition = array();
@@ -1216,6 +1219,8 @@ class LoanController extends CommonController {
         $loan_id = I('post.loan_id',0,'intval');
         $loan_status = I('post.loan_status',0,'intval');
         $is_bond = I('post.bond',0,'intval');
+        $date = I('post.pass','','string');
+
         if(!$loan_id) {
             $this->ajaxReturn(array(
                 'status' => 0,
@@ -1223,10 +1228,16 @@ class LoanController extends CommonController {
             ));
         }
         try {
-            if($loan_status == -1) {
+            if($loan_status == -1 || $loan_status == 1) {
+                // 逾期
+                if($date) {
+                    $gmt_overdue = strtotime($date);
+                }else {
+                    $gmt_overdue = time();
+                }
                 $data = array(
                     'loan_status' => $loan_status,
-                    'gmt_overdue' => time(),
+                    'gmt_overdue' => $gmt_overdue,
                     'is_bond' => $is_bond,
                 );
             }else {
@@ -1246,7 +1257,7 @@ class LoanController extends CommonController {
             }else {
                 $this->ajaxReturn(array(
                     'status' => 0,
-                    'message' => '状态切换失败，请稍后重试'
+                    'message' => '未做任何修改'
                 ));
             }
         } catch (Exception $exception) {

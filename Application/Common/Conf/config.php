@@ -3,7 +3,7 @@ return array(
 	//'配置项'=>'配置值'
     'URL_MODEL' => 0,    //PATHINFO模式为1，0为默认模式
     'LOAD_EXT_CONFIG' => 'db',
-    'DEFAULT_CONTROLLER' => 'Collection',
+    'DEFAULT_CONTROLLER' => 'Loan',
     'DEFAULT_AVATAR_URL' => 'http://imgbj.xianshikeji.com/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png',
     'WECHAT_SMALL_APPLICATION' => array(
         'APPID' => 'wx0454c08974dc7d66',

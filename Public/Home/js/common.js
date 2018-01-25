@@ -736,26 +736,35 @@ $('body').on('click','.text-center #edit-info',function () {
 $('body').on('click','.text-center #change-loan-status',function () {
     var loan_id = $(this).attr('attr-id');
     var loan_status = $(this).attr('attr-status');
-
+    var pass = '';
     layer.msg('将交易状态修改为', {
         time: 10000, //20s后自动关闭
         btn: ['已逾期','还款中','已结清','取消'],
         area: '380px',
         yes: function (index, layero) {
-            changeLoanStatus(loan_id,loan_status,-1,0); //已逾期
+            layer.prompt({title: "请输入逾期日期，格式：2018-01-01", formType: 3}, function(pass, index){
+                layer.close(index);
+                changeLoanStatus(pass,loan_id,loan_status,-1,0); //已逾期
+            });
+
+
         },
         btn2: function (index,layero) {
-            changeLoanStatus(loan_id,loan_status,0,0); //还款中
+            changeLoanStatus(pass,loan_id,loan_status,0,0); //还款中
         },
         btn3: function (index,layero) {
-            layer.confirm('是否退还保证金', {
-                btn: ['是','否'] //按钮
-            }, function(){
-                changeLoanStatus(loan_id,loan_status,1,1);
-            }, function(){
-                changeLoanStatus(loan_id,loan_status,1,0);
+            layer.prompt({title: "请输入结清日期，格式：2018-01-01", formType: 3}, function(pass, index){
+                layer.close(index);
+                layer.confirm('是否退还保证金', {
+                    btn: ['是','否'] //按钮
+                }, function(){
+                    changeLoanStatus(pass,loan_id,loan_status,1,1);
+                }, function(){
+                    changeLoanStatus(pass,loan_id,loan_status,1,0);
 
+                });
             });
+
             // changeLoanStatus(loan_id,loan_status,1); //已结清
         }
     });
@@ -792,7 +801,7 @@ $('body').on('click','.text-center #change-repay-status',function () {
                 }
                 if(result.status == 1) {
                     $(that).attr('class','label label-success');
-                    $(that).text('已结清');
+                    $(that).text('已还款');
                     return dialog.msg_fast(result.message);
 
                     /*return dialog.msg_url(result.message,jumpUrl);*/
@@ -822,7 +831,7 @@ $('body').on('click','.text-center #change-repay-status',function () {
                     }
                     if(result.status == 1) {
                         $(that).attr('class','label label-success');
-                        $(that).text('已结清');
+                        $(that).text('已还款');
                         return dialog.msg_fast(result.message);
                         /*return dialog.msg_url(result.message,jumpUrl);*/
                     }
@@ -964,15 +973,16 @@ $('#poundage').change(function () {
             '</div>');
     }
 });
-function changeLoanStatus(loan_id,loan_status,new_loan_status,bond) {
-    if(new_loan_status == loan_status) {
-        return dialog.msg('未修改状态！');
-    }
+function changeLoanStatus(pass,loan_id,loan_status,new_loan_status,bond) {
+    // if(new_loan_status == loan_status) {
+    //     return dialog.msg('未修改状态！');
+    // }
     var postUrl = 'index.php?m=home&c=loan&a=changeStatus';
     var postData = {
         'loan_id' : loan_id,
         'loan_status' : new_loan_status,
         'bond' : bond,
+        'pass' : pass,
     };
     ajaxPost_msg(postUrl,postData,'');
 }

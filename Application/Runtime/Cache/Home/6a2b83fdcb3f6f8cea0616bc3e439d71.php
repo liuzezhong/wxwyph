@@ -621,9 +621,9 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3><?php echo ($sumOfExpend); ?></h3>
+              <h3><?php echo ($sumOfdanliang); ?></h3>
 
-              <p>放款总支出总计（元）</p>
+              <p>总单量（笔）</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -636,9 +636,9 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3><?php echo ($sumOfRmoney); ?><sup style="font-size: 20px"></sup></h3>
+              <h3><?php echo ($sumOfshouru); ?><sup style="font-size: 20px"></sup></h3>
 
-              <p>收款总金额总计（元）</p>
+              <p>总计收入（元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -651,9 +651,9 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3><?php echo ($sumOfOther); ?></h3>
+              <h3><?php echo ($sumOfzhichu); ?></h3>
 
-              <p>现金工资支出总计 （元）</p>
+              <p>总计支出 （元）</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -733,7 +733,7 @@
                   <tr>
                     <th class="text-center success" rowspan="2" >月份</th>
                     <th class="text-center warning" colspan="3">业务情况</th>
-                    <th class="text-center info" colspan="4">月收入情况</th>
+                    <th class="text-center info" colspan="5">月收入情况</th>
                     <th class="text-center danger" colspan="3">月支出情况</th>
                     <th class="text-center success" rowspan="2">利润合计</th>
                   </tr>
@@ -747,7 +747,9 @@
                     <th class="text-center info">月收利息</th>
                     <th class="text-center info">月收违约金</th>
                     <th class="text-center info">月结清利润</th>
+                    <th class="text-center info">月外访费合计</th>
 
+                    <!--<th class="text-center danger">月放款合计</th>-->
                     <th class="text-center danger">月工资支出</th>
                     <th class="text-center danger">月社保支出</th>
                     <th class="text-center danger">月现金支出</th>
@@ -775,19 +777,33 @@
                   <?php if(is_array($profits)): $i = 0; $__LIST__ = $profits;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$profit): $mod = ($i % 2 );++$i;?><tr>
                       <td class="text-center success"><?php echo ($profit["month"]); ?></td>
                       <td class="text-center warning"><?php echo ($profit["loanTimes"]); ?></td>
-                      <td class="text-center warning"><?php echo ($profit["loanExpend"]); ?></td>
+                      <td class="text-center warning"><?php echo ($profit["trueTimes"]); ?></td>
+                      <td class="text-center warning"><?php echo ($profit["falseTimes"]); ?></td>
+
+
+                      <td class="text-center info"><?php echo ($profit["benjin"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["lixi"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["weiyuejin"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["jieqinglirun"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumTour"]); ?></td>
+
+                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumInsur"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumCharge"]); ?></td>
+                      <!--<td class="text-center warning"><?php echo ($profit["profit"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["repayTimes"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumPrin"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumInter"]); ?></td>-->
                       <!--<td class="text-center"><?php echo ($profit["sumBmoney"]); ?></td>-->
-                      <td class="text-center warning"><?php echo ($profit["sumRmoney"]); ?></td>
+                      <!--<td class="text-center warning"><?php echo ($profit["sumRmoney"]); ?></td>
                       <td class="text-center info"><?php echo ($profit["sumTour"]); ?></td>
                       <td class="text-center info"><?php echo ($profit["sumCharge"]); ?></td>
                       <td class="text-center info"><?php echo ($profit["sumWage"]); ?></td>
                       <td class="text-center info"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center info"><?php echo ($profit["sumWage"]); ?></td>
                       <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
                       <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
-                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>
+                      <td class="text-center danger"><?php echo ($profit["sumWage"]); ?></td>-->
                       <td class="text-center success">
                         <?php if($profit["profit"] < 0): ?><text class="text-danger"><?php echo ($profit["profit"]); ?></text>
                           <?php else: ?>

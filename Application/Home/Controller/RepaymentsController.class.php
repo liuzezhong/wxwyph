@@ -15,7 +15,6 @@ use Think\Page2;
 class RepaymentsController extends CommonController
 {
     public function index() {
-
         $condition = array();
         $companys = D('Company')->selectAllCompany();
         $userInfo = $this->getUserNowInfo();
@@ -59,9 +58,8 @@ class RepaymentsController extends CommonController
                 }
                 $this->assign('input_customer_phone',$phone);
             }
-
-            if(I('get.search_datepicker','','string')) {
-                $search_datepicker = I('get.search_datepicker','','string');
+            if(I('get.reservationtime','','string')) {
+                $search_datepicker = I('get.reservationtime','','string');
                 // 将2017-11-17 12:30:00 至 2017-11-25 15:30:20
                 // 分解为
                 // 2017-11-17 12:30:00
@@ -69,6 +67,7 @@ class RepaymentsController extends CommonController
                 $s_time = substr($search_datepicker,0,19);
                 $e_time = substr($search_datepicker,24,19);
                 $condition['gmt_repay'] = array('BETWEEN',array($s_time,$e_time));
+
                 $this->assign('input_datepicker',$search_datepicker);
             }else {
                 /*$s_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time())));

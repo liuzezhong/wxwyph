@@ -41,7 +41,15 @@ class RepaymentsModel extends Model
         }
         // 剔除逻辑删除的数据
         $condition['is_delete'] = array('neq',1);
-        return $this->where($condition)->count();
+        $res = $this->where($condition)->count();
+        return $res;
+    }
+
+    public function countRepaymentsByCondition($condition = array()) {
+        // 剔除逻辑删除的数据
+        $condition['is_delete'] = array('neq',1);
+        $res = $this->where($condition)->count();
+        return $res;
     }
     /**
      * 根据借款ID获取已还款期数
@@ -257,10 +265,17 @@ class RepaymentsModel extends Model
      */
     public function listRepaymentsByCondition($condition = array()) {
         // id去重
+
         if($condition['loan_id']) {
             $condition['loan_id'] = array('IN',array_unique($condition['loan_id']));
         }
         // 剔除逻辑删除的数据
+        $condition['is_delete'] = array('neq',1);
+        $res =  $this->where($condition)->order('gmt_create desc')->select();
+        return $res;
+    }
+
+    public function listRepaymentsByConditionB($condition = array()) {
         $condition['is_delete'] = array('neq',1);
         $res =  $this->where($condition)->order('gmt_create desc')->select();
         return $res;
@@ -311,5 +326,6 @@ class RepaymentsModel extends Model
         $condition['loan_id'] = $loan_id;
         return $this->where($condition)->delete();
     }
+
 
 }

@@ -6916,4 +6916,62 @@ class OtherController extends CommonController
         }
     }
 
+    public function checkLoanJieqing() {
+        $condition = array(
+            'loan_status' => 1,
+            'is_delete' => array('neq',1),
+        );
+        $loans = D('Loan')->selectAllBycondition($condition);
+
+        foreach ($loans as $key => $item) {
+            $loanCondition['loan_id'] = $item['loan_id'];
+            $repay = D('Repayments')->listRepaymentsByConditionB($loanCondition);
+            $lastRepayTime = $repay[0]['gmt_repay'];
+
+            $loanData = array(
+                'gmt_overdue' => strtotime($lastRepayTime),
+            );
+            $updateLoan = D('Loan')->updateLoanByID($item['loan_id'],$loanData);
+        }
+
+    }
+
+    public function checkLoanYuqi() {
+        $condition = array(
+            'loan_status' => -1,
+            'is_delete' => array('neq',1),
+        );
+        $loans = D('Loan')->selectAllBycondition($condition);
+
+        foreach ($loans as $key => $item) {
+            $repayCondition = array(
+                'is_delete' => 1,
+                'loan_id' => $item['loan_id']
+            );
+            $countRepayments = D('Repayments')->countRepaymentsByCondition($repayCondition);
+            if(!$countRepayments) {
+                $countRepayments = 0;
+            }
+
+            // 计算下一次还款时间
+            if($item['product_id'] == 2 || $item['product_id'] == 5) {
+                // 打卡
+                $yuqiTime = strtotime(date('Y-m-d H:i:s',$item['create_time']) . '+' . $countRepayments .' day');
+            }else if($item['product_id'] == 1 || $item['product_id'] == 4) {
+
+                $yuqiTime = strtotime(date('Y-m-d H:i:s',$item['create_time']) . '+' . ($countRepayments+1) .' week');
+
+            }else{
+                $yuqiTime = strtotime(date('Y-m-d H:i:s',$item['create_time']) . '+' . (($countRepayments+1)*$item['juti_data']) .' day');
+
+            }
+
+            $loanData = array(
+                'gmt_overdue' => $yuqiTime,
+            );
+            $updateLoan = D('Loan')->updateLoanByID($item['loan_id'],$loanData);
+        }
+
+    }
+
 }

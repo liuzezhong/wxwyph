@@ -25,6 +25,13 @@ class LoanModel extends Model {
         return $this->_db->where($condition)->order('create_time desc')->limit($offset,$pageSize)->select();
     }
 
+    public function selectAllDue($condition = array(), $page = 1, $pageSize = 10) {
+        // 去除逻辑删除的数据
+        $condition['is_delete'] = array('neq',1);
+        $offset = ($page -1) * $pageSize;
+        return $this->_db->where($condition)->order('gmt_overdue desc,create_time')->limit($offset,$pageSize)->select();
+    }
+
     public function selectAllBycondition($condition = array()) {
         // 去除逻辑删除的数据
         $condition['is_delete'] = array('neq',1);

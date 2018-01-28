@@ -442,6 +442,12 @@
                 </a>
                 </li>
 
+                <li <?php if(($controller_name == 'Settle') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/settle/index');?>">
+                    <i class="fa fa-tag"></i> <span>结清汇总</span>
+                </a>
+                </li>
+
                 <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">

@@ -1456,6 +1456,20 @@ $('#get-search-overdue').on('click',function () {
     window.location.href =getUrl;
 });
 
+$('#get-search-settle').on('click',function () {
+    var customer_id = $('#search_customer_id').val();
+    var product_id = $('#search_product_id').val();
+    var staff_id = $('#search_staff_id').val();
+    var reservationtime = $('#reservationtime').val();
+    var overduetime = $('#overduetime').val();
+    var company_id = $('#search_company').val();
+
+    var getUrl = '/index.php?m=home&c=settle&a=index&customer_id=' + customer_id + '&product_id=' + product_id + '&staff_id=' + staff_id
+        + '&reservationtime=' + reservationtime + '&company_id=' + company_id + '&overduetime=' + overduetime ;
+
+    window.location.href =getUrl;
+});
+
 
 $('#export-loan').on('click',function () {
     var customer_id = $('#search_customer_id').val();
@@ -1479,6 +1493,20 @@ $('#export-overdue').on('click',function () {
     var company_id = $('#search_company').val();
 
     var getUrl = '/index.php?m=home&c=overdue&a=export&customer_id=' + customer_id + '&product_id=' + product_id + '&staff_id=' + staff_id
+        + '&reservationtime=' + reservationtime + '&company_id=' + company_id + '&overduetime=' + overduetime ;
+
+    window.location.href =getUrl;
+});
+
+$('#export-settle').on('click',function () {
+    var customer_id = $('#search_customer_id').val();
+    var product_id = $('#search_product_id').val();
+    var staff_id = $('#search_staff_id').val();
+    var reservationtime = $('#reservationtime').val();
+    var overduetime = $('#overduetime').val();
+    var company_id = $('#search_company').val();
+
+    var getUrl = '/index.php?m=home&c=settle&a=export&customer_id=' + customer_id + '&product_id=' + product_id + '&staff_id=' + staff_id
         + '&reservationtime=' + reservationtime + '&company_id=' + company_id + '&overduetime=' + overduetime ;
 
     window.location.href =getUrl;

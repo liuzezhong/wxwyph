@@ -2,16 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: liuzezhong
- * Date: 2018/1/4
- * Time: 16:36
+ * Date: 2018/1/27
+ * Time: 21:22
  */
 
 namespace Home\Controller;
-use Think\Controller;
-use Think\Exception;
-use Think\Page2;
 
-class OverdueController extends CommonController
+
+use Think\Controller;
+use Think\Page2;
+use Think\Model;
+
+class SettleController extends CommonController
 {
     public function index() {
         $condition = array();
@@ -31,7 +33,8 @@ class OverdueController extends CommonController
         //客户列表
         // 查找所有逾期的的借款记录
         $loanCondition = array();
-        $loanCondition['loan_status'] = array('eq',-1);
+        $loanCondition['loan_status'] = array('eq',1);
+
         if($userInfo['jurisdiction'] == 1) {
             $loanCondition['company_id'] = $userInfo['company_id'];
         }else if($userInfo['jurisdiction'] == 2) {
@@ -161,8 +164,8 @@ class OverdueController extends CommonController
         $pageSize = $page_size ? $page_size : 10;
         //1.4 获取信息
         // 逾期的标志
-        $condition['loan_status'] = array('eq',-1);
-        $loans = D('Loan')->selectAll($condition,$page,$page_size);
+        $condition['loan_status'] = array('eq',1);
+        $loans = D('Loan')->selectAllDue($condition,$page,$page_size);
         $loansBak = D('Loan')->selectAllBycondition($condition);
         $countLoans = D('Loan')->countLoans($condition);
 
@@ -194,30 +197,16 @@ class OverdueController extends CommonController
 
 
 
-
         foreach ($loansBak as $key => $item) {
 
             // 获取剩余应还
             $repayment_smoney = $repayment_smoney + ($item['cyc_principal'] * $item['cyclical']);
             // 利润
-            $profit_money = $profit_money - $item['expenditure'];
+            //$profit_money = $profit_money - $item['expenditure'];
         }
 
         $repayment_smoney = $repayment_smoney - $sum_rmoney;
-        $profit_money = $profit_money + $sum_rmoney;
-
-        /*foreach ($loansBak as $key => $item) {
-            // 获取已经收款金额
-            $repayment_rmoney = D('Repayments')->getSumOfRmoneyByLoanID($item['loan_id']);
-            if(!$repayment_rmoney) {
-                $repayment_rmoney = 0;
-            }
-            $sum_rmoney = $sum_rmoney + $repayment_rmoney;
-            // 获取剩余应还
-            $repayment_smoney = $repayment_smoney + ($item['cyc_principal'] * $item['cyclical'] - $repayment_rmoney);
-            // 利润
-            $profit_money = $profit_money + ($repayment_rmoney - $item['expenditure']);
-        }*/
+        //$profit_money = $profit_money + $sum_rmoney;
 
         //手续费类型列表
         $poundages = D('Poundage')->selectALLPoundage();
@@ -243,34 +232,39 @@ class OverdueController extends CommonController
             $loans[$key]['repayment_smoney'] = $value['cyc_principal'] * $value['cyclical'] - $repayment_rmoney;
 
             // 单客人 收益  = 总已还金额 - 公司实际支出 + 上门费用
-            /*$tour = 0;
-            $tour = D('Tour')->getTourByLoanID($value['loan_id']);
-            if($tour) {
-                $tourMoney = $tour['money'];
-            }else {
-                $tourMoney = 0;
-            }*/
-            //$loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tourMoney;
-            //$loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
+            // 结清客户的收益 = 总已还本金 + 结清金额 - 实际支出 + 上门费
+            //[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
 
+            $Model = new Model();
+            $sql2 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
+                IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
+            $voList2 = $Model->query($sql2);
+            $jieqingjine = $voList2[0]['r_money'];
+            $loans[$key]['jieqingjine'] = $jieqingjine;
+
+            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine;
             if($value['is_bond'] == 1) {
-
+                $loans[$key]['baozhengjin'] = '已退';
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
                 }
 
             }else {
+                $loans[$key]['baozhengjin'] = '未退';
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tour['money'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
                 }
             }
-
 
             if($value['product_id'] == 5) {
                 // 红包贷
@@ -373,7 +367,7 @@ class OverdueController extends CommonController
         ));
 
         $this->display();
-   }
+    }
 
     public function export() {
         $condition = array();
@@ -466,8 +460,16 @@ class OverdueController extends CommonController
             // 剩余应还 = 每期应还* 期数 - 已还
             $loans[$key]['repayment_smoney'] = $value['cyc_principal'] * $value['cyclical'] - $repayment_rmoney;
 
-            if($value['is_bond'] == 1) {
+            $Model = new Model();
+            $sql2 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
+                IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
+            $voList2 = $Model->query($sql2);
+            $jieqingjine = $voList2[0]['r_money'];
+            $loans[$key]['jieqingjine'] = $jieqingjine;
 
+            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine;
+            if($value['is_bond'] == 1) {
+                $loans[$key]['baozhengjin'] = '已退';
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
@@ -476,6 +478,7 @@ class OverdueController extends CommonController
                 }
 
             }else {
+                $loans[$key]['baozhengjin'] = '未退';
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tour['money'];
@@ -568,9 +571,10 @@ class OverdueController extends CommonController
                 array('cycle_name','还款时间'),
                 array('repay_cyclical','借还周期'),
                 array('cyc_interest','每期利息'),
-                array('repayment_rmoney','已还金额'),
-                array('repayment_smoney','剩余应还'),
+                array('jieqingjine','结清金额'),
+
                 array('profit_money','损益情况'),
+                array('baozhengjin','保证金'),
                 array('staff_name','客户经理'),
 
                 array('company_name','所属公司'),
@@ -589,9 +593,9 @@ class OverdueController extends CommonController
                 array('cycle_name','还款时间'),
                 array('repay_cyclical','借还周期'),
                 array('cyc_interest','每期利息'),
-                array('repayment_rmoney','已还金额'),
-                array('repayment_smoney','剩余应还'),
+                array('jieqingjine','结清金额'),
                 array('profit_money','损益情况'),
+                array('baozhengjin','保证金'),
                 array('staff_name','客户经理'),
             );
         }
@@ -600,5 +604,4 @@ class OverdueController extends CommonController
         $excel = new PhpexcelController();
         $excel->exportExcel($xlsName,$xlsCell,$xlsData);
     }
-
 }

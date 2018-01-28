@@ -392,6 +392,12 @@
                 </a>
                 </li>
 
+                <li <if condition="($controller_name eq 'Settle') AND ($action_name eq 'index')">class="active"</if>>
+                <a href="{:U('home/settle/index')}">
+                    <i class="fa fa-tag"></i> <span>结清汇总</span>
+                </a>
+                </li>
+
                 <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <if condition="($controller_name eq 'Charge') AND ($action_name eq 'index')">class="active"</if>>
                 <a href="{:U('home/charge/index')}">

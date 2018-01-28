@@ -30,7 +30,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>闲时科技官网</b><!--欢迎您--></a>
+        <a href="../../index2.html"><b>万赢鹏辉企业管理</b><!--欢迎您--></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

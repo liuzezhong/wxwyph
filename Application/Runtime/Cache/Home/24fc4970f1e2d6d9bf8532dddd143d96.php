@@ -611,12 +611,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        每日收款
-        <small>每日应收款表</small>
+        结清汇总
+        <small>结清客户信息汇总</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 公司概览</a></li>
-        <li><a href="#">每日应收款表</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 结清资料</a></li>
+        <li class="active">结清客户信息汇总</li>
       </ol>
     </section>
 
@@ -628,54 +628,58 @@
               <div class="row">
                   <div class="col-md-3 col-sm-6 col-xs-12">
                       <div class="info-box">
-                          <span class="info-box-icon bg-aqua"><i class="fa fa-history fa-fw"></i></span>
+                          <span class="info-box-icon bg-aqua"><i class="fa fa-sellsy fa-fw"></i></span>
 
                           <div class="info-box-content">
-                              <span class="info-box-text">当前日期</span>
-                              <span class="info-box-number"><?php echo ($todayInfo); ?></span>
+                              <span class="info-box-text">当前实际支出合计</span>
+                              <span class="info-box-number"><?php echo ($sum_expenditure); ?>&nbsp;元</span>
                           </div>
                           <!-- /.info-box-content -->
                       </div>
                       <!-- /.info-box -->
                   </div>
                   <!-- /.col -->
-                  <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!--<div class="col-md-3 col-sm-6 col-xs-12">
                       <div class="info-box">
-                          <span class="info-box-icon bg-red"><i class="fa fa-podcast fa-fw"></i></span>
+                          <span class="info-box-icon bg-red"><i class="fa fa-thermometer fa-fw"></i></span>
 
                           <div class="info-box-content">
-                              <span class="info-box-text">当日应收金额</span>
-                              <span class="info-box-number"><?php echo ($sumSmoney); ?>元</span>
+                              <span class="info-box-text">当前已还金额合计</span>
+                              <span class="info-box-number"><?php echo ($sum_rmoney); ?>&nbsp;元</span>
                           </div>
-                          <!-- /.info-box-content -->
+                          &lt;!&ndash; /.info-box-content &ndash;&gt;
                       </div>
-                      <!-- /.info-box -->
+                      &lt;!&ndash; /.info-box &ndash;&gt;
                   </div>
-                  <!-- /.col -->
+                  &lt;!&ndash; /.col &ndash;&gt;
 
-                  <!-- fix for small devices only -->
+                  &lt;!&ndash; fix for small devices only &ndash;&gt;
                   <div class="clearfix visible-sm-block"></div>
 
                   <div class="col-md-3 col-sm-6 col-xs-12">
                       <div class="info-box">
-                          <span class="info-box-icon bg-green"><i class="fa fa-envelope-open fa-fw"></i></span>
+                          <span class="info-box-icon bg-green"><i class="fa fa-road fa-fw"></i></span>
 
                           <div class="info-box-content">
-                              <span class="info-box-text">当日实收金额</span>
-                              <span class="info-box-number"><?php echo ($sumRmoney); ?>元</span>
+                              <span class="info-box-text">当前剩余应还合计</span>
+                              <span class="info-box-number"><?php echo ($repayment_smoney); ?>&nbsp;元</span>
                           </div>
-                          <!-- /.info-box-content -->
+                          &lt;!&ndash; /.info-box-content &ndash;&gt;
                       </div>
-                      <!-- /.info-box -->
-                  </div>
+                      &lt;!&ndash; /.info-box &ndash;&gt;
+                  </div>-->
                   <!-- /.col -->
                   <div class="col-md-3 col-sm-6 col-xs-12">
                       <div class="info-box">
-                          <span class="info-box-icon bg-yellow"><i class="fa fa-users fa-fw"></i></span>
+                          <span class="info-box-icon bg-yellow"><i class="fa fa-recycle fa-fw"></i></span>
 
                           <div class="info-box-content">
-                              <span class="info-box-text">当日应收人数</span>
-                              <span class="info-box-number"><?php echo ($countPeople); ?>人</span>
+                              <span class="info-box-text">当前损益情况合计</span>
+                              <span class="info-box-number">
+                                  <?php if($profit_money > 0): ?>+<?php echo ($profit_money); ?>&nbsp;元
+                              <?php elseif($profit_money < 0): ?>
+                                  <?php echo ($profit_money); ?>&nbsp;元<?php endif; ?>
+                                  </span>
                           </div>
                           <!-- /.info-box-content -->
                       </div>
@@ -687,34 +691,45 @@
 
           </div>
 
-
-
-
-
-
-
-          <!--</div>-->
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+
                 <div class="col-xs-12">
                     <div class="panel panel-info">
-                        <div class="panel-body ">
+                        <div class="panel-body panel-body-footer">
                             <form class="form-inline search-line" action="/index.php" method="get">
+                                <input type="hidden" name="m" value="home"/>
+                                <input type="hidden" name="c" value="loan"/>
+                                <input type="hidden" name="a" value="index"/>
+
                                 <div class="form-group">
-                                    <label>还款时间&nbsp;</label>
-                                    <input type="text" class="form-control sandbox-container" name="search_datepicker" id="search_datepicker" placeholder="请选择贷款时间" value="<?php echo ($input_datepicker); ?>">
+                                    <label>客户姓名&nbsp;</label>
+                                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户姓名搜索" data-size="8" name="search_customer_id" id="search_customer_id" data-width="fit" multiple>
+                                        <?php if(is_array($customers)): $i = 0; $__LIST__ = $customers;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$customer): $mod = ($i % 2 );++$i; if($customer["selected"] == 1): ?><option value="<?php echo ($customer["id"]); ?>" selected><?php echo ($customer["name"]); ?></option>
+                                                <?php else: ?>
+                                                <option value="<?php echo ($customer["id"]); ?>"><?php echo ($customer["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
                                 </div>
                                 &nbsp;&nbsp;
                                 <div class="form-group">
-                                    <label>还款状态&nbsp;</label>
-                                    <select class="form-control selectpicker show-tick" title="选择状态" data-size="8" name="search_loan_status" id="search_loan_status" data-width="fit" multiple>
-                                        <?php if(is_array($statusSearchArray)): $i = 0; $__LIST__ = $statusSearchArray;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$status): $mod = ($i % 2 );++$i; if($status["selected"] == 1): ?><option value="<?php echo ($status["id"]); ?>" selected><?php echo ($status["name"]); ?></option>
+                                    <label>借款类型&nbsp;</label>
+                                    <select class="form-control selectpicker show-tick" title="按借款类型搜索" data-size="8" name="search_product_id" id="search_product_id" data-width="fit" multiple>
+                                        <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$product): $mod = ($i % 2 );++$i; if($product["selected"] == 1): ?><option value="<?php echo ($product["product_id"]); ?>" selected><?php echo ($product["product_name"]); ?></option>
                                                 <?php else: ?>
-                                                <option value="<?php echo ($status["id"]); ?>"><?php echo ($status["name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                                                <option value="<?php echo ($product["product_id"]); ?>"><?php echo ($product["product_name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                     </select>
                                 </div>
+                                &nbsp;&nbsp;
+                                <div class="form-group">
+                                    <label>客户经理&nbsp;</label>
+                                    <select class="form-control selectpicker show-tick" data-live-search="true" title="按客户经理搜索" data-size="8" name="search_staff_id" id="search_staff_id" data-width="fit" multiple>
+                                        <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i; if($staff["selected"] == 1): ?><option value="<?php echo ($staff["staff_id"]); ?>" selected><?php echo ($staff["staff_name"]); ?></option>
+                                                <?php else: ?>
+                                                <option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
+                                </div>
+
                                 <?php if($userInfo["jurisdiction"] == 2): ?>&nbsp;&nbsp;
                                     <div class="form-group">
                                         <label>所属公司&nbsp;</label>
@@ -725,80 +740,110 @@
                                         </select>
                                     </div><?php endif; ?>
                                 &nbsp;&nbsp;
-                                <button type="button" class="btn btn-info" id="get-search-collection"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                                <div class="form-group">
+                                    <label>借款日期&nbsp;</label>
+                                    <input type="text" class="form-control" placeholder="按借款日期范围搜索" size="40" name="search_datepicker" value="<?php echo ($input_datepicker); ?>" id="reservationtime">
+                                </div>
                                 &nbsp;&nbsp;
-                                <button type="button" class="btn btn-default" id="export-collection"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
+                                <div class="form-group">
+                                    <label>结清日期&nbsp;</label>
+                                    <input type="text" class="form-control" placeholder="按结清日期范围搜索" size="40" name="search_overduetime" value="<?php echo ($input_overduetime); ?>" id="overduetime">
+                                </div>
                                 &nbsp;&nbsp;
-                                <button type="button" class="btn btn-default" id="checkbox-loanstatus" attr-date="<?php echo ($input_datepicker); ?>"><i class="fa fa-plus fa-fw"></i> 批量还款</button>
+                                <button type="button" class="btn btn-info" id="get-search-settle"><i class="fa fa-search fa-fw"></i> 立即搜索</button>
+                                &nbsp;&nbsp;
+                                <button type="button" class="btn btn-default" id="export-settle"><i class="fa fa-file-excel-o fa-fw"></i> 导出表格</button>
                             </form>
 
 
                         </div>
                     </div>
 
+
+
+                </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-
-                    <th class="text-center"><input type="checkbox" id="image-all-checked"></th>
-                    <th class="text-center">借款时间</th>
+                    <th class="text-center">借款日期</th>
+                    <th class="text-center">结清日期</th>
                     <th class="text-center">客户姓名</th>
                     <th class="text-center">客户电话</th>
                     <th class="text-center">借款类型</th>
-                    <th class="text-center">借款本金(元）</th>
-                    <!--<th class="text-center">借款周期</th>-->
-                    <th class="text-center">还款时间</th>
-                    <th class="text-center">本次周期</th>
-                    <th class="text-center">应还金额（元）</th>
-                    <th class="text-center">实收金额（元）</th>
+                    <th class="text-center">借款金额</th>
+                    <th class="text-center">公司实支</th>
+                    <th class="text-center">每期还款</th>
+                    <th class="text-center">还款日</th>
+                    <th class="text-center">借还周期</th>
+                    <th class="text-center">结清金额</th>
+                    <th class="text-center">损益情况</th>
+                    <th class="text-center">保证金</th>
                     <th class="text-center">客户经理</th>
-                    <?php if($userInfo["jurisdiction"] == 2): ?><th class="text-center">所属公司</th><?php endif; ?>
-                    <th class="text-center">还款状态</th>
-                    <th class="text-center">短信提醒</th>
-                    <th class="text-center">备注</th>
+
+                    <th class="text-center">外访经理</th>
+                    <?php if($userInfo["jurisdiction"] != 3): ?><th class="text-center">更改状态</th><?php endif; ?>
+                    <th class="text-center">外访资料</th>
+                    <?php if($userInfo["jurisdiction"] != 1): ?><th class="text-center">所属公司</th><?php endif; ?>
                 </tr>
                 </thead>
                 <tbody>
-                <?php if(is_array($repayToday)): $i = 0; $__LIST__ = $repayToday;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$today): $mod = ($i % 2 );++$i;?><tr>
-                        <td class="text-center"><input type="checkbox" name="checkbox" value="<?php echo ($today["loan_id"]); ?>"></td>
-                        <td class="text-center"><?php echo (date("Y-m-d",$today["create_time"])); ?></td>
-                        <td class="text-center"><a href="<?php echo U('home/customer/index');?>&name=<?php echo ($today["customer_name"]); ?>"><?php echo ($today["customer_name"]); ?></a></td>
-                        <td class="text-center"><?php echo ($today["customer_phone"]); ?></td>
-                        <td class="text-center"><?php echo ($today["product_name"]); ?></td>
-                        <td class="text-center"><a href="<?php echo U('home/loan/index');?>&loan_id=<?php echo ($today["loan_id"]); ?>"><?php echo ($today["principal"]); ?></a></td>
+                <?php if(is_array($loans)): $i = 0; $__LIST__ = $loans;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$loan): $mod = ($i % 2 );++$i;?><tr>
 
-                        <td class="text-center"><?php echo ($today["cycle_name"]); ?></td>
-                        <td class="text-center"><?php echo ($today["now_cyclical"]); ?> / <?php echo ($today["cyclical"]); ?></td>
-                        <td class="text-center danger"><?php echo ($today["cyc_principal"]); ?></td>
-                        <td class="text-center success"><?php echo ($today["r_money"]); ?></td>
-                        <td class="text-center"><?php echo ($today["staff_name"]); ?></td>
-                        <?php if($userInfo["jurisdiction"] == 2): ?><td class="text-center"><?php echo ($today["company_name"]); ?></td><?php endif; ?>
-                        <td class="text-center">
+                      <td class="text-center"><?php echo (date("Y-m-d",$loan["create_time"])); ?></td>
+                      <td class="text-center"><?php echo ($loan["gmt_overdue"]); ?></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center"><?php echo ($loan["customer_name"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center"><a href="<?php echo U('home/customer/index');?>&name=<?php echo ($loan["customer_name"]); ?>"><?php echo ($loan["customer_name"]); ?></a></td><?php endif; ?>
 
-                            <?php if($today["r_status"] == 0): ?><span class="label label-warning" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">未还款</span>
-                                <?php elseif($today["r_status"] == -1): ?>
-                                <span class="label label-danger" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">逾期中</span>
-                                <?php elseif($today["r_status"] == 1): ?>
-                                <span class="label label-success" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">已还款</span><?php endif; ?>
+                      <td class="text-center"><?php echo ($loan["customer_phone"]); ?></td>
+                      <td class="text-center"><?php echo ($loan["product_name"]); ?></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center info"><?php echo ($loan["principal"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center info"><a href="<?php echo U('home/loan/index');?>&loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["principal"]); ?></a></td><?php endif; ?>
 
+                      <td class="text-center"><?php echo ($loan["expenditure"]); ?></td>
+                      <td class="text-center warning"><?php echo ($loan["cyc_principal"]); ?></td>
+                      <td class="text-center"><?php echo ($loan["cycle_name"]); ?></td>
+                      <?php if($userInfo["jurisdiction"] == 3): ?><td class="text-center"><?php echo ($loan["repay_cyclical"]); ?></td>
+                          <?php else: ?>
+                          <td class="text-center"><a href="<?php echo U('home/repayments/index');?>&search_loan_id=<?php echo ($loan["loan_id"]); ?>"><?php echo ($loan["repay_cyclical"]); ?></a></td><?php endif; ?>
 
-                        </td>
-                        <?php if($today["sendMessage"] == 0): ?><td class="text-center"><button class="btn btn-default btn-xs" id="loan-sendmessage"
-                                                            attr-id="<?php echo ($today["loan_id"]); ?>" attr-m="home" attr-c="message"
-                                                            attr-a="getLoanMessage" attr-style="2"
-                                                            attr-nowdate="<?php echo ($input_datepicker); ?>">发送短信</button></td>
+                      <td class="text-center danger"><?php echo ($loan["jieqingjine"]); ?></td>
+                      <td class="text-center">
 
-                        <?php elseif($today["sendMessage"] == 1): ?>
-                            <td class="text-center"><button class="btn btn-success btn-xs" id="loan-sendmessage"
-                                                            attr-id="<?php echo ($today["loan_id"]); ?>" attr-m="home" attr-c="message"
-                                                            attr-a="getLoanMessage" attr-style="2"
-                                                            attr-nowdate="<?php echo ($input_datepicker); ?>">再发一次</button></td><?php endif; ?>
-                        <td class="text-center"><?php echo ($today["remark"]); ?></td>
+                          <?php if($loan["profit_money"] > 0): ?><text class="text-success">+<?php echo ($loan["profit_money"]); ?><text>
+                              <?php elseif($loan["profit_money"] < 0): ?>
+                                  <text class="text-danger"><?php echo ($loan["profit_money"]); ?><text><?php endif; ?>
+                              </td>
+                      <td class="text-center" data-container="body" data-toggle="tooltip" data-placement="top" title="<?php echo ($loan["bond"]); ?>元">
+                          <?php if($loan["baozhengjin"] == '已退'): ?><text class="text-danger"><?php echo ($loan["baozhengjin"]); ?><text>
+                                  <?php elseif($loan["baozhengjin"] == '未退'): ?>
+                                  <text class=""><?php echo ($loan["baozhengjin"]); ?><text><?php endif; ?>
 
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                          </td>
+                      <td class="text-center"><?php echo ($loan["staff_name"]); ?></td>
+                      <td class="text-center">
+                          <?php echo ($loan["foreign_name"]); ?>
+                      </td>
+                      <?php if($userInfo["jurisdiction"] != 3): ?><td class="text-center">
+                              <?php if($loan["loan_status"] == 0): ?><span class="label label-warning" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">还款中</span>
+                                  <?php elseif($loan["loan_status"] == -1): ?>
+                                  <span class="label label-danger" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已逾期</span>
+                                  <?php elseif($loan["loan_status"] == 1): ?>
+                                  <span class="label label-success" id="change-loan-status" attr-id="<?php echo ($loan["loan_id"]); ?>" attr-status="<?php echo ($loan["loan_status"]); ?>" attr-m="home" attr-c="loan" attr-a="changeStatus">已结清</span><?php endif; ?>
+                          </td><?php endif; ?>
+
+                      <td class="text-center">
+                          <?php if($loan["is_image"] == 1): ?><a id="foreign_image" attr-id="<?php echo ($loan["loan_id"]); ?>">查看</a>
+                              <?php else: ?>
+                              暂无<?php endif; ?>
+                      </td>
+
+                      <?php if($userInfo["jurisdiction"] != 1): ?><td class="text-center"><?php echo ($loan["company_name"]); ?></td><?php endif; ?>
+                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
               </table>
                 <div class="pagination" ><?php echo ($pageRes); ?></div>
@@ -817,100 +862,141 @@
     <!-- /.content -->
   </div>
 
-    <div class="modal fade" id="addInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">新增记账记录</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
+    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">修改贷款信息</h4>
+                </div>
+                <div class="modal-body">
                     <form role="form" id="baoju-form">
                         <!-- text input -->
-                        <div class="form-group col-lg-12">
-                            <label>支出金额</label>
-                            <input type="text" class="form-control " name="money" placeholder="请输入支出金额" >
+                        <div class="form-group col-lg-6">
+                            <label>客户姓名</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户姓名" data-size="8" id="customer_id" name="customer_id" onchange="addLoanSelectCustomer()">
+                                <?php if(is_array($customers)): $i = 0; $__LIST__ = $customers;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$customer): $mod = ($i % 2 );++$i;?><option value="<?php echo ($customer["id"]); ?>"><?php echo ($customer["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
                         </div>
-                        <div class="form-group col-lg-12">
-                            <label>支出事项</label>
-                            <input type="text" class="form-control" name="matter" placeholder="请输入支出事项" >
+                        <div class="form-group col-lg-6">
+                            <label>手机号码</label>
+                            <input type="text" class="form-control " id="phone" placeholder="请输入手机号码">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>身份证号码</label>
+                            <input type="text" class="form-control" id="idcard" placeholder="请输入身份证号码" >
                         </div>
 
-                        <div class="form-group col-lg-12">
-                            <label>支出时间</label>
-                            <input type="text" class="form-control" name="gmt_create" id="gmt_create" placeholder="请选择支出时间">
+                        <div class="form-group col-lg-6">
+                            <label>产品类型</label>
+                            <select class="form-control selectpicker show-tick" title="请选择产品类型" data-size="5" name="product_id" id="product_id" onchange="addLoanSelectProduct()">
+                                <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$product): $mod = ($i % 2 );++$i;?><option value="<?php echo ($product["product_id"]); ?>"><?php echo ($product["product_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
                         </div>
-                        <div class="form-group col-lg-12">
+                        <!--<div class="form-group col-lg-6">-->
+                            <!--<label>还款时间</label>-->
+                            <!--<select class="form-control" id="cycle_id" >-->
+                                <!--<option value="0">请选择</option>-->
+                                <!--<?php if(is_array($cycles)): $i = 0; $__LIST__ = $cycles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cycle): $mod = ($i % 2 );++$i;?>-->
+                                    <!--<option value="<?php echo ($cycle["cycle_id"]); ?>"><?php echo ($cycle["cycle_name"]); ?></option>-->
+                                <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                        <div class="form-group col-lg-6">
+                            <label>还款时间</label>
+                            <select class="form-control" id="cycle_id"  >
+                                <option value="0">请选择</option>
+                                <?php if(is_array($cycles)): $i = 0; $__LIST__ = $cycles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cycle): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cycle["cycle_id"]); ?>"><?php echo ($cycle["cycle_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                        <div id="cycle-append">
+
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>贷款金额</label>
+                            <input type="text" class="form-control automatic " name="principal" id="principal" placeholder="请输入贷款本金">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>每期利息</label>
+                            <input type="text" class="form-control automatic" name="cyc_interest" id="cyc_interest" placeholder="请输入每期产生利息">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>还款周期</label>
+                            <input type="text" class="form-control automatic" name="cyclical" id="cyclical" placeholder="请输入还款周期数">
+                        </div>
+                        <!-- textarea -->
+                        <div class="form-group col-lg-6">
+                            <label>每期还款</label>
+                            <input type="text" class="form-control" name="cyc_principal" id="cyc_principal" placeholder="请输入每期应还金额">
+                        </div>
+                        <!--<div class="form-group col-lg-6">-->
+                            <!--<label>预计利息</label>-->
+                            <!--<input type="text" class="form-control" name="interest" id="interest" placeholder="请输入预计贷款利息">-->
+                        <!--</div>-->
+                        <div class="form-group col-lg-6">
+                            <label>手续费</label>
+                            <select class="form-control selectpicker show-tick" multiple title="请选择手续费项目" data-selected-text-format="count > 4" data-size="5" id="poundage">
+                                <?php if(is_array($poundages)): $i = 0; $__LIST__ = $poundages;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$poundage): $mod = ($i % 2 );++$i;?><option value="<?php echo ($poundage["poundage_id"]); ?>"><?php echo ($poundage["poundage_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                            <!--<input type="text" class="form-control" name="poundage" placeholder="请输入手续费">-->
+                        </div>
+                        <div id="poundage-append">
+
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>保证金</label>
+                            <input type="text" class="form-control automatic" name="bond" id="bond" placeholder="请输入保证金金额">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>同行返点</label>
+                            <input type="text" class="form-control automatic" name="rebate" id="rebate" placeholder="请输入同行返点金额">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>实际到账</label>
+                            <input type="text" class="form-control" name="arrival" id="arrival" placeholder="请输入客户实际到账金额">
+                        </div>
+                        <!-- select -->
+                        <div class="form-group col-lg-6">
+                            <label>公司支出</label>
+                            <input type="text" class="form-control" name="expenditure" id="expenditure" placeholder="请输入公司实际支出金额">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>客户经理</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择客户经理" data-size="8" name="staff_id" id="staff_id">
+                                <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i;?><option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>外访经理</label>
+                            <select class="form-control selectpicker show-tick" data-live-search="true" title="请选择外访经理" data-size="8" name="foreign_id" id="foreign_id">
+                                <?php if(is_array($staffs)): $i = 0; $__LIST__ = $staffs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$staff): $mod = ($i % 2 );++$i;?><option value="<?php echo ($staff["staff_id"]); ?>"><?php echo ($staff["staff_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>借贷日期</label>
+                            <input type="text" class="form-control sandbox-container" name="create_time" id="create_time" placeholder="请选择贷款时间">
+                        </div>
+
+                        <div class="form-group col-lg-6">
                             <label>备注信息</label>
-                            <textarea class="form-control" name="remark"></textarea>
+                            <textarea class="form-control" name="remark" id="remark"></textarea>
+
                         </div>
                         <div class="form-group col-lg-12">
-                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="charge" attr-a="checkAdd">新增记录</button>
+                            <input type="hidden" class="form-control sandbox-container" name="loan_id" id="loan_id">
+                            <button type="button" class="btn btn-primary btn-block" id="add-record" attr-m="home" attr-c="loan" attr-a="checkEdit">立即修改</button>
                         </div>
 
                     </form>
+
                 </div>
-
-
-            </div>
-            <div class="modal-footer">
-                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
-                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
+                    <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-    <div class="modal fade" id="editInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="data-dismiss"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">编辑记账记录</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <form role="form" id="baoju-edit-form">
-                        <!-- text input -->
-                        <div class="form-group col-lg-12">
-                            <label>支出金额</label>
-                            <input type="text" class="form-control " name="money" id="edit-money" placeholder="请输入支出金额" >
-                        </div>
-                        <div class="form-group col-lg-12">
-                            <label>支出事项</label>
-                            <input type="text" class="form-control" name="matter" id="edit-matter" placeholder="请输入支出事项" >
-                        </div>
-
-                        <div class="form-group col-lg-12">
-                            <label>支出时间</label>
-                            <input type="text" class="form-control" name="gmt_create" id="edit-gmt_create" placeholder="请选择支出时间">
-                        </div>
-                        <div class="form-group col-lg-12">
-                            <label>备注信息</label>
-                            <textarea class="form-control" name="remark" id="edit-remark"></textarea>
-                        </div>
-
-                        <div class="form-group col-lg-12">
-                            <input type="hidden"  name="charge_id" id="edit-charge_id">
-                            <button type="button" class="btn btn-primary btn-block" id="edit-record" attr-m="home" attr-c="charge" attr-a="checkEditValue">修改信息</button>
-                        </div>
-
-                    </form>
-                </div>
-
-
-            </div>
-            <div class="modal-footer">
-                <div class="text-center"><text class="text-warning"><small>付出不一定有收获，努力了就值得了</small></text></div>
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close fa-fw"></i>&nbsp;取消修改</button>-->
-                <!--<button type="button" class="btn btn-primary" id="add-record" attr-m="home" attr-c="staff" attr-a="checkEdit"><i class="fa fa-check fa-fw"></i>&nbsp;立即保存</button>-->
-            </div>
-        </div>
-    </div>
-</div>
 
 
 

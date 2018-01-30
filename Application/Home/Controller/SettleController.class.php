@@ -242,7 +242,21 @@ class SettleController extends CommonController
             $jieqingjine = $voList2[0]['r_money'];
             $loans[$key]['jieqingjine'] = $jieqingjine;
 
-            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine;
+
+            //收回利息合计（当前月）
+            $startDate = strtotime(date('Y-m',$value['gmt_overdue']));
+            $endDate = $value['gmt_overdue'];
+            $nowRepayCondition = array(
+                'loan_id' => $value['loan_id'],
+                'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+            );
+            $nowRepayCount = D('Repayments')->countRepaymentsByCondition($nowRepayCondition);
+            if(!$nowRepayCount) {
+                $nowRepayCount = 1;
+            }
+            $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
+
+            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi;
             if($value['is_bond'] == 1) {
                 $loans[$key]['baozhengjin'] = '已退';
                 if($value['tour_id'] != 0) {

@@ -1343,6 +1343,7 @@ $('#gmt_repay').datetimepicker({
     language: 'zh-CN',
     todayBtn: 'linked',
     todayHighlight: true,
+    pickerPosition: "top-left"
 });
 
 $/*('#gmt_create').datetimepicker({
@@ -1364,6 +1365,7 @@ $('#edit-gmt_repay').datetimepicker({
     language: 'zh-CN',
     todayBtn: 'linked',
     todayHighlight: true,
+    pickerPosition: "top-left"
 });
 
 $('#reservationtime').daterangepicker({
@@ -1736,8 +1738,10 @@ $('#get-search-collection').on('click',function () {
 $('#export-collection').on('click',function () {
     var loan_status = $('#search_loan_status').val();
     var reservationtime = $('#search_datepicker').val();
+    var company_id = $('#search_company').val();
 
-    var getUrl = '/index.php?m=home&c=collection&a=exportExcel&loan_status=' + loan_status + '&reservationtime=' + reservationtime;
+    //var getUrl = '/index.php?m=home&c=collection&a=exportExcel&loan_status=' + loan_status + '&reservationtime=' + reservationtime;
+    var getUrl = '/index.php?m=home&c=collection&a=exportExcel&loan_status=' + loan_status + '&reservationtime=' + reservationtime + '&company_id=' + company_id;
 
     window.location.href =getUrl;
 });

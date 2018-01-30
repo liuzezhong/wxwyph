@@ -362,12 +362,15 @@
                 </li>
                 <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Collection') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/collection/index');?>">
                     <i class="fa fa-deafness"></i> <span>每日应收</span>
                 </a>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Staff'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-sitemap"></i>
@@ -381,8 +384,9 @@
                         <li <?php if(($controller_name == 'Staff') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/staff/add');?>"><i class="fa fa-circle-o"></i> 添加员工</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
-
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Customer'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-users"></i>
@@ -396,7 +400,9 @@
                         <li <?php if(($controller_name == 'Customer') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/customer/add');?>"><i class="fa fa-circle-o"></i> 添加客户</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                     <a href="#">
                         <i class="fa fa-inbox"></i>
@@ -410,18 +416,25 @@
                         <li <?php if(($controller_name == 'Loan') AND ($action_name == 'add')): ?>class="active"<?php endif; ?>><a href="<?php echo U('home/loan/add');?>"><i class="fa fa-circle-o"></i> 添加记录</a></li>
                     </ul>
                 </li>
+                <?php } ?>
 
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Repayments') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/repayments/index');?>">
                     <i class="fa fa-google-wallet"></i> <span>还款记录</span>
                 </a>
                 </li>
+                <?php } ?>
 
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Tour') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/tour/index');?>">
                     <i class="fa fa-car"></i> <span>外访记录</span>
                 </a>
                 </li>
+                <?php } ?>
+
 
                 <li <?php if(($controller_name == 'Overdue') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/overdue/index');?>">
@@ -429,26 +442,45 @@
                 </a>
                 </li>
 
+                <li <?php if(($controller_name == 'Settle') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
+                <a href="<?php echo U('home/settle/index');?>">
+                    <i class="fa fa-tag"></i> <span>结清汇总</span>
+                </a>
+                </li>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Charge') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/charge/index');?>">
                     <i class="fa fa-shopping-bag"></i> <span>现金记账</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Wage') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/wage/index');?>">
                     <i class="fa fa-id-badge"></i> <span>工资管理</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Message') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/message/index');?>">
                     <i class="fa fa-database"></i> <span>短信记录</span>
                 </a>
                 </li>
+                <?php } ?>
+
+                <?php if($_SESSION['adminUser']['jurisdiction'] == 2 || $_SESSION['adminUser']['jurisdiction'] == 1) { ?>
                 <li <?php if(($controller_name == 'Image') AND ($action_name == 'index')): ?>class="active"<?php endif; ?>>
                 <a href="<?php echo U('home/image/index');?>">
                     <i class="fa fa-map-signs"></i> <span>外访资料</span>
                 </a>
                 </li>
+                <?php } ?>
+
+
 
                 <li <?php if($controller_name == 'Loan'): ?>class=" treeview active"<?php else: ?>class="treeview"<?php endif; ?>>
                 <a href="#">

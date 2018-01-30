@@ -271,7 +271,7 @@ class WageController extends CommonController
         $wage_id = I('post.wage_id',0,'intval');
         $gmt_wage = I('post.gmt_wage','','string,trim');
         $number = I('post.number',0,'intval');
-        $wage = I('post.number',0,'floatval');
+        $wage = I('post.wage',0,'floatval');
         $insur = I('post.insur',0,'floatval');
         $remark = I('post.remark','','string');
         $company_id = I('post.company_id',0,'intval');

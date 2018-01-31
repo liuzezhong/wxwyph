@@ -256,7 +256,9 @@ class SettleController extends CommonController
             }
             $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
 
-            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi;
+            $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByLoanID($value['loan_id']);
+
+            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
             if($value['is_bond'] == 1) {
                 $loans[$key]['baozhengjin'] = '已退';
                 if($value['tour_id'] != 0) {

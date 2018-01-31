@@ -196,15 +196,6 @@ class SettleController extends CommonController
         }
 
 
-
-        foreach ($loansBak as $key => $item) {
-
-            // 获取剩余应还
-            $repayment_smoney = $repayment_smoney + ($item['cyc_principal'] * $item['cyclical']);
-            // 利润
-            //$profit_money = $profit_money - $item['expenditure'];
-        }
-
         $repayment_smoney = $repayment_smoney - $sum_rmoney;
         //$profit_money = $profit_money + $sum_rmoney;
 
@@ -245,7 +236,8 @@ class SettleController extends CommonController
 
             //收回利息合计（当前月）
             $startDate = strtotime(date('Y-m',$value['gmt_overdue']));
-            $endDate = $value['gmt_overdue'];
+            $endDate = strtotime(date('Y-m',$value['gmt_overdue']) . '+1 month -1 second');
+
             $nowRepayCondition = array(
                 'loan_id' => $value['loan_id'],
                 'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
@@ -257,7 +249,6 @@ class SettleController extends CommonController
             $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
 
             $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByLoanID($value['loan_id']);
-
             $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
             if($value['is_bond'] == 1) {
                 $loans[$key]['baozhengjin'] = '已退';
@@ -275,7 +266,7 @@ class SettleController extends CommonController
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tour['money'];
-                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
                     $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];

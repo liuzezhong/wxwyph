@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_31.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_31.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,8 +97,8 @@
       <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="189">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -581,12 +574,12 @@
       <workItem from="1517058534574" duration="4934000" />
       <workItem from="1517289142541" duration="3150000" />
       <workItem from="1517323634958" duration="1490000" />
-      <workItem from="1517366984177" duration="11790000" />
+      <workItem from="1517366984177" duration="12188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338826000" />
+    <option name="totallyTimeSpent" value="339224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="137" y="56" width="1680" height="951" extended-state="0" />
@@ -1066,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>

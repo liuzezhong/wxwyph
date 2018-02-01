@@ -167,6 +167,11 @@ class LoanModel extends Model {
         return $this->_db->where($condition)->sum($filed);
     }
 
+    public function sumLoanBondCondition($condition = array()) {
+        $condition['is_delete'] = array('neq',1);
+        return $this->_db->where($condition)->sum('bond');
+    }
+
     /**
      * 按客户姓名逻辑删除借款信息
      * @param int $customer_id

@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" afterPath="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/863e1a54223f4d711dafd53da0f85bb0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b375405256d4481b50aaa344e65c47be.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_31.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_01_31.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,30 +23,40 @@
       <file leaf-file-name="ProfitController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="212" column="97" lean-forward="false" selection-start-line="212" selection-start-column="80" selection-end-line="212" selection-end-column="97" />
+            <state relative-caret-position="2">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
-                <marker date="1517131452612" expanded="true" signature="5032:5039" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5313" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5314" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5315" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5380" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5591" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5592" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5663" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5693" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="5032:5737" ph="SELECT sum(b... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="8110:8155" ph="SELECT * FRO... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="8110:8307" ph="SELECT * FRO... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="8110:8326" ph="SELECT * FRO... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="8210:8270" ph="SELECT MAX(c... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="9391:9470" ph="SELECT sum(r... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="9391:9602" ph="SELECT sum(r... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="9391:9682" ph="SELECT sum(r... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="9391:9729" ph="SELECT sum(r... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="9391:9766" ph="SELECT sum(r... bj_repayments" />
-                <marker date="1517131452612" expanded="true" signature="10026:10242" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5039" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5313" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5314" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5315" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5380" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5591" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5592" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5663" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5693" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="5032:5737" ph="SELECT sum(b... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="8403:8448" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="8403:8600" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="8403:8619" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="8503:8563" ph="SELECT MAX(c... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10337:10416" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10337:10548" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10337:10628" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10337:10675" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10337:10712" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517387132845" expanded="true" signature="10972:11188" ph="SELECT * FRO... bj_repayments" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoanModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="605">
+              <caret line="169" column="40" lean-forward="false" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,12 +64,18 @@
       <file leaf-file-name="SettleController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="250" column="91" lean-forward="false" selection-start-line="250" selection-start-column="91" selection-end-line="250" selection-end-column="91" />
+            <state relative-caret-position="329">
+              <caret line="261" column="93" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="261" selection-end-column="93" />
               <folding>
                 <element signature="e#122#143#0#PHP" expanded="true" />
-                <marker date="1517376551936" expanded="true" signature="8724:8948" ph="SELECT * FRO... bj_repayments" />
-                <marker date="1517376551936" expanded="true" signature="19746:19970" ph="SELECT * FRO... bj_repayments" />
+                <element signature="e#21099#31555#0#PHP" expanded="false" />
+                <element signature="e#24061#29632#0#PHP" expanded="false" />
+                <marker date="1517383698478" expanded="true" signature="8920:9144" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517383698478" expanded="true" signature="10346:10729" ph="SELECT sum(r... bj_repayments" />
+                <marker date="1517383698478" expanded="true" signature="10807:11031" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517383698478" expanded="true" signature="11294:11518" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517383698478" expanded="true" signature="18009:18233" ph="SELECT * FRO... bj_repayments" />
+                <marker date="1517383698478" expanded="true" signature="24991:25215" ph="SELECT * FRO... bj_repayments" />
               </folding>
             </state>
           </provider>
@@ -63,8 +84,8 @@
       <file leaf-file-name="RepaymentsModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="478">
+              <caret line="230" column="45" lean-forward="false" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -84,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -101,13 +122,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>todayInfo</find>
-      <find>change-loan-status</find>
       <find>change-loan</find>
       <find>changeLoanStatus</find>
       <find>changeStatus</find>
       <find>selectAllBycondition</find>
-      <find>sum</find>
       <find>countRepayMents</find>
       <find>countLoans</find>
       <find>getCountRepayments</find>
@@ -129,8 +147,11 @@
       <find>get-search-collection</find>
       <find>edit-gmt_repay</find>
       <find>datetimepicker</find>
-      <find>countRepaymentsByCondition</find>
       <find>$profit_money</find>
+      <find>countRepaymentsByCondition</find>
+      <find>getSumOfBmoneyByLoanID</find>
+      <find>sum</find>
+      <find>getCompanyByID</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,19 +197,19 @@
         <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Profit/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/OtherController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Login/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/nav.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/OverdueController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Settle/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CollectionController.class.php" />
         <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
       </list>
     </option>
@@ -208,8 +229,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="25" />
+    <option name="x" value="137" />
+    <option name="y" value="56" />
     <option name="width" value="1680" />
     <option name="height" value="951" />
   </component>
@@ -560,15 +581,15 @@
       <workItem from="1517058534574" duration="4934000" />
       <workItem from="1517289142541" duration="3150000" />
       <workItem from="1517323634958" duration="1490000" />
-      <workItem from="1517366984177" duration="2405000" />
+      <workItem from="1517366984177" duration="11790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329441000" />
+    <option name="totallyTimeSpent" value="338826000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="25" width="1680" height="951" extended-state="0" />
+    <frame x="137" y="56" width="1680" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16547619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -918,13 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/CollectionModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -979,35 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="212" column="97" lean-forward="false" selection-start-line="212" selection-start-column="80" selection-end-line="212" selection-end-column="97" />
-          <folding>
-            <marker date="1517131452612" expanded="true" signature="5032:5039" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5313" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5314" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5315" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5380" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5591" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5592" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5663" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5693" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="5032:5737" ph="SELECT sum(b... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="8110:8155" ph="SELECT * FRO... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="8110:8307" ph="SELECT * FRO... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="8110:8326" ph="SELECT * FRO... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="8210:8270" ph="SELECT MAX(c... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="9391:9470" ph="SELECT sum(r... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="9391:9602" ph="SELECT sum(r... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="9391:9682" ph="SELECT sum(r... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="9391:9729" ph="SELECT sum(r... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="9391:9766" ph="SELECT sum(r... bj_repayments" />
-            <marker date="1517131452612" expanded="true" signature="10026:10242" ph="SELECT * FRO... bj_repayments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Settle/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -1018,20 +1003,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="478">
+          <caret line="230" column="45" lean-forward="false" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="169" column="40" lean-forward="false" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="250" column="91" lean-forward="false" selection-start-line="250" selection-start-column="91" selection-end-line="250" selection-end-column="91" />
+        <state relative-caret-position="329">
+          <caret line="261" column="93" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="261" selection-end-column="93" />
           <folding>
             <element signature="e#122#143#0#PHP" expanded="true" />
-            <marker date="1517376551936" expanded="true" signature="8724:8948" ph="SELECT * FRO... bj_repayments" />
-            <marker date="1517376551936" expanded="true" signature="19746:19970" ph="SELECT * FRO... bj_repayments" />
+            <element signature="e#21099#31555#0#PHP" expanded="false" />
+            <element signature="e#24061#29632#0#PHP" expanded="false" />
+            <marker date="1517383698478" expanded="true" signature="8920:9144" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517383698478" expanded="true" signature="10346:10729" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517383698478" expanded="true" signature="10807:11031" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517383698478" expanded="true" signature="11294:11518" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517383698478" expanded="true" signature="18009:18233" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517383698478" expanded="true" signature="24991:25215" ph="SELECT * FRO... bj_repayments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <marker date="1517387132845" expanded="true" signature="5032:5039" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5313" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5314" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5315" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5380" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5591" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5592" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5663" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5693" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="5032:5737" ph="SELECT sum(b... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="8403:8448" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="8403:8600" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="8403:8619" ph="SELECT * FRO... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="8503:8563" ph="SELECT MAX(c... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10337:10416" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10337:10548" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10337:10628" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10337:10675" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10337:10712" ph="SELECT sum(r... bj_repayments" />
+            <marker date="1517387132845" expanded="true" signature="10972:11188" ph="SELECT * FRO... bj_repayments" />
           </folding>
         </state>
       </provider>
@@ -1039,7 +1067,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>

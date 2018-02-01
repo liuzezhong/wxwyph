@@ -199,6 +199,12 @@ class SettleController extends CommonController
         $repayment_smoney = $repayment_smoney - $sum_rmoney;
         //$profit_money = $profit_money + $sum_rmoney;
 
+
+
+
+
+
+
         //手续费类型列表
         $poundages = D('Poundage')->selectALLPoundage();
         foreach($loans as $key => $value) {
@@ -227,6 +233,10 @@ class SettleController extends CommonController
             //[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
 
             $Model = new Model();
+            //收回利息合计（当前月）
+            $startDate = strtotime(date('Y-m',$value['gmt_overdue']));
+            $endDate = strtotime(date('Y-m',$value['gmt_overdue']) . '+1 month -1 second');
+
             $sql2 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
                 IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
             $voList2 = $Model->query($sql2);
@@ -234,9 +244,6 @@ class SettleController extends CommonController
             $loans[$key]['jieqingjine'] = $jieqingjine;
 
 
-            //收回利息合计（当前月）
-            $startDate = strtotime(date('Y-m',$value['gmt_overdue']));
-            $endDate = strtotime(date('Y-m',$value['gmt_overdue']) . '+1 month -1 second');
 
             $nowRepayCondition = array(
                 'loan_id' => $value['loan_id'],
@@ -248,17 +255,58 @@ class SettleController extends CommonController
             }
             $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
 
-            $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByLoanID($value['loan_id']);
+            $weiyueCondition = array(
+                'loan_id' => $value['loan_id'],
+                'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+            );
+            $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByCondition($weiyueCondition);
+
             $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
+
+
+            /*if($value['product_id'] == 3 || $value['product_id'] == 5) {
+                $sql3 = "SELECT sum(r_money - b_money),sum(b_money) FROM `bj_repayments` WHERE loan_id = ". $value['loan_id'] . " 
+                AND is_delete != 1 AND cycles NOT IN (SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." 
+                AND is_delete != 1) AND gmt_repay BETWEEN '" . date('Y-m-d H:i:s',$startDate) . "' AND '" . date('Y-m-d H:i:s',$endDate) . "'";
+                $voList3 = $Model->query($sql3);
+
+                $sql4 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
+                IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
+                $voList4 = $Model->query($sql4);
+
+                $repayment_rmoney = $voList3[0]['sum(r_money - b_money)'] + $voList3[0]['sum(b_money)'] + $voList4[0]['r_money'];
+                print_r($voList4);
+            }else {
+                $sql2 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
+                IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
+                $voList2 = $Model->query($sql2);
+                $jieqingjine = $voList2[0]['r_money'];
+                $loans[$key]['jieqingjine'] = $jieqingjine;
+
+                $nowRepayCondition = array(
+                    'loan_id' => $value['loan_id'],
+                    'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+                );
+                $nowRepayCount = D('Repayments')->countRepaymentsByCondition($nowRepayCondition);
+                if(!$nowRepayCount) {
+                    $nowRepayCount = 1;
+                }
+                $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
+
+                $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByLoanID($value['loan_id']);
+                $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
+            }*/
+
+
             if($value['is_bond'] == 1) {
                 $loans[$key]['baozhengjin'] = '已退';
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
-                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
+                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'];
-                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
+                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
                 }
 
             }else {
@@ -266,10 +314,10 @@ class SettleController extends CommonController
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tour['money'];
-                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
+                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
-                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
+                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
                 }
             }
 
@@ -353,6 +401,64 @@ class SettleController extends CommonController
             }
 
         }
+
+
+        foreach($loansBak as $key => $value) {
+
+            // 获取还款期数
+            $repay_cyclical = D('Repayments')->countRepayMents($value['loan_id']);
+            if(!$repay_cyclical) {
+                $repay_cyclical = 0;
+            }
+
+            // 单客人 收益  = 总已还金额 - 公司实际支出 + 上门费用
+            // 结清客户的收益 = 总已还本金 + 结清金额 - 实际支出 + 上门费
+            //[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
+
+            $Model = new Model();
+            $sql2 = "SELECT * FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] ." AND cycles 
+                IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $value['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
+            $voList2 = $Model->query($sql2);
+            $jieqingjine = $voList2[0]['r_money'];
+
+            //收回利息合计（当前月）
+            $startDate = strtotime(date('Y-m',$value['gmt_overdue']));
+            $endDate = strtotime(date('Y-m',$value['gmt_overdue']) . '+1 month -1 second');
+
+            $nowRepayCondition = array(
+                'loan_id' => $value['loan_id'],
+                'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+            );
+            $nowRepayCount = D('Repayments')->countRepaymentsByCondition($nowRepayCondition);
+            if(!$nowRepayCount) {
+                $nowRepayCount = 1;
+            }
+            $shouhuilixi = ($nowRepayCount - 1) * $value['cyc_interest'];
+            $weiyueCondition = array(
+                'loan_id' => $value['loan_id'],
+                'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+            );
+            $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByCondition($weiyueCondition);
+            $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
+            if($value['is_bond'] == 1) {
+                if($value['tour_id'] != 0) {
+                    $tour = D('Tour')->getTourByID($value['tour_id']);
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
+                }else {
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
+                }
+
+            }else {
+                if($value['tour_id'] != 0) {
+                    $tour = D('Tour')->getTourByID($value['tour_id']);
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
+                }else {
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
+                }
+            }
+        }
+
+
 
         $this->assign(array(
             'loans' => $loans,

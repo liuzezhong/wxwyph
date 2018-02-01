@@ -228,6 +228,11 @@ class RepaymentsModel extends Model
         return $this->where($condition)->sum('b_money');
     }
 
+    public function getSumOfBmoneyByCondition($condition = array()) {
+        $condition['is_delete'] = array('neq',1);
+        return $this->where($condition)->sum('b_money');
+    }
+
     /**
      * 根据日期范围计算实收总额
      * @param array $data

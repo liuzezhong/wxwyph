@@ -161,13 +161,14 @@ class ProfitController extends CommonController
             // 结清利润
             $jieqingCondition = array(
                 'loan_status' => 1,
-                'product_id' => array('NOT IN',array(3,5)),
+                //'loan_id' => array('IN',array(4910)),
+                //'product_id' => array('NOT IN',array(3,5)),
                 'gmt_overdue' => array('BETWEEN',array($startDate,$endDate)),
                 'company_id' => $companyCondition,
             );
             $jieqingLoan = D('Loan')->selectAllBycondition($jieqingCondition);
-
             $jieqinglirun = number_format(0,2);
+
             foreach ($jieqingLoan as $m => $n) {
                 // 遍历每条结清的借款记录
 
@@ -191,7 +192,11 @@ class ProfitController extends CommonController
                 $shouhuilixi = ($nowRepayCount - 1) * $n['cyc_interest'];
 
                 //违约金
-                $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByLoanID($n['loan_id']);
+                $weiyueCondition = array(
+                    'loan_id' => $n['loan_id'],
+                    'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate))),
+                );
+                $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByCondition($weiyueCondition);
 
                 // 保证金
                 if($n['is_bond']) {
@@ -207,19 +212,38 @@ class ProfitController extends CommonController
                 $voList2 = $Model->query($sql2);
                 $jieqingjine = $voList2[0]['r_money'];
 
+                if($n['tour_id'] != 0) {
+
+                    $tour = D('Tour')->getTourByID($n['tour_id']);
+                    $tourMoney = $tour['money'];
+                }else {
+                    $tourMoney = 0;
+                }
+
+
+                // 扣除保证金
+
                 // 实际支出
                 $shijizhichu = $n['expenditure'];
-                // 结清利润
-                $jieqinglirun = $jieqinglirun + $shouhuibenjin + $shouhuilixi + $weiyuejinjieqing - $baozhengjin + $jieqingjine - $shijizhichu;
 
-                // 结清本金 = （（总周期 - 总已还周期 -1）+ 当月还款周期 ）* 周期本金
-                $jieqingbenjin = intval(($n['cyclical'] - $repayCount + 1) + ($nowRepayCount - 1)) * intval(($n['cyc_principal'] - $n['cyc_interest']));
-                $benjin = $benjin + $jieqingbenjin;
+                //print_r($shouhuibenjin . ',' . $shouhuilixi . ',' . $weiyuejinjieqing . ',' . $baozhengjin . ',' . $jieqingjine . ',' . $shijizhichu . ',' . $bondMoney . ',' . $tourMoney);
+                // 结清利润
+                $jieqinglirun = $jieqinglirun + $shouhuibenjin + $shouhuilixi + $weiyuejinjieqing - $baozhengjin + $jieqingjine - $shijizhichu + $tourMoney;
+
+                if($n['product_id'] == 3 || $n['product_id'] == 5) {
+                    $benjin = $benjin + $n['principal'];
+                }else {
+                    // 结清本金 = （（总周期 - 总已还周期 -1）+ 当月还款周期 ）* 周期本金
+                    $jieqingbenjin = intval(($n['cyclical'] - $repayCount + 1) + ($nowRepayCount - 1)) * intval(($n['cyc_principal'] - $n['cyc_interest']));
+                    $benjin = $benjin + $jieqingbenjin;
+                }
+
+
 
             }
 
 
-            $jieqing2Condition = array(
+            /*$jieqing2Condition = array(
                 'loan_status' => 1,
                 'product_id' => array('IN',array(3,5)),
                 'gmt_overdue' => array('BETWEEN',array($startDate,$endDate)),
@@ -239,7 +263,7 @@ class ProfitController extends CommonController
                 IN ( SELECT MAX(cycles) FROM `bj_repayments` WHERE loan_id = " . $n['loan_id'] . " AND is_delete != 1) AND is_delete != 1";
                 $voList4 = $Model->query($sql4);
                 $benjin = $benjin + $voList4['r_money'];
-            }
+            }*/
 
 
             // 放款支出

@@ -303,10 +303,10 @@ class SettleController extends CommonController
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
-                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] - $value['bond'];
-                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] - $value['bond'];
                 }
 
             }else {
@@ -314,10 +314,10 @@ class SettleController extends CommonController
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'] + $tour['money'];
-                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'] + $tour['money'];
                 }else {
                     $loans[$key]['profit_money'] = $repayment_rmoney - $value['expenditure'];
-                    //$profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
+                    $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
                 }
             }
 
@@ -403,7 +403,7 @@ class SettleController extends CommonController
         }
 
 
-        foreach($loansBak as $key => $value) {
+       /* foreach($loansBak as $key => $value) {
 
             // 获取还款期数
             $repay_cyclical = D('Repayments')->countRepayMents($value['loan_id']);
@@ -440,6 +440,9 @@ class SettleController extends CommonController
             );
             $weiyuejinjieqing = D('Repayments')->getSumOfBmoneyByCondition($weiyueCondition);
             $repayment_rmoney = (($repay_cyclical-1) * ($value['cyc_principal'] - $value['cyc_interest'])) + $jieqingjine + $shouhuilixi + $weiyuejinjieqing;
+
+
+
             if($value['is_bond'] == 1) {
                 if($value['tour_id'] != 0) {
                     $tour = D('Tour')->getTourByID($value['tour_id']);
@@ -456,7 +459,7 @@ class SettleController extends CommonController
                     $profit_money = $profit_money + $repayment_rmoney - $value['expenditure'];
                 }
             }
-        }
+        }*/
 
 
 

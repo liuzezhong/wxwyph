@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096d9c46-4b2d-4eb3-899c-e95ba556e288" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,10 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProfitController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProfitController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="755">
               <caret line="305" column="42" lean-forward="false" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="42" />
               <folding>
                 <marker date="1517641656712" expanded="true" signature="5038:5045" ph="SELECT sum(b... bj_repayments" />
@@ -149,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="504">
+              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -254,11 +249,11 @@
         <option value="$PROJECT_DIR$/Application/Home/Model/RepaymentsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Model/LoanModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/SettleController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/RepaymentsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/WageController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
       </list>
     </option>
   </component>
@@ -630,12 +625,12 @@
       <workItem from="1517323634958" duration="1490000" />
       <workItem from="1517366984177" duration="12188000" />
       <workItem from="1517450166894" duration="3930000" />
-      <workItem from="1517625648584" duration="7022000" />
+      <workItem from="1517625648584" duration="7083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350176000" />
+    <option name="totallyTimeSpent" value="350237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="951" extended-state="0" />
@@ -1028,14 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoanController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1021">
@@ -1093,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ProfitController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="755">
           <caret line="305" column="42" lean-forward="false" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="42" />
           <folding>
             <marker date="1517641656712" expanded="true" signature="5038:5045" ph="SELECT sum(b... bj_repayments" />
@@ -1120,6 +1107,14 @@
             <marker date="1517641656712" expanded="true" signature="11112:11487" ph="SELECT sum(r... bj_repayments" />
             <marker date="1517641656712" expanded="true" signature="11747:11963" ph="SELECT * FRO... bj_repayments" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

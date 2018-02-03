@@ -701,6 +701,8 @@ class RepaymentsController extends CommonController
     }
 
     public function exportExcel() {
+        ini_set('memory_limit','-1');
+
         $condition = array();
         $companys = D('Company')->selectAllCompany();
         $userInfo = $this->getUserNowInfo();
@@ -708,6 +710,7 @@ class RepaymentsController extends CommonController
             //1.1 如果有数据则获取GET数据
             if(I('get.search_loan_id',0,'intval')) {
                 $condition['loan_id'][] = I('get.search_loan_id',0,'intval');
+                $this->assign('input_loan_id',I('get.search_loan_id',0,'intval'));
             }
 
             if(I('get.search_customer_name','','string')) {
@@ -724,6 +727,7 @@ class RepaymentsController extends CommonController
                         }
                     }
                 }
+                $this->assign('input_customer_name',$name);
             }
 
             if(I('get.search_customer_phone','','string')) {
@@ -740,10 +744,10 @@ class RepaymentsController extends CommonController
                         }
                     }
                 }
+                $this->assign('input_customer_phone',$phone);
             }
-
-            if(I('get.search_datepicker','','string')) {
-                $search_datepicker = I('get.search_datepicker','','string');
+            if(I('get.reservationtime','','string')) {
+                $search_datepicker = I('get.reservationtime','','string');
                 // 将2017-11-17 12:30:00 至 2017-11-25 15:30:20
                 // 分解为
                 // 2017-11-17 12:30:00
@@ -751,30 +755,48 @@ class RepaymentsController extends CommonController
                 $s_time = substr($search_datepicker,0,19);
                 $e_time = substr($search_datepicker,24,19);
                 $condition['gmt_repay'] = array('BETWEEN',array($s_time,$e_time));
+
+                $this->assign('input_datepicker',$search_datepicker);
+            }else {
+                /*$s_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time())));
+                $e_time = date('Y-m-d H:i:s',strtotime(date('Y-m',time()) . ' +1 month -1 second'));
+                $condition['gmt_repay'] = array('BETWEEN',array($s_time,$e_time));
+                //2018-01-01 00:00:00 至 2018-01-31 23:59:59
+                $this->assign('input_datepicker',$s_time . ' 至 ' . $e_time);*/
             }
 
             if(I('get.company_id','','string') && I('get.company_id','','string') != 'undefined') {
                 $companySearchArray = explode(',',I('get.company_id','','string'));
+                foreach ($companys as $key => $item) {
+                    $companys[$key]['selected'] = 0;
+                    foreach ($companySearchArray as $i => $j) {
+                        if($item['company_id'] == $j) {
+                            $companys[$key]['selected'] = 1;
+                        }
+                    }
+                }
                 $condition['company_id'] = array('IN',$companySearchArray);
             }else {
                 // 如果账户权限为普通管理员，那么只能查找所属公司的数据，否则默认全部数据
+
                 if($userInfo['jurisdiction'] == 1) {
                     $condition['company_id'] = $userInfo['company_id'];
                 }else if($userInfo['jurisdiction'] == 2){
                     $companyIDs = array_column($companys,'company_id');
                     $condition['company_id'] = array('IN',$companyIDs);
+                    foreach ($companys as $key => $item) {
+                        $companys[$key]['selected'] = 0;
+                        foreach ($companyIDs as $i => $j) {
+                            if($item['company_id'] == $j) {
+                                $companys[$key]['selected'] = 1;
+                            }
+                        }
+                    }
                 }
             }
 
 
-            //1.4 数据库查询
-            $sum_smoney = $sum_bmoney = $sum_rmoney = 0;
             $repayments = D('Repayments')->listRepaymentsByCondition($condition);
-            $countRepayment = D('Repayments')->getCountRepayments($condition);
-            $sum_smoney = D('Repayments')->getSumOfSmoney($condition);
-            $sum_rmoney = D('Repayments')->getSumOfRmoney($condition);
-            $sum_bmoney = D('Repayments')->getSumOfBmoney($condition);
-
 
             // 遍历还款记录表
             foreach($repayments as $key => $item) {
@@ -845,6 +867,9 @@ class RepaymentsController extends CommonController
                 //$repayments[$key]['loan_arrival'] = $loan['arrival'];  // 实际到账
                 //$repayments[$key]['loan_expenditure'] = $loan['expenditure'];  // 实际支出
                 $repayments[$key]['loan_staff_name'] = $kehu_staff['staff_name'];  // 客户经理
+                $repayments[$key]['loan_status'] = $loan['loan_status'];  // 客户经理
+                $repayments[$key]['cyc_interest'] = $loan['cyc_interest'];  // 客户经理
+                $repayments[$key]['gmt_overdue'] = date('Y-m-d H:i:s',$loan['gmt_overdue']);  // 客户经理
                 //$repayments[$key]['loan_staff_phone'] = $kehu_staff['phone_number'];  // 电话号码
                 //$repayments[$key]['loan_staff_name'] = $sm_staff['staff_name'];  // 上门经理
                 $repayments[$key]['loan_create_time'] = date('Y-m-d', $loan['create_time']);  // 借款日期
@@ -876,6 +901,10 @@ class RepaymentsController extends CommonController
                     array('repay_pay_style','收款方式'),
                     array('gmt_repay','还款时间'),
                     array('company_name','所属公司'),
+                    array('loan_status','借款状态'),
+                    array('loan_status','借款状态'),
+                    array('cyc_interest','每期利息'),
+                    array('gmt_overdue','逾期时间'),
                     //array('customer_idcard','客户身份证号码'),
 
                     //array('loan_cyc_interest','每期利息'),
@@ -917,6 +946,9 @@ class RepaymentsController extends CommonController
                     array('repay_staff_name','收款人'),
                     array('repay_pay_style','收款方式'),
                     array('gmt_repay','还款时间'),
+                    array('loan_status','借款状态'),
+                    array('cyc_interest','每期利息'),
+                    array('gmt_overdue','逾期时间'),
                 );
             }
 

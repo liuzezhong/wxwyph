@@ -138,6 +138,14 @@ class ProfitController extends CommonController
                     bj_loan.company_id IN ( " . implode(',',$companyCondition[1]) . ") AND bj_loan.loan_status != 1 AND bj_loan.loan_status != -1";
             $voList = $Model->query($sql);
 
+            $sql8 = "SELECT sum(bj_repayments.s_money),sum(bj_loan.cyc_principal),sum(bj_repayments.r_money),
+                sum(bj_repayments.b_money),sum(bj_loan.cyc_interest),sum((bj_loan.cyc_principal - bj_loan.cyc_interest))
+                 FROM `bj_repayments`,`bj_loan` WHERE gmt_repay BETWEEN '" . date('Y-m-d H:i:s',$startDate)
+                . "' AND '" . date('Y-m-d H:i:s',$endDate) . "' AND bj_repayments.loan_id = bj_loan.loan_id 
+                    AND bj_repayments.is_delete != 1 AND bj_loan.is_delete != 1 AND 
+                    bj_loan.company_id IN ( " . implode(',',$companyCondition[1]) . ") AND bj_loan.loan_status != 0 AND gmt_overdue > $endDate";
+            $voList8 = $Model->query($sql8);
+
 
             //print_r($voList[0]['sum((bj_loan.cyc_principal - bj_loan.cyc_interest))']);
 
@@ -147,10 +155,12 @@ class ProfitController extends CommonController
                 $benjin = number_format(0,2);
             }
             // 月收利息
-            $lixi = $voList[0]['sum(bj_loan.cyc_interest)'];
+            $lixi = $voList[0]['sum(bj_loan.cyc_interest)'] + $voList8[0]['sum(bj_loan.cyc_interest)'];
             if(!$lixi) {
                 $lixi = number_format(0,2);
             }
+
+
             // 月收违约金
             $weiyuejin = $voList[0]['sum(bj_repayments.b_money)'];
             if(!$weiyuejin) {
@@ -299,7 +309,7 @@ class ProfitController extends CommonController
             }
 
             // 每月工资
-            $wageCondition['gmt_wage'] = array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate)));
+            $wageCondition['gmt_wage'] = array('BETWEEN',array(date('Y-m-d H:i:s',strtotime(date('Y-m-d H:i:s',$startDate) . '-1 month')),date('Y-m-d H:i:s',strtotime(date('Y-m-d H:i:s',$endDate) . '-1 month'))));
             $wageCondition['company_id'] = $companyCondition;
             $sumWage = D('Wage')->sumWageMoney($wageCondition);
             if(!$sumWage) {
@@ -307,7 +317,9 @@ class ProfitController extends CommonController
             }
 
             // 每月社保
-            $insurCondition['gmt_wage'] = array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate)));
+            $insurCondition['gmt_wage'] = array('BETWEEN',array(date('Y-m-d H:i:s',strtotime(date('Y-m-d H:i:s',$startDate) . '-1 month')),date('Y-m-d H:i:s',strtotime(date('Y-m-d H:i:s',$endDate) . '-1 month'))));
+
+            //$insurCondition['gmt_wage'] = array('BETWEEN',array(date('Y-m-d H:i:s',$startDate),date('Y-m-d H:i:s',$endDate)));
             $insurCondition['company_id'] = $companyCondition;
             $sumInsur = D('Wage')->sumInsurMoney($insurCondition);
             if(!$sumInsur) {

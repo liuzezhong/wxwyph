@@ -485,6 +485,24 @@ class LoanController extends CommonController {
                     $repayment_bmoney = 0;
                 }
 
+                if($s_time && $e_time) {
+                    $monthRepayCondition = array(
+                        'loan_id' => $value['loan_id'],
+                        'gmt_repay' => array('BETWEEN',array(date('Y-m-d H:i:s',$s_time),date('Y-m-d H:i:s',$e_time))),
+                    );
+                }else {
+                    $monthRepayCondition = array(
+                        'loan_id' => $value['loan_id'],
+                    );
+                }
+                // 获取当前月份的还款期数
+                $monthRepay = D('Repayments')->countRepaymentsByCondition($monthRepayCondition);
+
+                //获取当前月份违约金额
+                $bmoneyRepay = D('Repayments')->getSumOfBmoneyByCondition($monthRepayCondition);
+
+                $loans[$key]['monthrepay'] = $monthRepay;  // 客户姓名
+                $loans[$key]['bmoneyrepay'] = $bmoneyRepay;  // 客户姓名
                 $loans[$key]['id'] = $key + 1;  // 客户姓名
                 $loans[$key]['customer_name'] = $customer['name'];  // 客户姓名
                 $loans[$key]['customer_phone'] = $customer['phone'];  // 客户手机号码
@@ -567,9 +585,11 @@ class LoanController extends CommonController {
                     array('exp_time','到期日期'),
                     array('loan_status','借款状态'),
                     array('repay_cyclical','已还期数'),
+                    array('monthrepay','当月期数'),
                     array('sum_principal','应还总额'),
                     array('repayment_rmoney','已还金额'),
                     array('repayment_bmoney','违约金额'),
+                    array('bmoneyrepay','当月违约金'),
                     array('company_name','所属公司'),
                 );
             }else {
@@ -600,8 +620,10 @@ class LoanController extends CommonController {
                     array('exp_time','到期日期'),
                     array('loan_status','借款状态'),
                     array('repay_cyclical','已还期数'),
+                    array('monthrepay','当月期数'),
                     array('sum_principal','应还总额'),
                     array('repayment_rmoney','已还金额'),
+                    array('bmoneyrepay','当月违约金'),
                     array('repayment_bmoney','违约金额'),
                 );
             }

@@ -20,7 +20,7 @@ class WageController extends CommonController
             $this->assign('input_datepicker_start',$search_datepicker_start);
         }else {
             // 今年的第一个月
-            $search_datepicker_start = date('Y-m',strtotime(date('Y',time())));
+            $search_datepicker_start = date('Y',strtotime(date('Y',time()))) . '-01';
             $this->assign('input_datepicker_start',$search_datepicker_start);
         }
 

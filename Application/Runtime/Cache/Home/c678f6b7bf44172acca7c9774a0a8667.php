@@ -778,11 +778,11 @@
                         <?php if($userInfo["jurisdiction"] == 2): ?><td class="text-center"><?php echo ($today["company_name"]); ?></td><?php endif; ?>
                         <td class="text-center">
 
-                            <?php if($today["r_status"] == 0): ?><span class="label label-warning" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">未还款</span>
+                            <?php if($today["r_status"] == 0): ?><span class="label label-warning" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="<?php echo ($input_datepicker); ?>">未还款</span>
                                 <?php elseif($today["r_status"] == -1): ?>
-                                <span class="label label-danger" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">逾期中</span>
+                                <span class="label label-danger" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="<?php echo ($input_datepicker); ?>">逾期中</span>
                                 <?php elseif($today["r_status"] == 1): ?>
-                                <span class="label label-success" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">已还款</span><?php endif; ?>
+                                <span class="label label-success" id="change-repay-status" attr-id="<?php echo ($today["loan_id"]); ?>" attr-cyclical="<?php echo ($today["now_cyclical"]); ?>" attr-status="<?php echo ($today["r_status"]); ?>" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="<?php echo ($input_datepicker); ?>">已还款</span><?php endif; ?>
 
 
                         </td>

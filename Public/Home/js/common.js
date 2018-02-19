@@ -775,6 +775,7 @@ $('body').on('click','.text-center #change-repay-status',function () {
     var loan_id = $(this).attr('attr-id');
     var now_cyclical = $(this).attr('attr-cyclical');
     var re_status = $(this).attr('attr-status');
+    var now_date = $(this).attr('attr-data');
     var b_money = 0;
     var that = this;
     layer.msg('将交易状态修改为', {
@@ -841,30 +842,36 @@ $('body').on('click','.text-center #change-repay-status',function () {
         },
         btn3: function (index,layero) {
             //addRepaymentsAuto(loan_id,now_cyclical,re_status,-1,b_money); //已还款
-            var new_re_status = -1;
-            if(new_re_status == re_status) {
-                return dialog.msg('未做修改！');
-            }
-            var postUrl = 'index.php?m=home&c=repayments&a=addRepaymentsAuto';
-            var postData = {
-                'loan_id' : loan_id,
-                'now_cyclical' : now_cyclical,
-                'new_re_status' : new_re_status,
-                'b_money' : b_money,
-            };
-
-            $.post(postUrl,postData,function (result) {
-                if(result.status == 0) {
-                    return dialog.msg(result.message);
+            layer.prompt({title: "请输入逾期日期，格式：2018-01-01", formType: 3,value:now_date}, function(pass, index){
+                layer.close(index);
+                //changeLoanStatus(pass,loan_id,loan_status,-1,0); //已逾期
+                var new_re_status = -1;
+                if(new_re_status == re_status) {
+                    return dialog.msg('未做修改！');
                 }
-                if(result.status == 1) {
-                    $(that).attr('class','label label-danger');
-                    $(that).text('已逾期');
+                var postUrl = 'index.php?m=home&c=repayments&a=addRepaymentsAuto';
+                var postData = {
+                    'loan_id' : loan_id,
+                    'now_cyclical' : now_cyclical,
+                    'new_re_status' : new_re_status,
+                    'b_money' : b_money,
+                    'pass' : pass,
+                };
 
-                    return dialog.msg_fast(result.message);
-                    /*return dialog.msg_url(result.message,jumpUrl);*/
-                }
-            },'JSON');
+                $.post(postUrl,postData,function (result) {
+                    if(result.status == 0) {
+                        return dialog.msg(result.message);
+                    }
+                    if(result.status == 1) {
+                        $(that).attr('class','label label-danger');
+                        $(that).text('已逾期');
+
+                        return dialog.msg_fast(result.message);
+                        /*return dialog.msg_url(result.message,jumpUrl);*/
+                    }
+                },'JSON');
+            });
+
         }
     });
 

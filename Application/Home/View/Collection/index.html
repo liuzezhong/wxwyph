@@ -189,11 +189,11 @@
                         <td class="text-center">
 
                             <if condition="$today.r_status eq 0">
-                                <span class="label label-warning" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">未还款</span>
+                                <span class="label label-warning" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="{$input_datepicker}">未还款</span>
                                 <elseif condition="$today.r_status eq -1" />
-                                <span class="label label-danger" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">逾期中</span>
+                                <span class="label label-danger" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="{$input_datepicker}">逾期中</span>
                                 <elseif condition="$today.r_status eq 1" />
-                                <span class="label label-success" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto">已还款</span>
+                                <span class="label label-success" id="change-repay-status" attr-id="{$today.loan_id}" attr-cyclical="{$today.now_cyclical}" attr-status="{$today.r_status}" attr-m="home" attr-c="repayments" attr-a="addRepaymentsAuto" attr-data="{$input_datepicker}">已还款</span>
                             </if>
 
 

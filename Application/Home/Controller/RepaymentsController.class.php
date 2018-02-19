@@ -528,6 +528,7 @@ class RepaymentsController extends CommonController
         // 新的状态  1 正常还款 2是超时还款 3 是未还款
         $new_re_status = I('post.new_re_status',0,'intval');
         $b_money = I('post.b_money',0,'intval');
+        $date = I('post.pass','','string');
 
         if($new_re_status == 1 || $new_re_status == 2) {
             // 正常还款或者超时逾期，逾期产生违约金
@@ -587,7 +588,17 @@ class RepaymentsController extends CommonController
 
         }else if($new_re_status == -1) {
             // 逾期未还，将借款记录表设置为逾期状态
-            $chageLoan = D('Loan')->updateOneLoanFieldByID($loan_id,'loan_status',-1);
+            if($date) {
+                $gmt_overdue = strtotime($date);
+            }else {
+                $gmt_overdue = time();
+            }
+            $data = array(
+                'loan_status' => -1,
+                'gmt_overdue' => $gmt_overdue,
+            );
+            $chageLoan = D('Loan')->updateLoanByID($loan_id,$data);
+            //$chageLoan = D('Loan')->updateOneLoanFieldByID($loan_id,'loan_status',-1);
             if(!$chageLoan) {
                 $this->ajaxReturn(array(
                     'status' => 0,

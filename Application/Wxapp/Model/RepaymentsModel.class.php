@@ -50,6 +50,7 @@ class RepaymentsModel extends Model
             throw_exception('Home Model RepaymentsModel countRepayMents loan_id is 0');
         }
         $condition['loan_id'] = $loan_id;
+        $condition['is_delete'] = array('neq',1);
         return $this->where($condition)->count();
     }
 

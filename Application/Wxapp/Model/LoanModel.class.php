@@ -95,6 +95,7 @@ class LoanModel extends Model {
             throw_exception('错误：函数selectLoanByCustomerID查询条件为空！');
         }
         $condition['customer_id'] = $customer_id;
+        $condition['is_delete'] = array('neq',1);
         return $this->_db->where($condition)->order('create_time desc')->select();
     }
 

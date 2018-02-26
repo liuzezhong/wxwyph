@@ -119,7 +119,6 @@ class LoanController extends Controller
 
         try {
             $loans = D('Loan')->selectLoanByCustomerIDNotOK($customer_id);
-
             foreach ($loans as $i => $j) {
                 $loans[$i]['create_time'] = date('Y年m月d日',$j['create_time']);
             }

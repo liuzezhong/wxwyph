@@ -1,0 +1,606 @@
+[ 2018-03-09T15:07:58+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = '2gcGdYFMSl9mqfKL' ) LIMIT 1   [ RunTime:0.0135s ]
+
+[ 2018-03-09T15:07:58+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkSession
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0205s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = '2gcGdYFMSl9mqfKL' ) LIMIT 1   [ RunTime:0.0145s ]
+
+[ 2018-03-09T15:07:59+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003988s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `bj_session` WHERE ( openid = 'oi_Y55CCThy8B8pwc3541JJcL5_g' ) LIMIT 1   [ RunTime:0.0181s ]
+NOTIC: [8] Undefined index: unionid /Work/wwwroot/baojutouzi.com/Application/Wxapp/Controller/LoginController.class.php 第 38 行.
+SQL: UPDATE `bj_session` SET `session3key`='JEoRyaRX9E0dhGrZ',`session_key`='4ZnHvOZL10tvDWT3BrS+ew==',`unionid`=NULL,`create_time`='1520579279' WHERE ( openid = 'oi_Y55CCThy8B8pwc3541JJcL5_g' ) [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0157s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0165s ]
+
+[ 2018-03-09T15:08:00+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=checkPermissions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.1147s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0268s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0168s ]
+
+[ 2018-03-09T15:08:02+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: UPDATE `bj_wxuser` SET `nickName`='刘泽中',`gender`='1',`city`='',`province`='',`country`='China',`avatarUrl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epNtneEG3FKJ4LkibeoOtwaAxwRg6gzicjkv2vdn0fef7JYeKZVl5t7530HJXmS7hRicayE2ewMGRr3A/0',`gmt_modify`='2018-03-09 15:08:02' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0161s ]
+
+[ 2018-03-09T15:08:03+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0211s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0109s ]
+
+[ 2018-03-09T15:08:03+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=saveUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0105s ]
+SQL: UPDATE `bj_wxuser` SET `nickName`='刘泽中',`gender`='1',`city`='',`province`='',`country`='China',`avatarUrl`='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epNtneEG3FKJ4LkibeoOtwaAxwRg6gzicjkv2vdn0fef7JYeKZVl5t7530HJXmS7hRicayE2ewMGRr3A/0',`gmt_modify`='2018-03-09 15:08:03' WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) [ RunTime:0.0150s ]
+
+[ 2018-03-09T15:08:03+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=login&a=getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0161s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 1 LIMIT 1   [ RunTime:0.0100s ]
+
+[ 2018-03-09T15:08:14+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉	%' AND `is_delete` <> 1  [ RunTime:0.0139s ]
+
+[ 2018-03-09T15:08:17+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0137s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0191s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0113s ]
+
+[ 2018-03-09T15:08:21+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0139s ]
+
+[ 2018-03-09T15:08:38+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0130s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0238s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0155s ]
+
+[ 2018-03-09T15:11:15+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findEarnings
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0113s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0224s ]
+
+[ 2018-03-09T15:13:45+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0129s ]
+
+[ 2018-03-09T15:13:46+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0148s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0123s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0328s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0246s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0103s ]
+
+[ 2018-03-09T15:13:46+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0176s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0136s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0227s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0243s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0147s ]
+
+[ 2018-03-09T15:15:55+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0115s ]
+
+[ 2018-03-09T15:15:56+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0202s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0170s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0319s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0239s ]
+
+[ 2018-03-09T15:15:58+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findEarnings
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0122s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0232s ]
+
+[ 2018-03-09T15:16:00+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0111s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0234s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0189s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0162s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0393s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0133s ]
+
+[ 2018-03-09T15:16:01+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0117s ]
+
+[ 2018-03-09T15:16:03+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0130s ]
+
+[ 2018-03-09T15:16:05+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0109s ]
+
+[ 2018-03-09T15:16:06+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0106s ]
+
+[ 2018-03-09T15:16:07+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0101s ]
+
+[ 2018-03-09T15:16:09+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0113s ]
+
+[ 2018-03-09T15:16:11+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0106s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0244s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0229s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0181s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0136s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0105s ]
+
+[ 2018-03-09T15:18:16+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000237s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0167s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0155s ]
+
+[ 2018-03-09T15:18:17+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0108s ]
+
+[ 2018-03-09T15:18:18+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0122s ]
+
+[ 2018-03-09T15:18:21+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0197s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0196s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0150s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0255s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0159s ]
+
+[ 2018-03-09T15:23:39+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0132s ]
+
+[ 2018-03-09T15:23:40+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0119s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> -1 LIMIT 1   [ RunTime:0.0245s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0222s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0096s ]
+
+[ 2018-03-09T15:24:14+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0129s ]
+
+[ 2018-03-09T15:24:25+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=searchLoanByName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `bj_session` [ RunTime:0.0245s ]
+SQL: SELECT * FROM `bj_session` WHERE ( session3key = 'JEoRyaRX9E0dhGrZ' ) LIMIT 1   [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `bj_wxuser` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `bj_wxuser` WHERE ( openid = "oi_Y55CCThy8B8pwc3541JJcL5_g" ) LIMIT 1   [ RunTime:0.0135s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `bj_customer` WHERE `name` LIKE '%徐洪辉%' AND `is_delete` <> 1  [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0182s ]
+
+[ 2018-03-09T15:24:26+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=getLoansByCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `bj_loan` WHERE `customer_id` = 1084 AND `is_delete` <> 1 ORDER BY create_time desc  [ RunTime:0.0187s ]
+
+[ 2018-03-09T15:24:27+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0114s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0224s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0144s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0155s ]
+
+[ 2018-03-09T15:24:30+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findEarnings
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0187s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0232s ]
+
+[ 2018-03-09T15:24:34+08:00 ] 192.168.103.141 /baojutouzi.com/index.php?m=wxapp&c=loan&a=findLoanInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `bj_customer` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `bj_customer` WHERE `id` = 1084 LIMIT 1   [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `bj_loan` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `bj_loan` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `bj_product` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `bj_product` WHERE `product_id` = 1 LIMIT 1   [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `bj_repayments` [ RunTime:0.0111s ]
+SQL: SELECT SUM(r_money) AS tp_sum FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0245s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_repayments` WHERE `loan_id` = 1344 AND `is_delete` <> 1 LIMIT 1   [ RunTime:0.0308s ]
+SQL: SHOW COLUMNS FROM `bj_staff` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `bj_staff` WHERE `staff_id` = 127 LIMIT 1   [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `bj_image` [ RunTime:0.0106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bj_image` WHERE `loan_id` = 1344 LIMIT 1   [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `bj_company` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `bj_company` WHERE `company_id` = 4 LIMIT 1   [ RunTime:0.0095s ]
+

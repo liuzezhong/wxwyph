@@ -176,6 +176,7 @@ class RepaymentsModel extends Model
             throw_exception('Home Model RepaymentsModel getSumOfRmoneyByLoanID data is null');
         }
         $condition['loan_id'] = $loan_id;
+        $condition['is_delete'] = array('neq',1);
         return $this->where($condition)->sum('r_money');
     }
 

@@ -72,6 +72,7 @@ class LoanModel extends Model {
             throw_exception('错误：函数getLoanByID查询条件为空！');
         }
         $condition['loan_id'] = $loan_id;
+//        $condition['is_delete'] = array('neq',1);
         return $this->_db->where($condition)->find();
     }
 

@@ -206,6 +206,7 @@ class LoanController extends Controller
             // 已还金额
             $loan['repay_money'] = D('Repayments')->getSumOfRmoneyByLoanID($loan['loan_id']);
             $loan['repay_money'] = ($loan['repay_money'] == null) ? '0' : $loan['repay_money'];
+
             // 已还期数
             $loan['repay_times'] = D('Repayments')->countRepayMents($loan['loan_id']);
             // 最后一次还款时间
